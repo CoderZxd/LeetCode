@@ -30,8 +30,32 @@ package com.zxd.test.leetcode;
 //        请注意，答案必须是一个子串，"pwke" 是一个子序列 而不是子串。
 public class LongestNoRepeatString {
 
-    public int lengthOfLongestSubstring(String s) {
+    public static int lengthOfLongestSubstring(String s) {
+        if(null == s || "".equals(s)){
+            return 0;
+        }
+        if(s.length() == 1){
+            return 1;
+        }
+        int returnValue = 1;
+        for(int i=0;i<s.length()-1;i++){
+            for(int j=i+1;j < s.length();j++){
+                if(s.substring(i,j).indexOf(s.charAt(j)) >= 0){
+                    if(j-i > returnValue){
+                        returnValue = j - i;
+                    }
+                    break;
+                }else {
+                    if(j-i+1>returnValue){
+                        returnValue = j-i+1;
+                    }
+                }
+            }
+        }
+        return returnValue;
+    }
 
-        return -1;
+    public static void main(String[] args){
+        System.out.println(lengthOfLongestSubstring("pwwkew"));
     }
 }
