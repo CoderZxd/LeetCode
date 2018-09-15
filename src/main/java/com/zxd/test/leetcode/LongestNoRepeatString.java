@@ -55,7 +55,38 @@ public class LongestNoRepeatString {
         return returnValue;
     }
 
+//    解法二
+//    Java（假设字符集为 ASCII 128）
+//
+//    以前的我们都没有对字符串 s 所使用的字符集进行假设。
+//
+//    当我们知道该字符集比较小的时侯，我们可以用一个整数数组作为直接访问表来替换 Map。
+//
+//    常用的表如下所示：
+//
+//    int [26] 用于字母 ‘a’ - ‘z’或 ‘A’ - ‘Z’
+//    int [128] 用于ASCII码
+//    int [256] 用于扩展ASCII码
+//            复杂度分析
+//
+//    时间复杂度：O(n)，索引 j 将会迭代 n 次。
+//
+//    空间复杂度（HashMap）：O(min(m, n))，与之前的方法相同。
+//
+//    空间复杂度（Table）：O(m)，m是字符集的大小。
+    public static int lengthOfLongestSubstring2(String s) {
+        int n = s.length(), ans = 0;
+        int[] index = new int[128]; // current index of character
+        // try to extend the range [i, j]
+        for (int j = 0, i = 0; j < n; j++) {
+            i = Math.max(index[s.charAt(j)], i);
+            ans =  Math.max(ans, j - i + 1);
+            index[s.charAt(j)] = j + 1;
+        }
+        return ans;
+    }
+
     public static void main(String[] args){
-        System.out.println(lengthOfLongestSubstring("pwwkew"));
+        System.out.println(lengthOfLongestSubstring2("pwwkew"));
     }
 }
