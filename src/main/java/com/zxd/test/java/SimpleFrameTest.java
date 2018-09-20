@@ -45,7 +45,7 @@ class ImageComponent extends JComponent{
     private Image image;
 
     public ImageComponent(){
-        image = new ImageIcon("D:/3.png").getImage();
+        image = new ImageIcon("D:/light.png").getImage();
     }
 
     public void paintComponent(Graphics g){

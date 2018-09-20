@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d76580f-df25-48c5-9d28-d43b6d77cc21" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zxd/test/java/SimpleFrameTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/resources/3.png" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/LeetCode.iml" afterPath="$PROJECT_DIR$/LeetCode.iml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zxd/test/leetcode/ProxyTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zxd/test/leetcode/TraceHandler.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zxd/test/leetcode/proxy/LiuDeHua.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zxd/test/leetcode/proxy/LiuDeHuaProxy$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zxd/test/leetcode/proxy/LiuDeHuaProxy.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zxd/test/leetcode/proxy/Person.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zxd/test/java/SimpleFrameTest.java" afterPath="$PROJECT_DIR$/src/main/java/com/zxd/test/java/SimpleFrameTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,12 +18,12 @@
       <file leaf-file-name="SimpleFrameTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/java/SimpleFrameTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="47" column="47" lean-forward="false" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+            <state relative-caret-position="159">
+              <caret line="52" column="19" lean-forward="true" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1241#1242#0" expanded="true" />
-                <element signature="e#1301#1302#0" expanded="true" />
+                <element signature="e#1305#1306#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -422,12 +412,12 @@
       <workItem from="1537456495318" duration="177000" />
       <workItem from="1537456702928" duration="96000" />
       <workItem from="1537456830601" duration="140000" />
-      <workItem from="1537456999214" duration="6951000" />
+      <workItem from="1537456999214" duration="7080000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28127000" />
+    <option name="totallyTimeSpent" value="28256000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -917,12 +907,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/java/SimpleFrameTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="47" column="47" lean-forward="false" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+        <state relative-caret-position="159">
+          <caret line="52" column="19" lean-forward="true" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1241#1242#0" expanded="true" />
-            <element signature="e#1301#1302#0" expanded="true" />
+            <element signature="e#1305#1306#0" expanded="true" />
           </folding>
         </state>
       </provider>
