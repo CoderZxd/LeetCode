@@ -1,8 +1,8 @@
-package com.zxd.test.leetcode.proxy;
+package com.zxd.test.java.proxy;
 
 /**
  * @Project LeetCode
- * @Package com.zxd.test.leetcode.proxy
+ * @Package com.zxd.test.java.proxy
  * @Author：zouxiaodong
  * @Description:
  * @Date:Created in 14:37 2018/9/20.

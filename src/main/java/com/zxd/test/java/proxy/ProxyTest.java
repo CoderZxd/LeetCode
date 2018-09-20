@@ -1,4 +1,4 @@
-package com.zxd.test.leetcode;
+package com.zxd.test.java.proxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

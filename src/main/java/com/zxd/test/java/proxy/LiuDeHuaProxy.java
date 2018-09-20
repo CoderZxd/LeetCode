@@ -1,4 +1,4 @@
-package com.zxd.test.leetcode.proxy;
+package com.zxd.test.java.proxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -6,7 +6,7 @@ import java.lang.reflect.Proxy;
 
 /**
  * @Project LeetCode
- * @Package com.zxd.test.leetcode.proxy
+ * @Package com.zxd.test.java.proxy
  * @Author：zouxiaodong
  * @Description:
  * @Date:Created in 14:38 2018/9/20.
