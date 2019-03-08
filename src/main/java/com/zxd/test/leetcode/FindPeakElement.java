@@ -49,16 +49,16 @@ public class FindPeakElement {
             return nums.length-1;
         }
         int start = 0;
-        int end = nums.length -2;
+        int end = nums.length - 1;
         while(start <= end){
-            int middle = start + (end-start)/2;
+            int middle = (start+end)/2;
             if(nums[middle] > nums[middle-1] && nums[middle] > nums[middle+1]){
                 return middle;
             }
             if(nums[middle] > nums[middle-1]){
                 start = middle + 1;
             }else{
-                end = middle -1;
+                end = middle;
             }
         }
         return -1;
