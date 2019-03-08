@@ -5,7 +5,7 @@ package com.zxd.test.leetcode;
  * @Title: ${FILE_NAME}
  * @Project: LeetCode
  * @Package com.zxd.test.leetcode
- * @description: 峰值元素是指其值大于左右相邻值的元素。
+ * @description: 寻找峰值
  * @Version 1.0
  * @create 2019-03-08 22:20
  **/
@@ -49,16 +49,15 @@ public class FindPeakElement {
             return nums.length-1;
         }
         int start = 0;
-        int end = nums.length -1;
-        for(;start < end;){
-            int middle = (start + end)/2;
+        int end = nums.length -2;
+        while(start <= end){
+            int middle = start + (end-start)/2;
             if(nums[middle] > nums[middle-1] && nums[middle] > nums[middle+1]){
                 return middle;
             }
             if(nums[middle] > nums[middle-1]){
                 start = middle + 1;
-            }
-            if(nums[middle] > nums[middle+1]){
+            }else{
                 end = middle -1;
             }
         }
