@@ -9,6 +9,7 @@ package com.zxd.test.leetcode;
  * @Version 1.0
  * @create 2019-03-08 23:14
  **/
+//        674. 最长连续递增序列
 //        给定一个未经排序的整数数组，找到最长且连续的的递增序列。
 //
 //        示例 1:
@@ -31,16 +32,10 @@ public class FindLengthOfLCIS {
 
     //TODO
     public static int findLengthOfLCIS(int[] nums) {
+        if(nums.length == 0 || nums.length == 1 || (nums.length == 2 && nums[1] >= nums[0])){
+            return nums.length;
+        }
         int returnIndex = 0;
-        if(nums.length == 0){
-            return returnIndex;
-        }
-        if(nums.length == 1){
-            return 1;
-        }
-        if(nums.length == 2 && nums[1] >= nums[0]){
-            return 2;
-        }
         int start = 0;
         int end = start + 1;
         for(;end < nums.length;end++){
