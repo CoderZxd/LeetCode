@@ -25,11 +25,33 @@ package com.zxd.test.leetcode;
 //        注意：数组长度不会超过10000。
 public class FindLengthOfLCIS {
     public static void main(String[] args){
-
+        int[] nums = {1,2,3,5};
+        System.out.println(findLengthOfLCIS(nums));
     }
 
     //TODO
     public static int findLengthOfLCIS(int[] nums) {
-        return -1;
+        int returnIndex = 0;
+        if(nums.length == 0){
+            return returnIndex;
+        }
+        if(nums.length == 1){
+            return 1;
+        }
+        if(nums.length == 2 && nums[1] >= nums[0]){
+            return 2;
+        }
+        int start = 0;
+        int end = start + 1;
+        for(;end < nums.length;end++){
+            if(nums[end]>nums[end-1]){
+                if(end - start > returnIndex){
+                    returnIndex = end - start;
+                }
+            }else{
+                start = end;
+            }
+        }
+        return returnIndex+1;
     }
 }
