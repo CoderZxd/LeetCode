@@ -10,6 +10,7 @@ package com.zxd.test.leetcode;
  * @create 2019-03-08 23:14
  **/
 //        674. 最长连续递增序列
+//        https://leetcode-cn.com/problems/longest-continuous-increasing-subsequence/
 //        给定一个未经排序的整数数组，找到最长且连续的的递增序列。
 //
 //        示例 1:
@@ -36,9 +37,7 @@ public class FindLengthOfLCIS {
             return nums.length;
         }
         int returnIndex = 0;
-        int start = 0;
-        int end = start + 1;
-        for(;end < nums.length;end++){
+        for(int start = 0,end = start + 1;end < nums.length;end++){
             if(nums[end]>nums[end-1]){
                 if(end - start > returnIndex){
                     returnIndex = end - start;
