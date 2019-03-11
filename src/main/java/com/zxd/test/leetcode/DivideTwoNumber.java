@@ -30,13 +30,19 @@ package com.zxd.test.leetcode;
 //        假设我们的环境只能存储 32 位有符号整数，其数值范围是 [−2^31,  2^31 − 1]。本题中，如果除法结果溢出，则返回 2^31 − 1。
 public class DivideTwoNumber {
     public static void main(String[] args){
-        System.out.println(divide(10,3));
-        System.out.println(divide(7,-3));
+//        System.out.println(divide(10,3));
+//        System.out.println(divide(7,-3));
+        System.out.println(divide(-2147483648,-1));
     }
 
     public static int divide(int dividend, int divisor) {
         if(dividend == 0){
             return 0;
+        }
+        if(divisor == -1 && dividend == Integer.MIN_VALUE){
+            return Integer.MAX_VALUE;
+        }else if(divisor == 1 && dividend == Integer.MIN_VALUE){
+            return Integer.MIN_VALUE;
         }
         int abDividend = Math.abs(dividend);
         int abDivisor = Math.abs(divisor);
@@ -45,7 +51,7 @@ public class DivideTwoNumber {
             abDividend -= abDivisor;
             result++;
         }
-        if(dividend*divisor<0){
+        if((dividend>0 && divisor<0)||(dividend<0 && divisor>0)){
             result = -result;
         }
         return result;
