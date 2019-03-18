@@ -19,7 +19,7 @@ package com.zxd.test.leetcode;
 //        解释: 数字 1 出现在以下数字中: 1, 10, 11, 12, 13 。
 public class CountDigitOne {
     public static void main(String[] args){
-        System.out.println(countOne(3184191));
+        System.out.println(countOneByrRecursive(13));
     }
 
 
@@ -31,11 +31,11 @@ public class CountDigitOne {
      * creat_date: 2019-03-18
      * creat_time: 22:13
      **/
-    private static int countOne(int n){
+    private static int countOneByrRecursive (int n){
         if(n==0 || n==1){
             return n;
         }else{
-            return f(n) + countOne(n-1);
+            return f(n) + countOneByrRecursive(n-1);
         }
     }
 
