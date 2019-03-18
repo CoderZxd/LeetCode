@@ -19,7 +19,8 @@ package com.zxd.test.leetcode;
 //        解释: 数字 1 出现在以下数字中: 1, 10, 11, 12, 13 。
 public class CountDigitOne {
     public static void main(String[] args){
-        System.out.println(countOneByrRecursive(13));
+        System.out.println(countOneByrRecursive(20));
+        System.out.println(countOne(824883294));
     }
 
 
@@ -37,6 +38,34 @@ public class CountDigitOne {
         }else{
             return f(n) + countOneByrRecursive(n-1);
         }
+    }
+
+
+    /**
+     * class_name: countOne
+     * param: [n]
+     * describe: 非递归方式计算，提交提示“超出时间限制”(36 / 40 个通过测试用例)
+     * creat_user: CoderZZ
+     * creat_date: 2019-03-18
+     * creat_time: 22:44
+     **/
+    private static int countOne(int n){
+        int count = 0;
+        for(int i = 0;i<=n;i++){
+            int divisor = i; //除数
+            int remainder = 0; //余数
+            while(divisor > 0){
+                if(divisor == 1){
+                    count ++;
+                }
+                if(remainder == 1){
+                    count ++;
+                }
+                remainder = divisor % 10;
+                divisor = divisor / 10;
+            }
+        }
+        return count;
     }
 
     /**
@@ -63,4 +92,7 @@ public class CountDigitOne {
         }
         return count;
     }
+
+
+
 }
