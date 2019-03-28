@@ -14,8 +14,10 @@ import java.util.Map;
  **/
 public class ThreeNumbers {
     public static void main(String[] args){
-        int[] numbers = new int[]{1,2,3,4,5,6,7,8,9,10};
+        int[] numbers = new int[]{-5,-2,-1,0,1,3,4,6,8,9,10};
         getNumbers(numbers);
+        System.out.println("===================================");
+        nLogN(numbers);
     }
 
 
@@ -40,8 +42,35 @@ public class ThreeNumbers {
                 if(arrays[i]+arrays[j]>arrays[arrays.length-1]){
                     continue;
                 }
-                if(checkMap.containsKey(arrays[i]+arrays[j])){
+                if(checkMap.containsKey(arrays[i]+arrays[j]) && arrays[i] != (arrays[i]+arrays[j]) && (arrays[i]+arrays[j]) != arrays[j]) {
                     System.out.println(arrays[i]+" "+arrays[j]+" "+(arrays[i]+arrays[j]));
+                }
+            }
+        }
+    }
+
+    /**
+     * @FileName ThreeNumbers.java
+     * @ClassName ThreeNumbers
+     * @MethodName nLogN
+     * @Desc 时间复杂度为O(nlogn)
+     * @author zouxiaodong
+     * @date 2019/3/28 11:29
+     * @Params [arrays]
+     * @return void
+     */
+    private static void nLogN(int[] arrays){
+        for(int i=1;i<arrays.length;i++){
+            int start = 0;
+            int end = arrays.length - 1;
+            for(;start < i && end > start;){
+                if(arrays[i] == (arrays[start] + arrays[end]) && i != start && i != end){
+                    System.out.println(arrays[i]+" "+arrays[start]+" "+arrays[end]);
+                    start++;
+                }else if((arrays[start] + arrays[end]) > arrays[i]){
+                    end--;
+                }else{
+                    start++;
                 }
             }
         }
