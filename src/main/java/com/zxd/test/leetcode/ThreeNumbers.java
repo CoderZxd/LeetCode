@@ -61,9 +61,7 @@ public class ThreeNumbers {
      */
     private static void nLogN(int[] arrays){
         for(int i=1;i<arrays.length;i++){
-            int start = 0;
-            int end = arrays.length - 1;
-            for(;start < i && end > start;){
+            for(int start=0,end=arrays.length-1;start < i && end > start;){
                 if(arrays[i] == (arrays[start] + arrays[end]) && i != start && i != end){
                     System.out.println(arrays[i]+" "+arrays[start]+" "+arrays[end]);
                     start++;
