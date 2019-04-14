@@ -34,4 +34,24 @@ package com.zxd.test.leetcode;
  * }
  */
 public class RemoveNthFromEndSolution {
+    public static void main(String[] args){
+        ListNode l1 = new ListNode(5);
+        ListNode l2 = new ListNode(4);
+        ListNode l3 = new ListNode(3);
+        l1.next = l2;
+        l2.next = l3;
+        System.out.println(getLength(l1));
+    }
+
+    public static ListNode removeNthFromEnd(ListNode head, int n) {
+        return null;
+    }
+
+    public static int getLength(ListNode node){
+        if(node == null){
+            return 0;
+        }else{
+            return 1+ getLength(node.next);
+        }
+    }
 }
