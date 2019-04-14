@@ -24,7 +24,7 @@ package com.zxd.test.leetcode;
 //
 //        进阶：
 //
-//        你能尝试使用一趟扫描实现吗？
+//        你能尝试使用一趟扫描实现吗？(双指针)
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -41,17 +41,58 @@ public class RemoveNthFromEndSolution {
         l1.next = l2;
         l2.next = l3;
         System.out.println(getLength(l1));
+        System.out.println(getListNodeLength(l1));
+        removeNthFromEnd(l1,0);
     }
 
     public static ListNode removeNthFromEnd(ListNode head, int n) {
-        return null;
+        ListNode left = head;
+        ListNode right = head;
+        for (int i = 0; i < n; i++) {
+            right = right.next;
+        }
+        if (right == null) {
+            head = head.next;
+            return head;
+        }
+        while (right.next != null) {
+            left = left.next;
+            right = right.next;
+        }
+        left.next = left.next.next;
+        return head;
     }
 
+    /**
+     * class_name: getLength
+     * param: [node]
+     * describe: 递归计算链表长度
+     * creat_user: CoderZZ
+     * creat_date: 2019-04-14
+     * creat_time: 23:17
+     **/
     public static int getLength(ListNode node){
         if(node == null){
             return 0;
         }else{
             return 1+ getLength(node.next);
         }
+    }
+
+    /**
+     * class_name: getListNodeLength
+     * param: [node]
+     * describe: 非递归计算链表长度
+     * creat_user: CoderZZ
+     * creat_date: 2019-04-14
+     * creat_time: 23:19
+     **/
+    public static int getListNodeLength(ListNode node){
+        int length = 0;
+        while (node != null){
+            length++;
+            node = node.next;
+        }
+        return length;
     }
 }
