@@ -291,7 +291,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="ignore_missing_gitignore" value="true" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../logagent-logback" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tes-framework" />
+>>>>>>> 20ccb29ecee1aa008ff3cdda1d45c0241f984088
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
