@@ -32,7 +32,27 @@ public class PowerOfFourTest {
         }
     }
 
+    public static boolean isPowerOfFour2(int num){
+        while ( (num != 0)  && (num % 4 == 0)) {
+            num = num >>> 2;
+        }
+        return num == 1;
+    }
+
+    public static boolean isPowerOfFour3(int num){
+        if(num < 0){
+            return false;
+        }
+        if((num & (num -1)) != 0){
+            return false;
+        }
+        if((num & 0x55555555) == num){
+            return true;
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
-        System.out.println(PowerOfFourTest.isPowerOfFour(16));
+        System.out.println(PowerOfFourTest.isPowerOfFour3(63));
     }
 }
