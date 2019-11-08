@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7af4176-39b1-4cb2-a536-6327e4f0e7a8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/LengthOfLongestSubstring_3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/MedianSortedArrays_4.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -35,11 +35,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/LengthOfLongestSubstring_3.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
+            <state relative-caret-position="279">
               <caret line="122" column="63" selection-start-line="122" selection-start-column="63" selection-end-line="122" selection-end-column="63" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/MedianSortedArrays.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/MedianSortedArrays_4.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="521">
+              <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -79,6 +100,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/TwoSum_1.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/AddTwoNumbers_2.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/LengthOfLongestSubstring_3.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/MedianSortedArrays_4.java" />
       </list>
     </option>
   </component>
@@ -151,16 +173,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="leetcode" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
-              <item name="TwoIntegerLinkListNodeAdd.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
             <path>
               <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
@@ -239,9 +251,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.LengthOfLongestSubstring_3">
-    <configuration name="FourPowerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.FourPowerTest" />
+  <component name="RunManager" selected="Application.MedianSortedArrays_4">
+    <configuration name="LengthOfLongestSubstring_3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.LengthOfLongestSubstring_3" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
@@ -253,8 +265,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LengthOfLongestSubstring_3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.LengthOfLongestSubstring_3" />
+    <configuration name="MedianSortedArrays_4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.MedianSortedArrays_4" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
@@ -307,19 +319,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.FourPowerTest" />
       <item itemvalue="Application.PowerOfFourTest" />
       <item itemvalue="Application.Test " />
       <item itemvalue="Application.ThreadPoolTest" />
       <item itemvalue="Application.LengthOfLongestSubstring_3" />
+      <item itemvalue="Application.MedianSortedArrays_4" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MedianSortedArrays_4" />
         <item itemvalue="Application.LengthOfLongestSubstring_3" />
         <item itemvalue="Application.ThreadPoolTest" />
         <item itemvalue="Application.Test " />
         <item itemvalue="Application.PowerOfFourTest" />
-        <item itemvalue="Application.FourPowerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -352,12 +364,12 @@
       <workItem from="1571152814475" duration="36000" />
       <workItem from="1571152860908" duration="4000" />
       <workItem from="1572760284421" duration="1295000" />
-      <workItem from="1573180118152" duration="16359000" />
+      <workItem from="1573180118152" duration="20239000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46931000" />
+    <option name="totallyTimeSpent" value="50811000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -372,8 +384,8 @@
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32905984" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2542735" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.19551282" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2542735" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.19551282" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -381,7 +393,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.37713677" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32905984" />
       <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="right" id="SciView" />
@@ -520,8 +532,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/LengthOfLongestSubstring_3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
+        <state relative-caret-position="279">
           <caret line="122" column="63" selection-start-line="122" selection-start-column="63" selection-end-line="122" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/MedianSortedArrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/MedianSortedArrays_4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
