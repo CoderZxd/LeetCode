@@ -27,8 +27,14 @@ public class MaxArea11 {
 
 	public static void main(String[] args) {
 		System.out.println(maxArea(new int[]{1,8}));
+		System.out.println(maxArea_2(new int[]{1,8,6,2,5,4,8,3,7}));
 	}
 
+	/**
+	 * 解法一
+	 * @param height
+	 * @return
+	 */
 	public static int maxArea(int[] height) {
 		int result = 0;
 		int len = height.length;
@@ -37,6 +43,29 @@ public class MaxArea11 {
 				if(Math.min(height[i],height[j])*(j-i)>result){
 					result = Math.min(height[i],height[j])*(j-i);
 				}
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * 解法二:双指针法
+	 * @param height
+	 * @return
+	 */
+	public static int maxArea_2(int[] height){
+		int result = 0;
+		int len = height.length;
+		int start = 0;
+		int end = len - 1;
+		while (start<end){
+			if(Math.min(height[start],height[end])*(end-start)>result){
+				result = Math.min(height[start],height[end])*(end-start);
+			}
+			if(height[start]<=height[end]){
+				start++;
+			}else{
+				end--;
 			}
 		}
 		return result;
