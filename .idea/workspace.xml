@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7af4176-39b1-4cb2-a536-6327e4f0e7a8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zxd/test/leetcode/ConvertStringToZ.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zxd/test/leetcode/LongestPalindrome_5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zxd/test/leetcode/LongestPalindrome_5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/LeetCode.kotlin_module" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +66,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/ConvertStringToZ_6.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="359">
@@ -75,6 +74,15 @@
               <folding>
                 <element signature="e#1176#1190#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/MaxArea11.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="335">
+              <caret line="32" selection-start-line="32" selection-end-line="41" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -101,6 +109,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/MedianSortedArrays_4.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/MaxArea11.java" />
       </list>
     </option>
   </component>
@@ -111,7 +120,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1057" />
@@ -122,6 +131,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -178,7 +188,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -212,7 +221,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ConvertStringToZ_6">
+  <component name="RunManager" selected="Application.MaxArea11">
     <configuration name="ConvertStringToZ_6" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.ConvertStringToZ_6" />
       <module name="LeetCode" />
@@ -239,8 +248,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MedianSortedArrays_4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.MedianSortedArrays_4" />
+    <configuration name="MaxArea11" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.MaxArea11" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
@@ -252,13 +261,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test " type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.zxd.test.java.Test" />
+    <configuration name="MedianSortedArrays_4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.MedianSortedArrays_4" />
       <module name="LeetCode" />
-      <option name="VM_PARAMETERS" value="-XX:+PrintCompilation -XX:+PrintGCDetails -XX:+PrintGCDateStamps" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.zxd.test.java.*" />
+          <option name="PATTERN" value="com.zxd.test.leetcode.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -280,19 +288,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Test " />
       <item itemvalue="Application.ThreadPoolTest" />
       <item itemvalue="Application.LengthOfLongestSubstring_3" />
       <item itemvalue="Application.MedianSortedArrays_4" />
       <item itemvalue="Application.ConvertStringToZ_6" />
+      <item itemvalue="Application.MaxArea11" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MaxArea11" />
         <item itemvalue="Application.ConvertStringToZ_6" />
         <item itemvalue="Application.MedianSortedArrays_4" />
         <item itemvalue="Application.LengthOfLongestSubstring_3" />
         <item itemvalue="Application.ThreadPoolTest" />
-        <item itemvalue="Application.Test " />
       </list>
     </recent_temporary>
   </component>
@@ -329,17 +337,18 @@
       <workItem from="1573226799460" duration="686000" />
       <workItem from="1573633912671" duration="628000" />
       <workItem from="1573696236640" duration="593000" />
+      <workItem from="1587432076810" duration="692000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4917000" />
+    <option name="totallyTimeSpent" value="5609000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12726304" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12832801" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -348,7 +357,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32905984" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38141027" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2820513" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.19551282" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -479,6 +488,13 @@
           <folding>
             <element signature="e#1176#1190#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/MaxArea11.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="32" selection-start-line="32" selection-end-line="41" selection-end-column="22" />
         </state>
       </provider>
     </entry>
