@@ -39,8 +39,13 @@ public class MergeKLists23 {
 		ListNode l3 = new ListNode(2);
 		ListNode l3_2 = new ListNode(6);
 		l3.next = l3_2;
-		ListNode[] lists = new ListNode[]{l1,l2,l3};
-		System.out.println(mergeKLists(lists));
+		ListNode l4 = new ListNode(0);
+		ListNode l4_2 = new ListNode(2);
+		l4.next = l4_2;
+//		ListNode[] lists = new ListNode[]{l1,l2,l3};
+		ListNode[] lists = new ListNode[]{l1,l4};
+//		System.out.println(mergeKLists(lists));
+		System.out.println(mergeKLists_2(lists));
 	}
 
 	/**
@@ -67,7 +72,40 @@ public class MergeKLists23 {
 		}
 		return resultNode.next;
 	}
+
+	/**
+	 * 逐一比较
+	 * @param lists
+	 * @return
+	 */
+	public static ListNode mergeKLists_2(ListNode[] lists) {
+		ListNode resultNode = new ListNode(0);
+		ListNode tempResult = resultNode;
+		boolean isAllNull;
+		int minIndex = -1;
+		int len = lists.length;
+		do{
+			ListNode temp = null;
+			isAllNull = true;
+			for(int i=0;i<len;i++){
+				if(lists[i] != null){
+					if(temp == null || temp.val > lists[i].val){
+						minIndex = i;
+						temp = lists[i];
+					}
+					isAllNull = false;
+				}
+			}
+			if(minIndex != -1 && lists[minIndex] != null){
+				tempResult.next = new ListNode(lists[minIndex].val);
+				tempResult = tempResult.next;
+				lists[minIndex] = lists[minIndex].next;
+			}
+		}while (!isAllNull);
+		return resultNode.next;
+	}
 }
+
 
 //class ListNode {
 //	int val;
