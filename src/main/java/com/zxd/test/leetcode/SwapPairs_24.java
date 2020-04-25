@@ -41,7 +41,9 @@ public class SwapPairs_24 {
         l1_3.next = l1_4;
         l1_2.next = l1_3;
         l1.next = l1_2;
-        System.out.println(swapPairs(l1));
+//        System.out.println(swapPairs_2(l1));
+        ListNode result = swapPairs(l1);
+        System.out.println(result);
     }
 
     /**
@@ -49,7 +51,7 @@ public class SwapPairs_24 {
      * @param head
      * @return
      */
-    public static ListNode swapPairs(ListNode head) {
+    public static ListNode swapPairs_2(ListNode head) {
         //如果为空或者只有一个元素，直接返回
         if(head == null || head.next == null){
             return head;
@@ -81,5 +83,28 @@ public class SwapPairs_24 {
         }
         return resultNode;
     }
+
+    /**
+     * 递归方法
+     * @param head
+     * @return
+     */
+    public static ListNode swapPairs(ListNode head) {
+        //如果为空或者只有一个元素，直接返回
+        if(head == null || head.next == null){
+            return head;
+        }
+        ListNode firstNode = head;
+        ListNode secondNode = head.next;
+        // firstNode 连接后面交换完成的子链表
+        firstNode.next = swapPairs(secondNode.next);
+        //secondNode 连接 firstNode
+        secondNode.next = firstNode;
+        // 返回值：返回交换完成的子链表
+        // secondNode 变成了头结点
+        return secondNode;
+    }
+
+
 
 }
