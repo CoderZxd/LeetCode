@@ -68,10 +68,12 @@ public class ReverseKGroup_25 {
 	 * @return
 	 */
 	public static ListNode reverseKGroup(ListNode head, int k) {
+		//如果head节点数小于2个或者k==1,返回原节点
 		if(head == null || head.next == null || k == 1){
 			return head;
 		}
 		ListNode tempnode = head;
+		//按照k长度对head进行分割,key为长度,value为分割后的node
 		List<Map<Integer,ListNode>> nodesList = new ArrayList<>(10);
 		while (tempnode != null){
 			ListNode ln = new ListNode(0);
@@ -89,41 +91,75 @@ public class ReverseKGroup_25 {
 			tempMap.put(nums,ln.next);
 			nodesList.add(tempMap);
 		}
-		List<Map<ListNode,ListNode>> result = new ArrayList<>(10);
-		for(Map<Integer,ListNode> ele:nodesList){
-			Set<Integer> keys = ele.keySet();
+		//对nodesList的value进行反转，并将key设置为反转前的start节点，因为反转后start节点就变为了最后节点，需要将next指向下一个节点，保证链路正常
+		//nodesList结果类似于(以1->2->3->4->5->6->7->8为例子):[{3,1->2->3->null},{3,4->5->6->null},{2,7->8->null}]
+		//resultList存放nodesList中各个node反转后的结果，key为每个元素node的头节点,[{3,1->2->3->null},{3,4->5->6->null},{2,7->8->null}]结果反转后:
+		//[{1->null,3->2->1->null},{4->null,6->5->4->null},{7->8->null,7->8->null}]
+		List<Map<ListNode,ListNode>> resultList = new ArrayList<>(10);
+		for(Map<Integer,ListNode> eleNodeMap:nodesList){
+			Set<Integer> keys = eleNodeMap.keySet();
+			//其实只有一个元素
 			for(Integer key:keys){
+				//如果节点长度==k才翻转，否则保持不变
 				if(key==k){
-					ListNode start = ele.get(key);
+					//反转前的节点,即start节点(例如节点:1->2->3->null)
+					ListNode start = eleNodeMap.get(key);
 					ListNode next = start.next;
+					//start next
+					// ↓      ↓
+					// 1----> 2----> 3---->null
+					//交换start与next节点,此时next节点在start节点之前，即next.next == start
 					start.next = next.next;
 					next.next = start;
+					//next  start
+					// ↓      ↓
+					// 2----> 1----> 3---->null
+					//如果start节点不为null
 					while (start != null){
+						//将临时节点temp指向start.next
+						//next  start   temp
+						// ↓      ↓      ↓
+						// 2----> 1----> 3---->null
 						ListNode temp = start.next;
+						//如果temp不为null,说明可交换的节点
 						if(temp == null){
 							break;
 						}
+						//将start的next指向temp的next,即指向start.next节点的next
+						//next  start          temp
+						// ↓      ↓             ↓
+						// 2----> 1---->null    3->null
 						start.next = temp.next;
+						//将temp的next指向next,即完成start.next指向next节点
+						//temp  next  start
+						// ↓     ↓     ↓
+						// 3---->2---->1---->null
 						temp.next = next;
+						//将反转后的node赋值给next,便于存入下面的map中
 						next = temp;
 					}
 					Map<ListNode,ListNode> tempMap = new HashMap<>(2);
+					//将start节点与反转后的node存入map
 					tempMap.put(start,next);
-					result.add(tempMap);
+					resultList.add(tempMap);
 				}else{
+					//如果剩余长度不够k,则不需要反转
 					Map<ListNode,ListNode> tempMap = new HashMap<>(2);
-					tempMap.put(ele.get(key),ele.get(key));
-					result.add(tempMap);
+					tempMap.put(eleNodeMap.get(key),eleNodeMap.get(key));
+					resultList.add(tempMap);
 				}
 			}
 		}
 		List<ListNode> startNodes = new ArrayList<>(10);
 		List<ListNode> resultNodes = new ArrayList<>(10);
-		for(Map<ListNode,ListNode> eleMap:result){
+		for(Map<ListNode,ListNode> eleMap:resultList){
+			//startNodes中就是存的反转后的node的最后一个节点，需要将给节点的next指向下一个元素
 			startNodes.addAll(eleMap.keySet());
+			//resultNodes就是反转后的各个node
 			resultNodes.addAll(eleMap.values());
 		}
 		for(int i=0;i<startNodes.size()-1;i++){
+			//将startNodes的第i个节点的next指向resultNodes的第i+1节点，最后即为反转后的最后结果
 			startNodes.get(i).next = resultNodes.get(i+1);
 		}
 		return resultNodes.get(0);
