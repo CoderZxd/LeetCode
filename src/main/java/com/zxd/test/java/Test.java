@@ -17,5 +17,19 @@ public class Test {
             list1.add(i);
         }
         System.out.println("耗时:"+(System.currentTimeMillis() - start1));
+        label:
+        for(int i=0;i<100;i++){
+            System.out.println("i====>"+i);
+            for(int j=0;j<i;j++){
+                System.out.println("j======>"+j);
+                for(int k=0;k<j;k++){
+                    System.out.println("k======>"+k);
+                    if(k>=5){
+                        break label;
+                    }
+                }
+            }
+        }
+        System.out.println("=================>Done");
     }
 }
