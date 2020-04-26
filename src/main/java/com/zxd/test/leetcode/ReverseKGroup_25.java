@@ -68,7 +68,7 @@ public class ReverseKGroup_25 {
 	 * @return
 	 */
 	public static ListNode reverseKGroup(ListNode head, int k) {
-		if(head == null || head.next == null){
+		if(head == null || head.next == null || k == 1){
 			return head;
 		}
 		ListNode tempnode = head;
