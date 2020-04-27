@@ -29,15 +29,56 @@ public class LongestValidParentheses32 {
 	public static void main(String[] args) {
 		System.out.println(longestValidParentheses("()(()"));
 //		System.out.println(longestValidParentheses_1("))))())()()(()"));
-//		System.out.println(longestValidParentheses_1(new StringBuilder("()(()").reverse().toString()));
 	}
 
 	/**
-	 * 正则表达式替换法()替换成1,(1),替换成2,(3)替换成4,以此类推
+	 * 通过堆栈比较未匹配的字符，并记录其坐标
 	 * @param s
 	 * @return
 	 */
 	public static int longestValidParentheses(String s) {
+		String[] charArray = s.split("");
+		Stack<Integer> indexStack = new Stack<>();
+		for(int i=0;i< charArray.length;i++){
+			if("(".equals(charArray[i])){
+				indexStack.push(i);
+			}
+			if(")".equals(charArray[i])){
+				if(!indexStack.empty() && charArray[indexStack.peek()].equals("(")){
+					indexStack.pop();
+				}else{
+					indexStack.push(i);
+				}
+			}
+		}
+		if(indexStack.empty()){
+			return s.length();
+		}
+		int[] tempArray = new int[s.length()];
+		while (!indexStack.empty()){
+			tempArray[indexStack.pop()] = 1;
+		}
+		int result = 0;
+		int len = 0;
+		for(int i=0;i<tempArray.length;i++){
+			if(tempArray[i] == 1){
+				len = 0;
+				continue;
+			}
+			len++;
+			result = Math.max(result,len);
+		}
+		return result;
+	}
+
+	/**
+	 * 正则表达式替换法()替换成1,(1),替换成2,(3)替换成4,以此类推
+	 * 解决不了1a(1a的问题，太麻烦
+	 * @param s
+	 * @return
+	 */
+	@Deprecated
+	public static int longestValidParentheses_1(String s) {
 		int result = 0;
 		int loop = 1;
 		String replace = s.replaceAll("\\(\\)",loop+"a");
@@ -65,61 +106,5 @@ public class LongestValidParentheses32 {
 			result += longestValidParentheses(afterReplace);
 		}
 		return result;
-	}
-
-
-
-	/**
-	 * 判断有效括号长度(不符合子串长度)
-	 * @param s
-	 * @return
-	 */
-	public static int longestValidParentheses_1(String s) {
-		return Math.min(getNums(s),getNumsByReverse(new StringBuilder(s).reverse().toString()));
-	}
-
-	public static int getNums(String s){
-		String[] charArray = s.split("");
-		Stack<String> charStack = new Stack<>();
-		int result = 0;
-		int maxResult = 0;
-		for(String ele:charArray){
-			if("(".equals(ele)){
-				charStack.push(ele);
-			}
-			if(")".equals(ele) && !charStack.empty()){
-				String stack = charStack.pop();
-				if(stack.equals("(")){
-					result += 2;
-				}
-			}else if(")".equals(ele) && charStack.empty()){
-				maxResult = Math.max(maxResult,result);
-				result = 0;
-			}
-		}
-		return Math.max(maxResult,result);
-	}
-
-	public static int getNumsByReverse(String s){
-		String[] charArray = s.split("");
-		Stack<String> charStack = new Stack<>();
-		int result = 0;
-		int maxResult = 0;
-		for(String ele:charArray){
-			if(")".equals(ele)){
-				charStack.push(ele);
-			}
-			if("(".equals(ele) && !charStack.empty()){
-				String stack = charStack.pop();
-				if(stack.equals(")")){
-					result += 2;
-				}
-			}else if("(".equals(ele) && charStack.empty()){
-				maxResult = Math.max(maxResult,result);
-				result = 0;
-				charStack.clear();
-			}
-		}
-		return Math.max(maxResult,result);
 	}
 }
