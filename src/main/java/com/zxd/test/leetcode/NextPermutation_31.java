@@ -42,8 +42,10 @@ public class NextPermutation_31 {
 						swap = true;
 						if(pre>maxPre){
 							maxPre=pre;
+							endIndex=end;
+						}else if(pre == maxPre && nums[endIndex] > nums[end]){
+							endIndex = end;
 						}
-						endIndex = end;
 					}
 				}
 			}
