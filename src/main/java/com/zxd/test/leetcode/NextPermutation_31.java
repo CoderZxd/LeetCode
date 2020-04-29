@@ -24,32 +24,40 @@ package com.zxd.test.leetcode;
 public class NextPermutation_31 {
 
 	public static void main(String[] args) {
-		nextPermutation(new int[]{4,2,0,2,3,2,0});
+//		nextPermutation(new int[]{4,2,0,2,3,2,0});
+//		nextPermutation(new int[]{5,4,7,5,3,2});
+//		nextPermutation(new int[]{1,3,2});
+		nextPermutation(new int[]{2,3,1});
 	}
 
 	public static void nextPermutation(int[] nums) {
 		if(nums != null && nums.length > 1){
 			int len = nums.length;
 			boolean swap = false;
-			label:
+			int maxPre = 0;
+			int endIndex = len-1;
 			for(int end=len-1;end >=0;end--){
 				for(int pre=end-1;pre>=0;pre--){
-					if(nums[end]>nums[pre]){
+					if(nums[pre]<nums[end]){
 						swap = true;
-						int temp = nums[end];
-						nums[end] = nums[pre];
-						nums[pre]=temp;
-						//从pre+1开始的元素需要从小到大排序，冒泡排序
-						for(int i=pre+1;i<len;i++){
-							for(int j=pre+1;j<len-1;j++){
-								if(nums[j+1]<nums[j]){
-									int tempNum = nums[j+1];
-									nums[j+1]=nums[j];
-									nums[j]=tempNum;
-								}
-							}
+						if(pre>maxPre){
+							maxPre=pre;
 						}
-						break label;
+						endIndex = end;
+					}
+				}
+			}
+			System.out.println(maxPre+" "+endIndex);
+			int tempVal = nums[endIndex];
+			nums[endIndex] = nums[maxPre];
+			nums[maxPre]=tempVal;
+			//从pre+1开始的元素需要从小到大排序，冒泡排序
+			for(int i=maxPre+1;i<len;i++){
+				for(int j=maxPre+1;j<len-1;j++){
+					if(nums[j+1]<nums[j]){
+						int tempNum = nums[j+1];
+						nums[j+1]=nums[j];
+						nums[j]=tempNum;
 					}
 				}
 			}
