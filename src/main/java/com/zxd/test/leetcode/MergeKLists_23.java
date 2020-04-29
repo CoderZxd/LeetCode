@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * @Title: MergeKLists23
+ * @Title: MergeKLists_23
  * @Description: https://leetcode-cn.com/problems/merge-k-sorted-lists/
  * @Author xiaodong.zou
  * @Date 2020/4/22 9:13
@@ -23,7 +23,7 @@ import java.util.List;
 //		2->6
 //		]
 //		输出: 1->1->2->3->4->4->5->6
-public class MergeKLists23 {
+public class MergeKLists_23 {
 
 	public static void main(String[] args) {
 		ListNode l1 = new ListNode(1);

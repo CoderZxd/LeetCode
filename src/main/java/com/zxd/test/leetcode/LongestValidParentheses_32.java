@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 
 
 /**
- * @Title: LongestValidParentheses32
+ * @Title: LongestValidParentheses_32
  * @Description: https://leetcode-cn.com/problems/longest-valid-parentheses/
  * @Author xiaodong.zou
  * @Date 2020/4/26 23:13
@@ -24,7 +24,7 @@ import java.util.regex.Pattern;
 //		输入: ")()())"
 //		输出: 4
 //		解释: 最长有效括号子串为 "()()"
-public class LongestValidParentheses32 {
+public class LongestValidParentheses_32 {
 
 	public static void main(String[] args) {
 		System.out.println(longestValidParentheses("()(()"));

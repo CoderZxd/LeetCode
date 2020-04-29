@@ -1,7 +1,7 @@
 package com.zxd.test.leetcode;
 
 /**
- * @Title: MaxArea11
+ * @Title: MaxArea_11
  * @Description: https://leetcode-cn.com/problems/container-with-most-water/
  * @Author xiaodong.zou
  * @Date 2020/4/21 9:24
@@ -23,7 +23,7 @@ package com.zxd.test.leetcode;
 //
 //		输入：[1,8,6,2,5,4,8,3,7]
 //		输出：49
-public class MaxArea11 {
+public class MaxArea_11 {
 
 	public static void main(String[] args) {
 		System.out.println(maxArea(new int[]{1,8}));
