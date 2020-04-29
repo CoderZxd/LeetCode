@@ -19,6 +19,8 @@ package com.zxd.test.leetcode;
 //		1,1,5 → 1,5,1
 //		1,3,2 → 2,1,3
 //		2,3,1 → 3,1,2
+//		5,4,7,5,3,2 → 5,5,2,3,4,7
+//		5,5,7,4,3,2 → 5,5,2,3,4,7
 public class NextPermutation_31 {
 
 	public static void main(String[] args) {
@@ -37,8 +39,8 @@ public class NextPermutation_31 {
 						int temp = nums[end];
 						nums[end] = nums[pre];
 						nums[pre]=temp;
-						//从pre+1开始的元素需要从小到大排序(从end位到pre+1位置的元素两两交换,即将end元素放到pre+1位置,pre+1之后的元素逐一后移)
-						for(int i=len-1;i>pre+1;i--){
+						//从pre+1开始的元素需要从小到大排序
+						for(int i=pre+1;i<len;i++){
 							int swapNum = nums[i];
 							nums[i]=nums[i-1];
 							nums[i-1]=swapNum;
