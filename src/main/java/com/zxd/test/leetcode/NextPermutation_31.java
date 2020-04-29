@@ -18,10 +18,11 @@ package com.zxd.test.leetcode;
 //		3,2,1 → 1,2,3
 //		1,1,5 → 1,5,1
 //		1,3,2 → 2,1,3
+//		2,3,1 → 3,1,2
 public class NextPermutation_31 {
 
 	public static void main(String[] args) {
-		nextPermutation(new int[]{1,3,2});
+		nextPermutation(new int[]{2,3,1});
 	}
 
 	public static void nextPermutation(int[] nums) {
@@ -33,11 +34,14 @@ public class NextPermutation_31 {
 				for(int pre=end-1;pre>=0;pre--){
 					if(nums[end]>nums[pre]){
 						swap = true;
-						while (end > pre){
-							int temp = nums[end-1];
-							nums[end-1] = nums[end];
-							nums[end] = temp;
-							end--;
+						int temp = nums[end];
+						nums[end] = nums[pre];
+						nums[pre]=temp;
+						//从pre+1开始的元素需要从小到大排序(从end位到pre+1位置的元素两两交换,即将end元素放到pre+1位置,pre+1之后的元素逐一后移)
+						for(int i=len-1;i>pre+1;i--){
+							int swapNum = nums[i];
+							nums[i]=nums[i-1];
+							nums[i-1]=swapNum;
 						}
 						break label;
 					}
