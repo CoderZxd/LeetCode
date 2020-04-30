@@ -30,28 +30,46 @@ public class NextPermutation_31 {
 		nextPermutation(new int[]{2,3,1});
 	}
 
+	/**
+	 * 找出距离尾部最近的需要交换的位置，如果有相同的最近的交换位置，则需要判断需要交换位置对应的两个数，取较小的对应数字的位置(因为情况1与情况2，pre相同,需要取nums[end1]<nums[end2]的条件下的end1值),例如:
+	 *  4,2,0,2,3,2,0
+	 *      ↑     ↑
+	 *情况1 pre   end
+	 *      ↑   ↑
+	 *情况2 pre end
+	 *这种情况应该取情况1
+	 * @param nums
+	 */
 	public static void nextPermutation(int[] nums) {
+		//如果nums长度大于1
 		if(nums != null && nums.length > 1){
 			int len = nums.length;
+			//是否需要数据交换，如果需要数据交换，需要做数据交换后的重排序处理，否则就需要把数组进行原地倒排
 			boolean swap = false;
+			//最靠近尾部的需要交换的位置，只有这样，才是下一个更大的排列
 			int maxPre = 0;
+			//需要与maxpre进行数据互换位置的数的位置
 			int endIndex = -1;
+			//双循环找出最大的maxpre和数据最小的endIndex
 			for(int end=len-1;end >=0;end--){
 				for(int pre=end-1;pre>=0;pre--){
+					//如果pre<end 就代表存在更大的排列,swap就可以为true
 					if(nums[pre]<nums[end]){
 						swap = true;
 						if(endIndex < 0){
 							endIndex = end;
 						}
+						//如果当前的pre>maxPre,说明存在更靠近尾部的下一个更大排列
 						if(pre>maxPre){
 							maxPre=pre;
 							endIndex=end;
-						}else if(pre == maxPre && nums[endIndex] > nums[end]){
+						}else if(pre == maxPre && nums[endIndex] > nums[end]){ //如果当前pre与maxPre相同,并且end小于endIndex，说明这种情况比endIndex更小，更接近下一个更大排列，所以需要将endIndex值更新为当前的end
 							endIndex = end;
 						}
 					}
 				}
 			}
+			//如果存在更大的排列，则交换maxPre与endIdex的值,然后maxPre+1到len-1的元素进行有小到大排序
 			if(swap){
 				System.out.println(maxPre+" "+endIndex);
 				int tempVal = nums[endIndex];
