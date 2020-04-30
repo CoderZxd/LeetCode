@@ -35,11 +35,14 @@ public class NextPermutation_31 {
 			int len = nums.length;
 			boolean swap = false;
 			int maxPre = 0;
-			int endIndex = len-1;
+			int endIndex = -1;
 			for(int end=len-1;end >=0;end--){
 				for(int pre=end-1;pre>=0;pre--){
 					if(nums[pre]<nums[end]){
 						swap = true;
+						if(endIndex < 0){
+							endIndex = end;
+						}
 						if(pre>maxPre){
 							maxPre=pre;
 							endIndex=end;
@@ -49,17 +52,19 @@ public class NextPermutation_31 {
 					}
 				}
 			}
-			System.out.println(maxPre+" "+endIndex);
-			int tempVal = nums[endIndex];
-			nums[endIndex] = nums[maxPre];
-			nums[maxPre]=tempVal;
-			//从pre+1开始的元素需要从小到大排序，冒泡排序
-			for(int i=maxPre+1;i<len;i++){
-				for(int j=maxPre+1;j<len-1;j++){
-					if(nums[j+1]<nums[j]){
-						int tempNum = nums[j+1];
-						nums[j+1]=nums[j];
-						nums[j]=tempNum;
+			if(swap){
+				System.out.println(maxPre+" "+endIndex);
+				int tempVal = nums[endIndex];
+				nums[endIndex] = nums[maxPre];
+				nums[maxPre]=tempVal;
+				//从pre+1开始的元素需要从小到大排序，冒泡排序
+				for(int i=maxPre+1;i<len;i++){
+					for(int j=maxPre+1;j<len-1;j++){
+						if(nums[j+1]<nums[j]){
+							int tempNum = nums[j+1];
+							nums[j+1]=nums[j];
+							nums[j]=tempNum;
+						}
 					}
 				}
 			}
