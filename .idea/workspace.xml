@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7af4176-39b1-4cb2-a536-6327e4f0e7a8" name="Default Changelist" comment="" />
+    <list default="true" id="b7af4176-39b1-4cb2-a536-6327e4f0e7a8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zxd/test/leetcode/MaxArea11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zxd/test/leetcode/MergeKLists23.class" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,79 +18,23 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/LengthOfLongestSubstring_3.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/NextPermutation_31.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1904">
-              <caret line="122" column="63" selection-start-line="122" selection-start-column="63" selection-end-line="122" selection-end-column="63" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/MedianSortedArrays.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/MedianSortedArrays_4.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1488">
-              <caret line="94" column="101" selection-start-line="94" selection-start-column="101" selection-end-line="94" selection-end-column="101" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/ConvertStringToZ_6.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="736">
-              <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/MaxArea11.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="51" column="15" selection-start-line="51" selection-start-column="15" selection-end-line="51" selection-end-column="15" />
+            <state relative-caret-position="857">
+              <caret line="89" selection-start-line="89" selection-end-line="89" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/ReverseKGroup_25.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/CombinationSum_39.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
-              <caret line="540" column="12" selection-start-line="540" selection-start-column="12" selection-end-line="540" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/SwapPairs_24.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="32" selection-start-line="32" selection-end-line="42" selection-end-column="23" />
+            <state relative-caret-position="475">
+              <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+              <folding>
+                <element signature="e#865#866#0" expanded="true" />
+                <element signature="e#891#892#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -118,6 +66,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/MergeKLists23.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zxd/test/java/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/ReverseKGroup_25.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/NextPermutation_31.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/CombinationSum_39.java" />
       </list>
     </option>
   </component>
@@ -141,7 +91,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -152,6 +101,11 @@
             <path>
               <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
               <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -174,6 +128,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
@@ -184,15 +147,11 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="leetcode" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -226,7 +185,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ReverseKGroup_25">
+  <component name="RunManager" selected="Application.NextPermutation_31">
     <configuration name="ConvertStringToZ_6" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.ConvertStringToZ_6" />
       <module name="LeetCode" />
@@ -253,8 +212,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReverseKGroup_25" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.ReverseKGroup_25" />
+    <configuration name="NextPermutation_31" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.NextPermutation_31" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
@@ -266,8 +225,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SwapPairs_24" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.SwapPairs_24" />
+    <configuration name="ReverseKGroup_25" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.ReverseKGroup_25" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
@@ -293,14 +252,15 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.SwapPairs_24" />
       <item itemvalue="Application.ConvertStringToZ_6" />
       <item itemvalue="Application.MergeKLists23" />
       <item itemvalue="Application.Test (1)" />
       <item itemvalue="Application.ReverseKGroup_25" />
+      <item itemvalue="Application.NextPermutation_31" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.NextPermutation_31" />
         <item itemvalue="Application.ReverseKGroup_25" />
         <item itemvalue="Application.Test (1)" />
         <item itemvalue="Application.MergeKLists23" />
@@ -343,41 +303,43 @@
       <workItem from="1573696236640" duration="593000" />
       <workItem from="1587432076810" duration="1788000" />
       <workItem from="1587517931915" duration="17031000" />
+      <workItem from="1588776037910" duration="171000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23906000" />
+    <option name="totallyTimeSpent" value="30491000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1773163" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20682302" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32905984" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.39751554" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.19551282" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27682403" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.29291844" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.35897437" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.22103004" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" sideWeight="0.49924126" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="Maven" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Coverage" order="7" sideWeight="0.5007587" side_tool="true" weight="0.25" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,14 +416,41 @@
           <properties />
           <option name="timeStamp" value="16" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/NextPermutation_31.java</url>
+          <line>53</line>
+          <properties />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/NextPermutation_31.java</url>
+          <line>71</line>
+          <properties />
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/NextPermutation_31.java</url>
+          <line>89</line>
+          <properties />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/LeetCode$NextPermutation_31.ic" NAME="NextPermutation_31 Coverage Results" MODIFIED="1588169550514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.zxd.test.leetcode.*</FILTER>
+    </SUITE>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="540" column="12" selection-start-line="540" selection-start-column="12" selection-end-line="540" selection-end-column="12" />
+        <state relative-caret-position="396">
+          <caret line="136" column="32" selection-start-line="136" selection-start-column="32" selection-end-line="136" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -497,11 +486,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/MedianSortedArrays_4.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1488">
-          <caret line="94" column="101" selection-start-line="94" selection-start-column="101" selection-end-line="94" selection-end-column="101" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="1008">
+          <caret line="57" column="31" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -518,8 +504,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/ConvertStringToZ_6.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+        <state relative-caret-position="882">
+          <caret line="50" column="9" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -542,8 +528,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/Solution46.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="79" column="7" lean-forward="true" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
+        <state relative-caret-position="792">
+          <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -561,6 +547,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="512">
           <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/SwapPairs_24.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="99" column="45" selection-start-line="99" selection-start-column="35" selection-end-line="99" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/NextPermutation_31.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="857">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/CombinationSum_39.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+          <folding>
+            <element signature="e#865#866#0" expanded="true" />
+            <element signature="e#891#892#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
