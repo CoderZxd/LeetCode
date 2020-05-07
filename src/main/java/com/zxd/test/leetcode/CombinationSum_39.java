@@ -2,6 +2,7 @@ package com.zxd.test.leetcode;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -40,37 +41,28 @@ import java.util.List;
 public class CombinationSum_39 {
 
     public static void main(String[] args) {
-        combinationSum(new int[]{2,3,5},8);
+        List<List<Integer>> res = combinationSum(new int[]{2,3,5},8);
+        System.out.println(res);
     }
 
     public static List<List<Integer>> combinationSum(int[] candidates, int target) {
-        List<List<Integer>> resultList = new ArrayList<>(10);
-        int len = candidates.length;
-        for(int i=0;i<len;i++){
-            List<Integer> tempList = new ArrayList<>(10);
-            deal(tempList,target,candidates,i);
-            if(tempList.isEmpty()){
-               continue;
-            }
-            resultList.add(tempList);
-        }
-        return resultList;
+        List<List<Integer>> res = new ArrayList<>(10);
+        dfs(new LinkedList<Integer>(), 0, candidates, target,res);
+        return res;
     }
 
-    private static void deal(List<Integer> temp,int target,int[] candidates,int index){
-        int len = candidates.length;
-        for(int i=0;i<len;i++){
-            if(candidates[i] == target){
-                temp.add(target);
-                return;
-            }
-        }
-        int tempTarget = target - candidates[index];
-        if(tempTarget < 0){
-            temp.clear();
+    private static void dfs(LinkedList<Integer> list, int pre, int[] candidates, int target,List<List<Integer>> res) {
+        if (target < 0) {
             return;
         }
-        temp.add(candidates[index]);
-        deal(temp,tempTarget,candidates,index);
+        if (target == 0) {
+            res.add(new ArrayList<>(list));
+            return;
+        }
+        for (int i = pre; i < candidates.length; i++) {
+            list.add(candidates[i]);
+            dfs(list, i, candidates, target - candidates[i],res);
+            list.removeLast();
+        }
     }
 }
