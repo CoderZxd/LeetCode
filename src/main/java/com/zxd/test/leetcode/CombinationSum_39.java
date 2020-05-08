@@ -83,8 +83,10 @@ public class CombinationSum_39 {
                 break;
             }
             path.add(candidates[i]);
+            System.out.println("before:"+path);
             dfs(candidates,len,residue-candidates[i],i,path,res);
             path.removeLast();
+            System.out.println("after:"+path);
         }
     }
 }
