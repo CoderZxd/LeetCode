@@ -41,28 +41,52 @@ import java.util.List;
 public class CombinationSum_39 {
 
     public static void main(String[] args) {
-        List<List<Integer>> res = combinationSum(new int[]{2,3,5},8);
-        System.out.println(res);
+        combinationSum(new int[]{2,3,5},8);
     }
 
     public static List<List<Integer>> combinationSum(int[] candidates, int target) {
-        List<List<Integer>> res = new ArrayList<>(10);
-        dfs(new LinkedList<Integer>(), 0, candidates, target,res);
-        return res;
+        List<List<Integer>> resultList = new ArrayList<>(10);
+        int len = candidates.length;
+        Arrays.sort(candidates);
+        dfs(candidates,len,target,0,new LinkedList<Integer>(),resultList);
+        return resultList;
     }
 
-    private static void dfs(LinkedList<Integer> list, int pre, int[] candidates, int target,List<List<Integer>> res) {
-        if (target < 0) {
+//    回溯算法的框架：
+//
+//    result = []
+//    def backtrack(路径, 选择列表):
+//        if 满足结束条件:
+//            result.add(路径)
+//            return
+//
+//        for 选择 in 选择列表:
+//            做选择
+//            backtrack(路径, 选择列表)
+//            撤销选择
+
+    /**
+     * @param candidates 数组输入
+     * @param len        输入数组的长度，冗余变量
+     * @param residue    剩余数值
+     * @param begin      本轮搜索的起点下标
+     * @param path       从根结点到任意结点的路径
+     * @param res        结果集变量
+     */
+    private static void dfs(int[] candidates,int len,int residue,int begin, LinkedList<Integer> path,List<List<Integer>> res){
+        if(residue == 0){
+            res.add(new ArrayList<Integer>(path));
             return;
         }
-        if (target == 0) {
-            res.add(new ArrayList<>(list));
-            return;
-        }
-        for (int i = pre; i < candidates.length; i++) {
-            list.add(candidates[i]);
-            dfs(list, i, candidates, target - candidates[i],res);
-            list.removeLast();
+        for(int i=begin;i<len;i++){
+            if(residue-candidates[i]<0){
+                break;
+            }
+            path.add(candidates[i]);
+            System.out.println("before:"+path);
+            dfs(candidates,len,residue-candidates[i],i,path,res);
+            path.removeLast();
+            System.out.println("after:"+path);
         }
     }
 }
