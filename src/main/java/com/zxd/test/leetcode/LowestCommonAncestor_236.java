@@ -131,10 +131,12 @@ public class LowestCommonAncestor_236 {
         while (!queue.isEmpty()) {
             TreeNode tempTreeNode = queue.remove();
             System.out.println(tempTreeNode.val);
-            if (tempTreeNode.left != null)
+            if (tempTreeNode.left != null){
                 queue.add(tempTreeNode.left);
-            if (tempTreeNode.right != null)
+            }
+            if (tempTreeNode.right != null){
                 queue.add(tempTreeNode.right);
+            }
         }
     }
 
