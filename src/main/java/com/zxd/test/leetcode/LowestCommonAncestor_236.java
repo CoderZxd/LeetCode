@@ -77,94 +77,51 @@ public class LowestCommonAncestor_236 {
      *     TreeNode(int x) { val = x; }
      * }
      */
-    /**
-     * 通过广度遍历，找出节点与节点之前的父子关系(一个父节点的两个子节点位置为2n+1,2n+2)，2n+1即奇数一定是左节点，2n+2即偶数一定是右节点
-     * @param root
-     * @param p
-     * @param q
-     * @return
-     */
+//    方法二：存储父节点
+//            思路
+//
+//    我们可以用哈希表存储所有节点的父节点，然后我们就可以利用节点的父节点信息从 p 结点开始不断往上跳，并记录已经访问过的节点，再从 q 节点开始不断往上跳，如果碰到已经访问过的节点，那么这个节点就是我们要找的最近公共祖先。
+//
+//    算法
+//
+//    从根节点开始遍历整棵二叉树，用哈希表记录每个节点的父节点指针。
+//    从 p 节点开始不断往它的祖先移动，并用数据结构记录已经访问过的祖先节点。
+//    同样，我们再从 q 节点开始不断往它的祖先移动，如果有祖先已经被访问过，即意味着这是 p 和 q 的深度最深的公共祖先，即 LCA 节点。
+//
+//    作者：LeetCode-Solution
+//    链接：https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/solution/er-cha-shu-de-zui-jin-gong-gong-zu-xian-by-leetc-2/
+//    来源：力扣（LeetCode）
+//    著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
     public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        Map<Integer,Integer> valToPosMap = new HashMap<>(16);
-        Map<Integer,TreeNode> posToTreeNodeMap = new HashMap<>(16);
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.add(root);
-        valToPosMap.put(root.val,0);
-        posToTreeNodeMap.put(0,root);
-        // 先进先出
-        while (!queue.isEmpty()) {
-            TreeNode tempTreeNode = queue.remove();
-            if (tempTreeNode.left != null){
-                queue.add(tempTreeNode.left);
-                valToPosMap.put(tempTreeNode.left.val,valToPosMap.get(tempTreeNode.val)*2+1);
-                posToTreeNodeMap.put(valToPosMap.get(tempTreeNode.val)*2+1,tempTreeNode.left);
-            }
-            if (tempTreeNode.right != null){
-                queue.add(tempTreeNode.right);
-                valToPosMap.put(tempTreeNode.right.val,valToPosMap.get(tempTreeNode.val)*2+2);
-                posToTreeNodeMap.put(valToPosMap.get(tempTreeNode.val)*2+2,tempTreeNode.right);
-            }
+        Set<Integer> visitedSet = new HashSet<>(16);
+        Map<Integer, TreeNode> parentsMap = new HashMap<>(16);
+        getParents(root,parentsMap);
+        while(p != null){
+            visitedSet.add(p.val);
+            p = parentsMap.get(p.val);
         }
-        System.out.println("valToPosMap---->"+valToPosMap);
-        //找出节点所有的父节点位置，找到离该节点最近的相同的节点即为最近父节点
-        //找节点p所有的父节点位置
-        int posP = valToPosMap.get(p.val);
-        System.out.println("posP----->"+posP);
-        List<Integer> parentsP = new ArrayList<>(10);
-        //将P的位置加入
-        parentsP.add(posP);
-        getParentsPos(posP,parentsP);
-        System.out.println("parentsP---->"+parentsP);
-        int posQ = valToPosMap.get(q.val);
-        System.out.println("posQ----->"+posQ);
-        List<Integer> parentsQ = new ArrayList<>(10);
-        //将Q的位置加入
-        parentsQ.add(posQ);
-        getParentsPos(posQ,parentsQ);
-        System.out.println("parentsQ---->"+parentsQ);
-        //找到parentsP和parentsQ最大的相同数即为最近的父节点所在的位置
-        int commonParentPos = -1;
-        int parentPSize = parentsP.size();
-        int parentQSize = parentsQ.size();
-        int i = 0,j = 0;
-        while (i<parentPSize || j<parentQSize){
-            if(parentsP.get(i).equals(parentsQ.get(j))){
-                commonParentPos = parentsP.get(i);
-                break;
+        while (q!= null){
+            if(visitedSet.contains(q.val)){
+                return q;
             }
-            if(parentsP.get(i) > parentsQ.get(j)){
-                i++;
-            }else{
-                j++;
-            }
+            q = parentsMap.get(q.val);
         }
-        System.out.println("commonParentPos===="+commonParentPos);
-        //将该位置的节点进行返回
-        TreeNode treeNode = posToTreeNodeMap.get(commonParentPos);
-        return treeNode;
+        return null;
     }
 
     /**
-     * 获取父节点位置列表
-     * @param pos
-     * @param parents
+     * 获取节点的父节点信息
+     * @param treeNode
+     * @param parentsMap
      */
-    private static void getParentsPos(int pos, List<Integer> parents){
-        if(pos%2==0){
-            int parent =  (pos-2)/2;
-            if(parent < 0){
-                return;
-            }
-            parents.add(parent);
-            getParentsPos(parent,parents);
+    public static void getParents(TreeNode treeNode,Map<Integer, TreeNode> parentsMap){
+        if(treeNode.left != null){
+            parentsMap.put(treeNode.left.val,treeNode);
+            getParents(treeNode.left,parentsMap);
         }
-        if(pos%2==1){
-            int parent =  (pos-1)/2;
-            if(parent < 0){
-                return;
-            }
-            parents.add(parent);
-            getParentsPos(parent,parents);
+        if(treeNode.right != null){
+            parentsMap.put(treeNode.right.val,treeNode);
+            getParents(treeNode.right,parentsMap);
         }
     }
 
