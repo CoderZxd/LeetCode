@@ -25,7 +25,7 @@ package com.zxd.test.leetcode;
 //        输出: 1
 //        解释: 最长连续递增序列是 [2], 长度为1。
 //        注意：数组长度不会超过10000。
-public class FindLengthOfLCIS {
+public class FindLengthOfLCIS_674 {
     public static void main(String[] args){
         int[] nums = {1,2,3,5};
         System.out.println(findLengthOfLCIS(nums));

@@ -17,7 +17,7 @@ package com.zxd.test.leetcode;
 //        输入: 13
 //        输出: 6
 //        解释: 数字 1 出现在以下数字中: 1, 10, 11, 12, 13 。
-public class CountDigitOne {
+public class CountDigitOne_233 {
     public static void main(String[] args){
         System.out.println(countOneByrRecursive(20));
         System.out.println(countOne(824883294));

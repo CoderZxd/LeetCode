@@ -9,7 +9,7 @@ import java.util.*;
  * @Description:
  * @Date:Created in 12:04 2018/8/31.
  */
-public class LeetCodeArrayTest {
+public class IsValidSudoku_36 {
     public static void main(String[] args){
         char[][] board = new char[][]{{'5','3','.','.','7','.','.','.','.'},
                                       {'6','2','.','1','9','5','.','.','.'},

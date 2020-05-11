@@ -19,7 +19,7 @@ import java.util.Set;
 //        [2,3,1],
 //        [3,1,2],
 //        [3,2,1]
-public class Solution46 {
+public class Permute_46 {
 
     public static void main(String[] args) {
         System.out.println(permute(new int[]{1,2,3,4,5}));

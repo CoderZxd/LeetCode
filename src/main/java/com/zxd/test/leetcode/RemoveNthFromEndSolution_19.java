@@ -33,7 +33,7 @@ package com.zxd.test.leetcode;
  *     ListNode(int x) { val = x; }
  * }
  */
-public class RemoveNthFromEndSolution {
+public class RemoveNthFromEndSolution_19 {
     public static void main(String[] args){
         ListNode l1 = new ListNode(5);
         ListNode l2 = new ListNode(4);

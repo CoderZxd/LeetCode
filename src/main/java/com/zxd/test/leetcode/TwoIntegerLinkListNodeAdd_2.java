@@ -33,7 +33,7 @@ class ListNode {
         this.val = x;
     }
 }
-public class TwoIntegerLinkListNodeAdd {
+public class TwoIntegerLinkListNodeAdd_2 {
     
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         int i = 0;
