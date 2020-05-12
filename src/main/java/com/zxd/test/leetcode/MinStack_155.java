@@ -52,17 +52,24 @@ import java.util.*;
 public class MinStack_155 {
 
 	private List<Integer> stackList = new ArrayList<>(10);
+	private List<Integer> minStackList = new ArrayList<>(10);
 	/** initialize your data structure here. */
 	public MinStack_155() {
-
 	}
 
 	public void push(int x) {
-		this.stackList.add(x);
+		stackList.add(x);
+		if(minStackList.isEmpty()){
+			minStackList.add(x);
+		}else{
+			minStackList.add(Math.min(x,minStackList.get(minStackList.size()-1)));
+		}
 	}
 
 	public void pop() {
-		this.stackList.remove(stackList.size()-1);
+		stackList.remove(stackList.size()-1);
+		minStackList.remove(minStackList.size()-1);
+
 	}
 
 	public int top() {
@@ -70,13 +77,7 @@ public class MinStack_155 {
 	}
 
 	public int getMin() {
-		int result = stackList.get(0);
-		for(int i=1;i<this.stackList.size();i++){
-			if(this.stackList.get(i)<result){
-				result = this.stackList.get(i);
-			}
-		}
-		return result;
+		return this.minStackList.get(minStackList.size()-1);
 	}
 
 	public static void main(String[] args) {
