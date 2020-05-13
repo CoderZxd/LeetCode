@@ -44,23 +44,34 @@ public class LevelOrder_102 {
 	}
 
 	public static List<List<Integer>> levelOrder(TreeNode root) {
+		//返回结果
 		List<List<Integer>> resultList = new ArrayList<>(10);
 		if(root != null){
+			//存储节点与节点所处层数关系的map
 			Map<TreeNode,Integer> treeNodeToLevelMap = new HashMap<>(16);
+			//层数与该层节点list的对应关系map
 			TreeMap<Integer,List<Integer>> levelToResultMap = new TreeMap<>();
+			//广度优先遍历
 			Queue<TreeNode> bfs = new LinkedList<>();
 			bfs.add(root);
+			//跟节点属于第0层
 			treeNodeToLevelMap.put(root,0);
+			//第0层的节点list，加入根节点的值
 			List<Integer> tempList = new ArrayList<>(1);
 			tempList.add(root.val);
-			levelToResultMap.put(0,tempList);
+//			levelToResultMap.put(0,tempList);
+
+			//放入0层的结果集
 			resultList.add(tempList);
+			//如果还有节点,继续进行遍历
 			while (!bfs.isEmpty()){
 				TreeNode cur = bfs.poll();
 				System.out.println(cur.val);
 				if(cur.left != null){
 					bfs.add(cur.left);
+					//将该节点加入层数缓存map
 					treeNodeToLevelMap.put(cur.left,treeNodeToLevelMap.get(cur)+1);
+					//获取所在的层数，将本节点值加入所在层数的缓存map中
 					if(levelToResultMap.containsKey(treeNodeToLevelMap.get(cur)+1)){
 						levelToResultMap.get(treeNodeToLevelMap.get(cur)+1).add(cur.left.val);
 					}else{
