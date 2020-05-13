@@ -1,8 +1,6 @@
 package com.zxd.test.leetcode;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * @Title: LevelOrder_102
@@ -46,19 +44,50 @@ public class LevelOrder_102 {
 	}
 
 	public static List<List<Integer>> levelOrder(TreeNode root) {
-		Queue<TreeNode> bfs = new LinkedList<>();
-		bfs.add(root);
-		while (!bfs.isEmpty()){
-			TreeNode cur = bfs.poll();
-			System.out.println(cur.val);
-			if(cur.left != null){
-				bfs.add(cur.left);
+		List<List<Integer>> resultList = new ArrayList<>(10);
+		if(root != null){
+			Map<TreeNode,Integer> treeNodeToLevelMap = new HashMap<>(16);
+			TreeMap<Integer,List<Integer>> levelToResultMap = new TreeMap<>();
+			Queue<TreeNode> bfs = new LinkedList<>();
+			bfs.add(root);
+			treeNodeToLevelMap.put(root,0);
+			List<Integer> tempList = new ArrayList<>(1);
+			tempList.add(root.val);
+			levelToResultMap.put(0,tempList);
+			resultList.add(tempList);
+			while (!bfs.isEmpty()){
+				TreeNode cur = bfs.poll();
+				System.out.println(cur.val);
+				if(cur.left != null){
+					bfs.add(cur.left);
+					treeNodeToLevelMap.put(cur.left,treeNodeToLevelMap.get(cur)+1);
+					if(levelToResultMap.containsKey(treeNodeToLevelMap.get(cur)+1)){
+						levelToResultMap.get(treeNodeToLevelMap.get(cur)+1).add(cur.left.val);
+					}else{
+						List<Integer> temp = new ArrayList<>(1);
+						temp.add(cur.left.val);
+						levelToResultMap.put(treeNodeToLevelMap.get(cur)+1,temp);
+						resultList.add(temp);
+					}
+				}
+				if(cur.right != null){
+					bfs.add(cur.right);
+					treeNodeToLevelMap.put(cur.right,treeNodeToLevelMap.get(cur)+1);
+					if(levelToResultMap.containsKey(treeNodeToLevelMap.get(cur)+1)){
+						levelToResultMap.get(treeNodeToLevelMap.get(cur)+1).add(cur.right.val);
+					}else{
+						List<Integer> temp = new ArrayList<>(1);
+						temp.add(cur.right.val);
+						levelToResultMap.put(treeNodeToLevelMap.get(cur)+1,temp);
+						resultList.add(temp);
+					}
+				}
 			}
-			if(cur.right != null){
-				bfs.add(cur.right);
-			}
+			System.out.println(treeNodeToLevelMap);
+			System.out.println(levelToResultMap);
+			System.out.println(resultList);
 		}
-		return null;
+		return resultList;
 	}
 }
 /**
