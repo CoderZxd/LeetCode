@@ -1,5 +1,8 @@
 package com.zxd.test.leetcode;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @Title: SingleNumber_136
  * @Description: https://leetcode-cn.com/problems/single-number/
@@ -24,10 +27,18 @@ package com.zxd.test.leetcode;
 public class SingleNumber_136 {
 
 	public static void main(String[] args) {
-
+		System.out.println(singleNumber(new int[]{4,1,2,1,2}));
 	}
 
 	public static int singleNumber(int[] nums) {
-		return 0;
+		Map<Integer,Integer> tempMap = new HashMap<>(16);
+		for(Integer ele:nums){
+			if(tempMap.get(ele) != null){
+				tempMap.remove(ele);
+			}else{
+				tempMap.put(ele,ele);
+			}
+		}
+		return tempMap.keySet().iterator().next();
 	}
 }
