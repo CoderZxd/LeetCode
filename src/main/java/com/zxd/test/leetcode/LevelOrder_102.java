@@ -19,25 +19,27 @@ import java.util.*;
 //		3
 //		/ \
 //		9  20
-//		/  \
-//		15   7
+//		/\  \
+//    15 8  7
 //		返回其层次遍历结果：
 //
 //		[
 //		[3],
 //		[9,20],
-//		[15,7]
+//		[15,8,7]
 //		]
 public class LevelOrder_102 {
 
 	public static void main(String[] args) {
 		TreeNode treeNode7 = new TreeNode(7);
 		TreeNode treeNode15 = new TreeNode(15);
+		TreeNode treeNode8 = new TreeNode(8);
 		TreeNode treeNode20 = new TreeNode(20);
 		TreeNode treeNode9 = new TreeNode(9);
 		TreeNode treeNode3 = new TreeNode(3);
 		treeNode20.right = treeNode7;
 		treeNode9.left = treeNode15;
+		treeNode9.right = treeNode8;
 		treeNode3.left = treeNode9;
 		treeNode3.right = treeNode20;
 		levelOrder(treeNode3);
