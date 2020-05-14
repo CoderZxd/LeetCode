@@ -41,6 +41,7 @@ public class LevelOrder_102 {
 		treeNode3.left = treeNode9;
 		treeNode3.right = treeNode20;
 		levelOrder(treeNode3);
+		levelOrder_2(treeNode3);
 	}
 
 	public static List<List<Integer>> levelOrder(TreeNode root) {
@@ -99,6 +100,35 @@ public class LevelOrder_102 {
 			System.out.println(resultList);
 		}
 		return resultList;
+	}
+
+	public static List<List<Integer>> levelOrder_2(TreeNode root) {
+		//按层遍历即可
+		//1.
+		List<List<Integer>> lists = new ArrayList<>();
+		if (root == null) {
+			return lists;
+		}
+		//2.
+		List<TreeNode> nodes = new ArrayList<>();
+		nodes.add(root);
+		while (!nodes.isEmpty()) {
+			int size = nodes.size();
+			List<Integer> list = new ArrayList<>();
+			for (int i = 0; i < size; i++) {
+				TreeNode remove = nodes.remove(0);
+				list.add(remove.val);
+				if (remove.left != null) {
+					nodes.add(remove.left);
+				}
+				if (remove.right != null) {
+					nodes.add(remove.right);
+				}
+			}
+			lists.add(list);
+		}
+		System.out.println(lists);
+		return lists;
 	}
 }
 /**
