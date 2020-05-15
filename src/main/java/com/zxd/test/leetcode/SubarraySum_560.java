@@ -20,10 +20,23 @@ package com.zxd.test.leetcode;
 public class SubarraySum_560 {
 
 	public static void main(String[] args) {
-
+		System.out.println(subarraySum(new int[]{28,54,7,-70,22,65,-6},100));
 	}
 
-	public int subarraySum(int[] nums, int k) {
-		return 0;
+	public static int subarraySum(int[] nums, int k) {
+		int result = 0;
+		int temp = k;
+		int length = nums.length;
+		for(int i=0;i<length;i++){
+			temp = k;
+			for (int j=i;j<length;j++){
+				temp -= nums[j];
+				if(temp == 0){
+					result++;
+					System.out.println("i="+i+",j="+j);
+				}
+			}
+		}
+		return result;
 	}
 }
