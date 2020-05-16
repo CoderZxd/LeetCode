@@ -55,6 +55,9 @@ public class SubarraySum_560 {
 	//            做选择
 	//            backtrack(路径, 选择列表)
 	//            撤销选择
+
+
+
 	//方法二：前缀和 + 哈希表优化
 	public static int subarraySum_2(int[] nums, int k) {
 		int count = 0, pre = 0;
@@ -62,8 +65,9 @@ public class SubarraySum_560 {
 		mp.put(0, 1);
 		for (int i = 0; i < nums.length; i++) {
 			pre += nums[i];
-			if (mp.containsKey(pre - k))
+			if(mp.containsKey(pre - k)){
 				count += mp.get(pre - k);
+			}
 			mp.put(pre, mp.getOrDefault(pre,0) + 1);
 		}
 		return count;
