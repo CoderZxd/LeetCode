@@ -20,7 +20,7 @@ package com.zxd.test.leetcode;
 public class SubarraySum_560 {
 
 	public static void main(String[] args) {
-		System.out.println(subarraySum(new int[]{28,54,7,-70,22,65,-6},100));
+		System.out.println(subarraySum(new int[]{1,2,3,4,5,6,7,1,23,21,3,1,2,1,1,1,1,1,12,2,3,2,3,2,2},6));
 	}
 
 	public static int subarraySum(int[] nums, int k) {
@@ -39,4 +39,17 @@ public class SubarraySum_560 {
 		}
 		return result;
 	}
+
+	//    回溯算法的框架：
+	//
+	//    result = []
+	//    def backtrack(路径, 选择列表):
+	//        if 满足结束条件:
+	//            result.add(路径)
+	//            return
+	//
+	//        for 选择 in 选择列表:
+	//            做选择
+	//            backtrack(路径, 选择列表)
+	//            撤销选择
 }
