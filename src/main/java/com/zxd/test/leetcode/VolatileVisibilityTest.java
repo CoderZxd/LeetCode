@@ -17,11 +17,7 @@ public class VolatileVisibilityTest {
 			public void run() {
 				System.out.println("waiting data.....");
 				while (!flag){
-//					try {
-//						Thread.sleep(10L);
-//					} catch (InterruptedException e) {
-//						e.printStackTrace();
-//					}
+//					System.out.println("test");
 				}
 				System.out.println("=========================success");
 			}
