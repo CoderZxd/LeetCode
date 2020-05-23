@@ -22,22 +22,21 @@ public class MinWindow_76 {
 
 
 	public static void main(String[] args) {
-		System.out.println(minWindow("cwirwjbfntstplnenpabdttnbiagcnrglbyhnbnavhvmtlqgaqkdmdtnltvpipwuquddvseqabctmsbmllsxrlmegjupyqlpmqsjlyalaegozjbkxtjogxsmgodhgqwsjqeureftknhlwixvdgjjfeyoudvburvdjzxafetqtbdplblrjwcpccdxgyyarvfaxcbciwubzysnzfekeizgledredrvzyyyazakxvlxvfkwlqgpyixjmbargtohrmftngfldskyywwlmccmkzwzayshugontwhicovfhffhbdsphucutatwalfutviorrxvhscoyhvbmntujvofxjbxwispdcexvdscvvtveozresnnpbsmmvjifdxlhdicgchexazcqavusikhlevxaffhkessicwqffuchugyudspncwahuxjzeslll",
-				"ftpejujeztahrwljlao"));
+		System.out.println(minWindow("cwirwjbfntstplnenpabdttnbiagcnrglbyhnbnavhvmtlqgaqkdmdtnltvpipwuquddvseqabctmsbmllsxrlmegjupyqlpmqsjlyalaegozjbkxtjogxsmgodhgqwsjqeureftknhlwixvdgjjfeyoudvburvdjzxafetqtbdplblrjwcpccdxgyyarvfaxcbciwubzysnzfekeizgledredrvzyyyazakxvlxvfkwlqgpyixjmbargtohrmftngfldskyywwlmccmkzwzayshugontwhicovfhffhbdsphucutatwalfutviorrxvhscoyhvbmntujvofxjbxwispdcexvdscvvtveozresnnpbsmmvjifdxlhdicgchexazcqavusikhlevxaffhkessicwqffuchugyudspncwahuxjzeslll","ftpejujeztahrwljlao"));
 	}
 	public static String minWindow(String s, String t) {
 		if(s.equals(t)){
 			return s;
 		}
-		String result = "";
 		int s_len = s.length();
 		int t_len = t.length();
+		int start = 0;
+		int end = 0;
 		String[] tArray = t.split("");
 		label:
 		for(int i=0;i<=s_len-t_len;i++){
 			for(int j=s_len;j>=i+t_len;j--){
 				String temp = s.substring(i,j);
-				String tempResult = temp;
 				for(String ele:tArray){
 					if(!temp.contains(ele)){
 						continue label;
@@ -46,11 +45,29 @@ public class MinWindow_76 {
 						temp = sb.toString();
 					}
 				}
-				if("".equals(result)){
-					result = tempResult;
-				}else if(tempResult.length()<result.length()){
-					result = tempResult;
+				if(start==0 && end==0){
+					start = i;
+					end = j;
+				}else if(j-i<end-start){
+					start = i;
+					end = j;
 				}
+			}
+		}
+		return s.substring(start,end);
+	}
+
+
+	public static String minWindow_2(String s, String t) {
+		if(s.equals(t)){
+			return s;
+		}
+		int s_len = s.length();
+		int t_len = t.length();
+		String result = "";
+		for(int start=0;start<=s_len-t_len;start++){
+			for (int end=start+t_len;end<s_len;end++){
+				String temp = s.substring(start,end+1);
 			}
 		}
 		return result;
