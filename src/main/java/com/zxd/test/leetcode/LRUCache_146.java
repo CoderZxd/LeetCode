@@ -1,5 +1,10 @@
 package com.zxd.test.leetcode;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /**
  * @Title: LRUCache_146
  * @Description: https://leetcode-cn.com/problems/lru-cache/
@@ -37,24 +42,120 @@ package com.zxd.test.leetcode;
 
 public class LRUCache_146 {
 
+	public static void main(String[] args) {
+		LRUCache cache = new LRUCache(2);
+		cache.put(1, 1);
+		cache.put(2, 2);
+		System.out.println(cache.get(1));       // 返回  1
+		cache.put(3, 3);    // 该操作会使得密钥 2 作废
+		System.out.println(cache.get(2));       // 返回 -1 (未找到)
+		cache.put(4, 4);    // 该操作会使得密钥 1 作废
+		System.out.println(cache.get(1));       // 返回 -1 (未找到)
+		System.out.println(cache.get(3));       // 返回  3
+		System.out.println(cache.get(4));       // 返回  4
+	}
+
 }
 
 
 class LRUCache {
 
-	public LRUCache(int capacity) {
+	private int capacity = 0;
 
+	private Map<Integer,Node> cacheMap = new HashMap<>(16);
+
+	private Node head;
+
+	private Node tail;
+
+	private int count = 0;
+
+	public LRUCache(int capacity) {
+		this.capacity = capacity;
+		Node headNode = new Node(null,null);
+		Node tailNode = new Node(null,null);
+		headNode.next = tailNode;
+		tailNode.pre = headNode;
+		this.head = headNode;
+		this.tail = tailNode;
 	}
 
 	public int get(int key) {
-		return 0;
+		if(cacheMap.containsKey(key)){
+			Node node = cacheMap.get(key);
+			//将node从原node中摘除
+			Node pre = node.pre;
+			Node next = node.next;
+			pre.next = next;
+			next.pre = pre;
+			//将node加入到头部
+			Node headNext = head.next;
+			node.next = headNext;
+			node.pre = head;
+			headNext.pre = node;
+			head.next = node;
+			return node.val;
+		}
+		return -1;
 	}
 
 	public void put(int key, int value) {
-
+		Node node = cacheMap.get(key);
+		if(node == null){
+			if(count<capacity){
+				Node newNode = new Node(key,value);
+				Node headNext = head.next;
+				headNext.pre = newNode;
+				newNode.pre = head;
+				head.next = newNode;
+				newNode.next = headNext;
+				cacheMap.put(key,newNode);
+				count++;
+			}else{
+				//先删除尾节点
+				Node tailPre = tail.pre;
+				Node tailPrePre = tailPre.pre;
+				tailPre.next = tail;
+				tail.pre = tailPrePre;
+				tailPre.next = null;
+				tailPre.pre = null;
+				cacheMap.remove(tailPre.key);
+				count--;
+				//再添加
+				Node newNode = new Node(key,value);
+				Node headNext = head.next;
+				headNext.pre = newNode;
+				newNode.pre = head;
+				head.next = newNode;
+				newNode.next = headNext;
+				cacheMap.put(key,newNode);
+				count++;
+			}
+		}else{
+			//移动至头部
+			Node pre = node.pre;
+			Node next = node.next;
+			pre.next = next;
+			next.pre = pre;
+			Node headNext = head.next;
+			head.next = node;
+			node.next = headNext;
+			headNext.pre = node;
+			node.pre = head;
+		}
 	}
 }
 
+class Node{
+	Integer key;
+	Integer val;
+	Node pre;
+	Node next;
+	Node(Integer key,Integer val){
+		this.key = key;
+		this.val = val;
+	}
+}
 /**
  * Your LRUCache object will be instantiated and called as such:
  * LRUCache obj = new LRUCache(capacity);
