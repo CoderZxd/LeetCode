@@ -43,16 +43,21 @@ import java.util.Map;
 public class LRUCache_146 {
 
 	public static void main(String[] args) {
-		LRUCache cache = new LRUCache(2);
+		LRUCache cache = new LRUCache(3);
 		cache.put(1, 1);
 		cache.put(2, 2);
-		System.out.println(cache.get(1));       // 返回  1
-		cache.put(3, 3);    // 该操作会使得密钥 2 作废
-		System.out.println(cache.get(2));       // 返回 -1 (未找到)
-		cache.put(4, 4);    // 该操作会使得密钥 1 作废
-		System.out.println(cache.get(1));       // 返回 -1 (未找到)
-		System.out.println(cache.get(3));       // 返回  3
-		System.out.println(cache.get(4));       // 返回  4
+		cache.put(3, 3);
+		cache.put(4, 4);
+		System.out.println(cache.get(4));
+		System.out.println(cache.get(3));
+		System.out.println(cache.get(2));
+		System.out.println(cache.get(1));
+		cache.put(5, 5);
+		System.out.println(cache.get(1));
+		System.out.println(cache.get(2));
+		System.out.println(cache.get(3));
+		System.out.println(cache.get(4));
+		System.out.println(cache.get(5));
 	}
 
 }
@@ -75,7 +80,9 @@ class LRUCache {
 		Node headNode = new Node(null,null);
 		Node tailNode = new Node(null,null);
 		headNode.next = tailNode;
+		tailNode.next=null;
 		tailNode.pre = headNode;
+		headNode.pre=null;
 		this.head = headNode;
 		this.tail = tailNode;
 	}
@@ -115,13 +122,13 @@ class LRUCache {
 				//先删除尾节点
 				Node tailPre = tail.pre;
 				Node tailPrePre = tailPre.pre;
-				tailPre.next = tail;
+				tailPrePre.next = tail;
 				tail.pre = tailPrePre;
 				tailPre.next = null;
 				tailPre.pre = null;
 				cacheMap.remove(tailPre.key);
 				count--;
-				//再添加
+				//再添加头节点
 				Node newNode = new Node(key,value);
 				Node headNext = head.next;
 				headNext.pre = newNode;
@@ -142,6 +149,7 @@ class LRUCache {
 			node.next = headNext;
 			headNext.pre = node;
 			node.pre = head;
+			node.val = value;
 		}
 	}
 }
