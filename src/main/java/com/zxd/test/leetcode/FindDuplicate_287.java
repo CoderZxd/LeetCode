@@ -27,9 +27,14 @@ public class FindDuplicate_287 {
 
 	public static void main(String[] args) {
 		System.out.println(findDuplicate(new int[]{1,3,4,2,2}));
-
+		System.out.println(findDuplicate_2(new int[]{1,3,4,2,2}));
 	}
 
+	/**
+	 * O(n^2)时间复杂度
+	 * @param nums
+	 * @return
+	 */
 	public static int findDuplicate(int[] nums) {
 		int len = nums.length;
 		for(int i=0;i<len-1;i++){
@@ -40,5 +45,54 @@ public class FindDuplicate_287 {
 			}
 		}
 		return -1;
+	}
+	/**
+	 * 方法二：二进制
+	 * https://leetcode-cn.com/problems/find-the-duplicate-number/solution/xun-zhao-zhong-fu-shu-by-leetcode-solution/
+	 * @param nums
+	 * @return
+	 */
+	public static int findDuplicate_1(int[] nums) {
+		int n = nums.length, ans = 0;
+		int bit_max = 31;
+		while (((n - 1) >> bit_max) == 0) {
+			bit_max -= 1;
+		}
+		for (int bit = 0; bit <= bit_max; ++bit) {
+			int x = 0, y = 0;
+			for (int i = 0; i < n; ++i) {
+				if ((nums[i] & (1 << bit)) != 0) {
+					x += 1;
+				}
+				if (i >= 1 && ((i & (1 << bit)) != 0)) {
+					y += 1;
+				}
+			}
+			if (x > y) {
+				ans |= 1 << bit;
+			}
+		}
+		return ans;
+	}
+
+	/**
+	 * 方法三：快慢指针
+	 * https://leetcode-cn.com/problems/find-the-duplicate-number/solution/xun-zhao-zhong-fu-shu-by-leetcode-solution/
+	 * @param nums
+	 * @return
+	 */
+	public static int findDuplicate_2(int[] nums){
+		int slow = 0, fast = 0;
+		do {
+			slow = nums[slow];
+			fast = nums[nums[fast]];
+		} while (slow != fast);
+		System.out.println("slow="+slow+",fast="+fast);
+		slow = 0;
+		while (slow != fast) {
+			slow = nums[slow];
+			fast = nums[fast];
+		}
+		return slow;
 	}
 }
