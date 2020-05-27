@@ -30,6 +30,7 @@ public class SubarraysDivByK_974 {
 
 	public static void main(String[] args) {
 		System.out.println(subarraysDivByK(new int[]{4,5,0,-2,-3,1},5));
+		System.out.println(subarraysDivByK_1(new int[]{4,5,0,-2,-3,1},5));
 	}
 
 	/**
@@ -52,4 +53,31 @@ public class SubarraysDivByK_974 {
 		}
 		return result;
 	}
+	/**
+	 * 方法二(同余定理)
+	 * @param A
+	 * @param K
+	 * @return
+	 */
+	public static int subarraysDivByK_1(int[] A, int K) {
+		int res = 0;
+		// 记录当前前缀和
+		int preSum = 0;
+		// 因为K固定，因此可以使用数组代替哈希表（mod[i] = j，代表余数为i的前缀和出现了j次）
+		int[] mod = new int[K];
+		// 余数为0的状况，也就是直接被整除的情况，要提前放个1，考虑比如 A = {K}
+		mod[0] = 1;
+		for (int value : A) {
+			// 更新前缀和
+			preSum += value;
+			// 计算mod（java注意）
+			int m = (preSum % K + K) % K;
+			// 更新结果
+			res += mod[m];
+			// 更新余数集记录
+			++mod[m];
+		}
+		return res;
+	}
+
 }
