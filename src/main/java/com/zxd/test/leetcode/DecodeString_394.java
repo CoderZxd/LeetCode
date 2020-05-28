@@ -31,19 +31,26 @@ public class DecodeString_394 {
 	}
 
 	public static String decodeString(String s) {
+		//1.结果栈
 		Stack<Character> stack = new Stack<>();
 		char[] chars = s.toCharArray();
 		for(char ele:chars){
+			//如果是‘]’,需要弹栈,找到'['为需要重复的字符串
 			if(']' == ele){
 				StringBuffer sb = new StringBuffer();
+				//循环弹栈
 				label:
 				for(;;){
 					char temp = stack.peek();
+					//如果为‘[’说明找到了字符串的左边界,否则仍然是需要重复的字符
 					if('[' == temp){
+						//将‘[’弹栈丢弃
 						stack.pop();
+						//继续弹栈找到字符串的重复次数
 						StringBuffer numSb = new StringBuffer();
 						for(;;){
-							if(stack.isEmpty() || stack.peek()<48 || stack.peek() > 57) {
+							//如果栈空或者当前栈顶的字符不是数字,则说明重复次数已找到,将拼接的字符串继续压入栈中
+							if(stack.isEmpty() || stack.peek()<'0' || stack.peek() > '9') {
 								StringBuffer sbsb = new StringBuffer();
 								String tempStr = sb.reverse().toString();
 								String numStr = numSb.reverse().toString();
