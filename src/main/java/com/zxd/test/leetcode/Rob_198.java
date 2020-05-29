@@ -30,11 +30,38 @@ public class Rob_198 {
 
 	public static void main(String[] args) {
 //		System.out.println(rob(new int[]{1,2,3,1}));
-//		System.out.println(rob(new int[]{2,7,9,1,1,3,1,4,1,5}));
+//		System.out.println(rob_1(new int[]{2,7,9,1,1,3,1,4,1,5}));
 //		System.out.println(rob(new int[]{1,9,2}));
-		System.out.println(rob(new int[]{114,117,207,117,235,82,90,67,143,146,53,108,200,91,80,223,58,170,110,236,81,90,222,160,165,195,187,199,114,235,197,187,69,129,64,214,228,78,188,67,205,94,205,169,241,202,144,240}));
+//		System.out.println(rob_1(new int[]{1,9,2}));
+		System.out.println(rob_1(new int[]{114,117,207,117,235,82,90,67,143,146,53,108,200,91,80,223,58,170,110,236,81,90,222,160,165,195,187,199,114,235,197,187,69,129,64,214,228,78,188,67,205,94,205,169,241,202,144,240}));
 	}
 
+	/**
+	 * 动态规划 dp[i] = max(dp[i-2]+nums[2],dp[i-1])
+	 * @param nums
+	 * @return
+	 */
+	public static int rob_1(int[] nums) {
+		int result = 0;
+		int len = nums.length;
+		if(len == 0){
+			return result;
+		}
+		int[] dp = new int[len];
+		dp[0] = nums[0];
+		result = nums[0];
+		if(len>=2){
+			dp[1] = Math.max(nums[0],nums[1]);
+			result = dp[1];
+		}
+		for(int i=2;i<len;i++){
+			dp[i] = Math.max(dp[i-2]+nums[i],dp[i-1]);
+			if(dp[i]>result){
+				result = dp[i];
+			}
+		}
+		return result;
+	}
 
 	public static int rob(int[] nums) {
 		int step1 = cr(0,nums);
@@ -43,7 +70,7 @@ public class Rob_198 {
 	}
 
 	/**
-	 * 方法一：递归，56 / 69 个通过测试用例，57测试用例
+	 * 方法一：递归，56 / 69 个通过测试用例，57测试用例超时
 	 * @param i
 	 * @param nums
 	 * @return
