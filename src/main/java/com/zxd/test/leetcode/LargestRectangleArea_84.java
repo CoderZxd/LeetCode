@@ -36,7 +36,7 @@ public class LargestRectangleArea_84 {
 	}
 
 	/**
-	 * 方法一:94 / 96 个通过测试用例,执行95测试用例超时
+	 * 方法一:暴力解法
 	 * @param heights
 	 * @return
 	 */
@@ -44,24 +44,16 @@ public class LargestRectangleArea_84 {
 		int len = heights.length;
 		int maxArea = 0;
 		for(int i=0;i<len;i++){
-			for(int j=i;j<len;j++){
-				//找到i-j的最小元素
-				int area = (j-i+1)*getMinNum(i,j,heights);
-				if(area>maxArea){
-					maxArea = area;
-				}
+			int w=1,h=heights[i],j=i;
+			while (--j>=0 && heights[j]>=h){
+				w++;
 			}
+			j=i;
+			while (++j<len && heights[j]>=h){
+				w++;
+			}
+			maxArea = Math.max(maxArea,h*w);
 		}
 		return maxArea;
-	}
-
-	private static int getMinNum(int i,int j,int[] heights){
-		int min = heights[i];
-		for(int s=i+1;s<=j;s++){
-			if(heights[s]<min){
-				min = heights[s];
-			}
-		}
-		return min;
 	}
 }
