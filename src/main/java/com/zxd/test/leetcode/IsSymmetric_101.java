@@ -85,6 +85,12 @@ public class IsSymmetric_101 {
         return ifSymmetric(root.left,root.right);
     }
 
+    /**
+     * 递归查找，如果左子树的left与右子树的right同为null或者值相同，并且左子树的right与右子树的left同为null或者值相同，则当前节点对称；递归进行校验
+     * @param leftNode
+     * @param rightNode
+     * @return
+     */
     private static boolean ifSymmetric(TreeNode leftNode, TreeNode rightNode){
         if(leftNode == rightNode){
             return true;
