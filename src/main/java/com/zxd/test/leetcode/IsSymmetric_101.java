@@ -64,13 +64,18 @@ public class IsSymmetric_101 {
         root2.left = node2_left_1;
         root2.right = node2_right_1;
         System.out.println(isSymmetric(root2));
-//        bfs(root);
-//        System.out.println("===========================");
-//        dfs(root);
-//        System.out.println("===========================");
-//        afs(root);
-//        System.out.println("===========================");
-//        bbfs(root);
+        System.out.println("=============前序遍历==============");
+        preOrder(root);
+        System.out.println();
+        System.out.println("=============中序遍历==============");
+        inOrder(root);
+        System.out.println();
+        System.out.println("=============后序遍历==============");
+        posOrder(root);
+        System.out.println();
+        System.out.println("=============广度优先遍历=============");
+        bfs(root);
+        System.out.println();
         System.out.println("-----------------------------");
         System.out.println(isMirror(root,root));
         System.out.println(isMirror(root2,root2));
@@ -124,73 +129,59 @@ public class IsSymmetric_101 {
     }
 
 
-
-    private static void dfs(TreeNode node,List<Integer> elements){
+    /**
+     * 前序遍历
+     * @param node
+     */
+    private static void preOrder(TreeNode node){
         if(node == null){
-            elements.add(null);
             return;
         }
-        dfs(node.left,elements);
-        elements.add(node.val);
-        dfs(node.right,elements);
+        System.out.print(node.val+" ");
+        preOrder(node.left);
+        preOrder(node.right);
     }
 
+    /**
+     * 中序遍历
+     * @param node
+     */
+    private static void inOrder(TreeNode node){
+        if(node == null){
+            return;
+        }
+        inOrder(node.left);
+        System.out.print(node.val+" ");
+        inOrder(node.right);
+    }
+
+    /**
+     * 后序遍历
+     * @param node
+     */
+    private static void posOrder(TreeNode node){
+        if(node == null){
+            return;
+        }
+        posOrder(node.left);
+        posOrder(node.right);
+        System.out.print(node.val+" ");
+    }
+
+    /**
+     * 广度优先遍历(迭代)
+     * @param node
+     */
     private static void bfs(TreeNode node){
-        if(node == null){
-            return;
-        }
-        System.out.println(node.val);
-        bfs(node.left);
-        bfs(node.right);
-    }
-
-    private static void dfs(TreeNode node){
-        if(node == null){
-            return;
-        }
-        dfs(node.left);
-        System.out.println(node.val);
-        dfs(node.right);
-    }
-
-    private static void afs(TreeNode node){
-        if(node == null){
-            return;
-        }
-        afs(node.left);
-        afs(node.right);
-        System.out.println(node.val);
-    }
-
-    private static void bbfs(TreeNode node){
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(node);
         while (!queue.isEmpty()){
             TreeNode treeNode = queue.poll();
-            System.out.println(treeNode.val);
+            System.out.print(treeNode.val+" ");
             if(treeNode.left != null){
                 queue.add(treeNode.left);
             }
             if(treeNode.right != null){
-                queue.add(treeNode.right);
-            }
-        }
-    }
-
-    private static void bfs(TreeNode node,List<Integer> elements){
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.add(node);
-        while (!queue.isEmpty()){
-            TreeNode treeNode = queue.poll();
-            if(treeNode != null){
-                elements.add(treeNode.val);
-            }else{
-                elements.add(null);
-            }
-            if(treeNode!= null){
-                queue.add(treeNode.left);
-            }
-            if(treeNode != null){
                 queue.add(treeNode.right);
             }
         }
