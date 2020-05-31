@@ -71,7 +71,9 @@ public class IsSymmetric_101 {
 //        afs(root);
 //        System.out.println("===========================");
 //        bbfs(root);
-
+        System.out.println("-----------------------------");
+        System.out.println(isMirror(root,root));
+        System.out.println(isMirror(root2,root2));
     }
 
 
@@ -80,7 +82,7 @@ public class IsSymmetric_101 {
     }
 
     /**
-     * 递归查找，如果左子树的left与右子树的right同为null或者值相同，并且左子树的right与右子树的left同为null或者值相同，则当前节点对称；递归进行校验
+     * 方法一 ：递归，如果左子树的left与右子树的right同为null或者值相同，并且左子树的right与右子树的left同为null或者值相同，则当前节点对称；递归进行校验
      * @param leftNode
      * @param rightNode
      * @return
@@ -96,6 +98,30 @@ public class IsSymmetric_101 {
     }
 
 
+    /**
+     * 方法二:广度优先遍历实现迭代方法
+     * @return
+     */
+    private static boolean isMirror(TreeNode leftNode,TreeNode rightNode){
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(leftNode);
+        queue.offer(rightNode);
+        while (!queue.isEmpty()){
+            leftNode = queue.poll();
+            rightNode = queue.poll();
+            if(leftNode == null && rightNode == null){
+                return true;
+            }
+            if(leftNode == null || rightNode == null || leftNode.val != rightNode.val){
+                return false;
+            }
+            queue.offer(leftNode.left);
+            queue.offer(rightNode.right);
+            queue.offer(leftNode.right);
+            queue.offer(rightNode.left);
+        }
+        return true;
+    }
 
 
 
