@@ -76,13 +76,7 @@ public class IsSymmetric_101 {
 
 
     public static boolean isSymmetric(TreeNode root) {
-        if(root == null || root.left == root.right){
-            return true;
-        }
-        if(root.left != null && root.right != null && root.left.val != root.right.val ){
-            return false;
-        }
-        return ifSymmetric(root.left,root.right);
+        return ifSymmetric(root,root);
     }
 
     /**
@@ -92,19 +86,13 @@ public class IsSymmetric_101 {
      * @return
      */
     private static boolean ifSymmetric(TreeNode leftNode, TreeNode rightNode){
-        if(leftNode == rightNode){
+        if(leftNode == null && rightNode == null){
             return true;
         }
-        if((leftNode == null && rightNode != null) || (leftNode != null && rightNode == null)){
+        if(leftNode == null || rightNode == null){
             return false;
         }
-        if((leftNode.left == null && rightNode.right != null) || (leftNode.left != null && rightNode.right ==null) ||(leftNode.right == null && rightNode.left != null) ||(leftNode.right != null && rightNode.left == null)){
-            return false;
-        }
-        if((leftNode.left == rightNode.right || leftNode.left.val == rightNode.right.val) && (leftNode.right == rightNode.left || leftNode.right.val == rightNode.left.val)){
-            return ifSymmetric(leftNode.left,rightNode.right) && ifSymmetric(leftNode.right,rightNode.left);
-        }
-        return false;
+        return leftNode.val == rightNode.val && ifSymmetric(leftNode.left,rightNode.right) && ifSymmetric(leftNode.right,rightNode.left);
     }
 
 
