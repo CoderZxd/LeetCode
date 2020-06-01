@@ -60,11 +60,7 @@ public class KidsWithCandies_1431 {
 		}
 		System.out.println("maxVal="+maxVal);
 		for(int i=0;i<len;i++){
-			if(candies[i]+extraCandies>=maxVal){
-				resultList.add(true);
-			}else{
-				resultList.add(false);
-			}
+			resultList.add(candies[i]+extraCandies>=maxVal);
 		}
 		return resultList;
 	}
