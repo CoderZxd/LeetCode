@@ -42,36 +42,36 @@ public class ProductExceptSelf_238 {
 		/**
 		 * 存放当前元素i之前所有元素的乘积
 		 */
-		int[] multi = new int[len];
+		int[] L = new int[len];
 		/**
 		 * 第0个元素的乘积为自己本身
 		 */
-		multi[0] = nums[0];
+		L[0] = nums[0];
 		for(int i=1;i<len;i++){
-			multi[i] = nums[i] * multi[i-1];
+			L[i] = nums[i] * L[i-1];
 		}
-		System.out.println(multi);
+		System.out.println(L);
 		/**
 		 * 存放当前元素i之后所有元素的乘积
 		 */
-		int[] rightMulti = new int[len+1];
+		int[] R = new int[len+1];
 		/**
 		 * 最后一个元素因为没有最右，所以存入1
 		 */
-		rightMulti[len] = 1;
+		R[len] = 1;
 		//当前元素i最右乘积=当前元素值i*元素i+1最右乘积
 		for(int i=len-1;i>0;i--){
-			rightMulti[i] = nums[i] * rightMulti[i+1];
+			R[i] = nums[i] * R[i+1];
 		}
-		System.out.println(rightMulti);
+		System.out.println(R);
 		//第一个元素值=第一个（i=1）元素的最右乘积
 		/**
 		 * 输出结果可以得到如下规律:
 		 * output[i] = multi[i-1]*rightMulti[i+1];
 		 */
-		output[0] = rightMulti[1];
+		output[0] = R[1];
 		for(int i=1;i<len;i++){
-			output[i] = multi[i-1] * rightMulti[i+1];
+			output[i] = L[i-1] * R[i+1];
 		}
 		return output;
 	}
