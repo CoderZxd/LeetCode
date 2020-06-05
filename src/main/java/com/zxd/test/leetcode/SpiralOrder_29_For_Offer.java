@@ -50,8 +50,8 @@ public class SpiralOrder_29_For_Offer {
 		int cols = matrix[0].length;
 		//结果集
 		int[] result = new int[rows*cols];
-		//遍历过的节点设置为-1,便于遍历时寻找结束条件值
-		int[][] indexArray = new int[rows][cols];
+		//遍历过的节点设置为1,便于遍历时寻找结束条件值
+		int[][] visited = new int[rows][cols];
 		//是否需要继续遍历
 		boolean continueFlag = true;
 		int startRow = -1;
@@ -62,40 +62,40 @@ public class SpiralOrder_29_For_Offer {
 			//向右遍历
 			startRow++;
 			startCol++;
-			while (startCol<cols && indexArray[startRow][startCol] != -1){
+			while (startCol<cols && visited[startRow][startCol] != 1){
 				result[index] = matrix[startRow][startCol];
 				index++;
-				indexArray[startRow][startCol] = -1;
+				visited[startRow][startCol] = 1;
 				startCol++;
 				continueFlag = true;
 			}
 			//向下遍历
 			startRow++;
 			startCol--;
-			while (startRow<rows && startCol>=0 && indexArray[startRow][startCol] != -1){
+			while (startRow<rows && startCol>=0 && visited[startRow][startCol] != 1){
 				result[index] = matrix[startRow][startCol];
 				index++;
-				indexArray[startRow][startCol] = -1;
+				visited[startRow][startCol] = 1;
 				startRow++;
 				continueFlag = true;
 			}
 			//向左遍历
 			startRow--;
 			startCol--;
-			while (startCol>=0 && startRow>=0 && indexArray[startRow][startCol] != -1){
+			while (startCol>=0 && startRow>=0 && visited[startRow][startCol] != 1){
 				result[index] = matrix[startRow][startCol];
 				index++;
-				indexArray[startRow][startCol] = -1;
+				visited[startRow][startCol] = 1;
 				startCol--;
 				continueFlag = true;
 			}
 			//向上遍历
 			startRow--;
 			startCol++;
-			while (startRow>=0 && startCol >=0 && indexArray[startRow][startCol] != -1){
+			while (startRow>=0 && startCol >=0 && visited[startRow][startCol] != 1){
 				result[index] = matrix[startRow][startCol];
 				index++;
-				indexArray[startRow][startCol] = -1;
+				visited[startRow][startCol] = 1;
 				startRow--;
 				continueFlag = true;
 			}
