@@ -46,7 +46,7 @@ public class SpiralOrder_29_For_Offer {
 	public static int[] spiralOrder(int[][] matrix) {
 		int rows = matrix.length;
 		//如果为空，返回空结果
-		if(rows == 0){
+		if(rows == 0 || matrix[0].length == 0){
 			return new int[0];
 		}
 		int cols = matrix[0].length;
@@ -65,8 +65,7 @@ public class SpiralOrder_29_For_Offer {
 			startRow++;
 			startCol++;
 			while (startCol<cols && visited[startRow][startCol] != 1){
-				result[index] = matrix[startRow][startCol];
-				index++;
+				result[index++] = matrix[startRow][startCol];
 				visited[startRow][startCol] = 1;
 				startCol++;
 				continueFlag = true;
@@ -75,8 +74,7 @@ public class SpiralOrder_29_For_Offer {
 			startRow++;
 			startCol--;
 			while (startRow<rows && startCol>=0 && visited[startRow][startCol] != 1){
-				result[index] = matrix[startRow][startCol];
-				index++;
+				result[index++] = matrix[startRow][startCol];
 				visited[startRow][startCol] = 1;
 				startRow++;
 				continueFlag = true;
@@ -85,8 +83,7 @@ public class SpiralOrder_29_For_Offer {
 			startRow--;
 			startCol--;
 			while (startCol>=0 && startRow>=0 && visited[startRow][startCol] != 1){
-				result[index] = matrix[startRow][startCol];
-				index++;
+				result[index++] = matrix[startRow][startCol];
 				visited[startRow][startCol] = 1;
 				startCol--;
 				continueFlag = true;
@@ -95,8 +92,7 @@ public class SpiralOrder_29_For_Offer {
 			startRow--;
 			startCol++;
 			while (startRow>=0 && startCol >=0 && visited[startRow][startCol] != 1){
-				result[index] = matrix[startRow][startCol];
-				index++;
+				result[index++] = matrix[startRow][startCol];
 				visited[startRow][startCol] = 1;
 				startRow--;
 				continueFlag = true;
