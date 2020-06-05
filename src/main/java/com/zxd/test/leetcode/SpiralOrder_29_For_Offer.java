@@ -31,19 +31,28 @@ import java.util.List;
 public class SpiralOrder_29_For_Offer {
 
 	public static void main(String[] args) {
-//		spiralOrder(new int[][]{{1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15},{16,17,18,19,20},{21,22,23,24,25}});
-//		spiralOrder(new int[][]{});
+		spiralOrder(new int[][]{{1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15},{16,17,18,19,20},{21,22,23,24,25}});
+		spiralOrder(new int[][]{});
 		spiralOrder(new int[][]{{1},{2}});
 	}
 
+	/**
+	 * 顺时针循环遍历：先右→,后下↓，后左←，后上↑顺序进行
+	 * @param matrix
+	 * @return
+	 */
 	public static int[] spiralOrder(int[][] matrix) {
 		int rows = matrix.length;
+		//如果为空，返回空结果
 		if(rows == 0){
 			return new int[0];
 		}
 		int cols = matrix[0].length;
+		//结果集
 		int[] result = new int[rows*cols];
+		//遍历过的节点设置为-1,便于遍历时寻找结束条件值
 		int[][] indexArray = new int[rows][cols];
+		//是否需要继续遍历
 		boolean continueFlag = true;
 		int startRow = -1;
 		int startCol = -1;
@@ -70,7 +79,7 @@ public class SpiralOrder_29_For_Offer {
 				startRow++;
 				continueFlag = true;
 			}
-			//向右遍历
+			//向左遍历
 			startRow--;
 			startCol--;
 			while (startCol>=0 && startRow>=0 && indexArray[startRow][startCol] != -1){
