@@ -22,11 +22,16 @@ public class LongestConsecutive_128 {
 
 	public static void main(String[] args) {
 
-//		System.out.println(longestConsecutive(new int[]{100, 4, 200, 1, 3, 2}));
-//		System.out.println(longestConsecutive(new int[]{0,0}));
-//		System.out.println(longestConsecutive(new int[]{1,3,5,2,4}));
-//		System.out.println(longestConsecutive(new int[]{0,3,7,2,5,8,4,6,0,1}));
+		System.out.println(longestConsecutive(new int[]{100, 4, 200, 1, 3, 2}));
+		System.out.println(longestConsecutive_1(new int[]{100, 4, 200, 1, 3, 2}));
+		System.out.println(longestConsecutive(new int[]{0,0}));
+		System.out.println(longestConsecutive_1(new int[]{0,0}));
+		System.out.println(longestConsecutive(new int[]{1,3,5,2,4}));
+		System.out.println(longestConsecutive_1(new int[]{1,3,5,2,4}));
+		System.out.println(longestConsecutive(new int[]{0,3,7,2,5,8,4,6,0,1}));
+		System.out.println(longestConsecutive_1(new int[]{0,3,7,2,5,8,4,6,0,1}));
 		System.out.println(longestConsecutive(new int[]{-1,9,-3,-6,7,-8,-6,2,9,2,3,-2,4,-1,0,6,1,-9,6,8,6,5,2}));
+		System.out.println(longestConsecutive_1(new int[]{-1,9,-3,-6,7,-8,-6,2,9,2,3,-2,4,-1,0,6,1,-9,6,8,6,5,2}));
 	}
 
 	/**
@@ -91,5 +96,28 @@ public class LongestConsecutive_128 {
 			}
 		}
 		return result;
+	}
+
+
+	public static int longestConsecutive_1(int[] nums) {
+		int len = nums.length;
+		if(len<=1){
+			return len;
+		}
+		Arrays.sort(nums);
+		int maxLen = 1,curLen=1;
+		for(int i=1;i<len;i++){
+			if(nums[i]-nums[i-1] == 1){
+				curLen++;
+			}else if(nums[i] == nums[i-1]){
+				continue;
+			}else {
+				if(curLen>maxLen){
+					maxLen = curLen;
+				}
+				curLen = 1;
+			}
+		}
+		return Math.max(maxLen,curLen);
 	}
 }
