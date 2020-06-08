@@ -22,6 +22,18 @@ public class PingTest {
 		Properties properties = System.getProperties();
 		System.out.println(properties.getProperty("os.name").toLowerCase().contains("windows"));
 
+
+//		正在 Ping iotemqtest.luckincoffee.com [10.104.154.12] 具有 32 字节的数据:
+//		来自 10.104.154.12 的回复: 字节=32 时间=13ms TTL=54
+//		来自 10.104.154.12 的回复: 字节=32 时间=15ms TTL=54
+//		来自 10.104.154.12 的回复: 字节=32 时间=11ms TTL=54
+//		来自 10.104.154.12 的回复: 字节=32 时间=12ms TTL=54
+//		来自 10.104.154.12 的回复: 字节=32 时间=22ms TTL=54
+//
+//		10.104.154.12 的 Ping 统计信息:
+//		数据包: 已发送 = 5，已接收 = 5，丢失 = 0 (0% 丢失)，
+//		往返行程的估计时间(以毫秒为单位):
+//		最短 = 11ms，最长 = 22ms，平均 = 14ms
 		System.out.println(getNetworkStatusByPing("ping -n 5 iotemqtest.luckincoffee.com"));
 	}
 	/**
