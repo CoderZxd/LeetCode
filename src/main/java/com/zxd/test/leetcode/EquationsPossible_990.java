@@ -66,7 +66,6 @@ public class EquationsPossible_990 {
 	}
 
 	public static boolean equationsPossible(String[] equations) {
-		int length = equations.length;
 		int[] parent = new int[26];
 		for (int i = 0; i < 26; i++) {
 			parent[i] = i;
