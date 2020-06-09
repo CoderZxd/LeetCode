@@ -44,7 +44,7 @@ public class TranslateNum_46_For_Offer {
 		}
 		int[] dp = new int[len];
 		dp[0] = 1;
-		if((numString.charAt(0) <= '2' && numString.charAt(0) >= '1' && numString.charAt(1)<='5') || numString.charAt(0) == '1'){
+		if(numString.charAt(0) == '1' || (numString.charAt(0) == '2' && numString.charAt(1) <= '5')){
 			dp[1] = 2;
 		}else{
 			dp[1] = 1;
