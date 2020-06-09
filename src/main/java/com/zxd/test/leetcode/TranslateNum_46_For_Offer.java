@@ -28,6 +28,7 @@ public class TranslateNum_46_For_Offer {
 		System.out.println(translateNum(18580));
 		System.out.println(translateNum(419605557));
 		System.out.println(translateNum(1492916348));
+		System.out.println(translateNum_1(1492916348));
 	}
 
 	/**
@@ -55,4 +56,15 @@ public class TranslateNum_46_For_Offer {
 		return dp[len-1];
 	}
 
+	/**
+	 * 递归
+	 * @param num
+	 * @return
+	 */
+	public static int translateNum_1(int num) {
+		if (num < 10) {
+			return 1;
+		}
+		return (num%100 < 10 || num%100 > 25) ? translateNum(num/10) : translateNum(num/10) + translateNum(num/ 100);
+	}
 }
