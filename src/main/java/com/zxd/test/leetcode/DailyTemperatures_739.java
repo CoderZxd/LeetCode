@@ -1,5 +1,7 @@
 package com.zxd.test.leetcode;
 
+import java.util.Stack;
+
 /**
  * @Title: DailyTemperatures_739
  * @Description: https://leetcode-cn.com/problems/daily-temperatures/
@@ -17,7 +19,8 @@ public class DailyTemperatures_739 {
 	public static void main(String[] args) {
 		int[] result = dailyTemperatures(new int[]{34,80,80,34,34,80,80,80,80,34});
 //		int[] result_1 = dailyTemperatures_1(new int[]{73, 74, 75, 71, 69, 72, 76, 73});
-		int[] result_1 = dailyTemperatures_1(new int[]{34,80,80,34,34,80,80,80,80,34});
+//		int[] result_1 = dailyTemperatures_1(new int[]{34,80,80,34,34,80,80,80,80,34});
+		int[] result_1 = dailyTemperatures_2(new int[]{34,80,80,34,34,80,80,80,80,34});
 		System.out.println(result);
 	}
 
@@ -108,4 +111,27 @@ public class DailyTemperatures_739 {
 		}
 		return res;
 	}
+
+	/**
+	 * 单调栈
+	 * https://leetcode-cn.com/problems/daily-temperatures/solution/leetcode-tu-jie-739mei-ri-wen-du-by-misterbooo/
+	 * @param T
+	 * @return
+	 */
+	public static int[] dailyTemperatures_2(int[] T) {
+		Stack<Integer> stack = new Stack<>();
+		int length = T.length;
+		int[] result = new int[length];
+
+		for (int i = 0; i < length; i++) {
+			while (!stack.isEmpty() && T[i] > T[stack.peek()]) {
+				int pre = stack.pop();
+				result[pre] = i - pre;
+			}
+			stack.add(i);
+
+		}
+		return result;
+	}
+
 }
