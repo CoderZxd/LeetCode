@@ -58,7 +58,7 @@ public class ThreeSum_15 {
 				int left = j+1;
 				//折半查找的结束位置是数组末尾
 				int right = len-1;
-				//如果left比len小并且left比remain大或者right比remain小,则不存在符合条件的值，直接进行下
+				//如果left比len小并且left比remain大或者right比remain小,则不存在符合条件的值，直接进行下一步
 				if(left < len && (nums[left] > remain || nums[right] < remain)){
 					continue;
 				}
