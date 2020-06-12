@@ -35,7 +35,7 @@ public class ThreeSum_15 {
 	/**
 	 * 执行结果： 通过
 	 * 显示详情
-	 * 执行用时 : 379  ms , 在所有 Java 提交中击败了 7.77% 的用户
+	 * 执行用时 : 285  ms , 在所有 Java 提交中击败了 9.39% 的用户
 	 * 内存消耗 : 44.4 MB , 在所有 Java 提交中击败了 95.60% 的用户
 	 * @param nums
 	 * @return
@@ -76,6 +76,10 @@ public class ThreeSum_15 {
 					}else {
 						right = mid -1;
 					}
+				}
+				//如果当前j元素与j+1元素相同，则不需要j再重复外层循环了,直接j++进行下一次for循环,即从j+2开始
+				if(j+1<len && nums[j] == nums[j+1]){
+					j++;
 				}
 			}
 			//如果当前i元素与i+1元素相同，则不需要i再重复外层循环了,直接i++进行下一次for循环,即从i+2开始
