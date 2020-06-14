@@ -75,4 +75,65 @@ public class FindBestValue_1300 {
         }
         return ans;
     }
+
+    /**
+     * 12 / 18 个通过测试用例
+     * TODO:主要是没有理解题目的真正意思
+     * @param arr
+     * @param target
+     * @return
+     */
+    public static int findBestValue(int[] arr, int target) {
+        int result = 0;
+        int len = arr.length;
+        if(len == 1){
+            if(arr[0] <= target){
+                return arr[0];
+            }else{
+                return target;
+            }
+        }
+        Arrays.sort(arr);
+        //平均数
+        int average = Math.round((float) target/len);
+        if(arr[0]>average){
+            return average;
+        }
+        //折半查找平均数所在数组的位置
+        int left = 0;
+        int right = len-1;
+        int mid = 0;
+        while (left<=right){
+            mid = (left+right)/2;
+            if(arr[mid] == average){
+                break;
+            }else if(arr[mid] < average){
+                left = mid+1;
+            }else{
+                right = mid -1;
+            }
+        }
+//        System.out.println(mid);
+        if(mid == 0){
+            return arr[mid];
+        }
+        //从mid处开始计算
+        int[] sumArray = new int[len];
+        sumArray[0] = arr[0];
+        for(int i=1;i<=mid;i++){
+            sumArray[i] = arr[i] + sumArray[i-1];
+        }
+        int cha = Integer.MAX_VALUE;
+        for(int i=mid;i<len;i++){
+            sumArray[i] = arr[i] + sumArray[i-1];
+            int sum = sumArray[i] + (len-i-1)*arr[i];
+            if(Math.abs(sum-target)<cha){
+                cha = Math.abs(sum-target);
+                result = arr[i];
+            }else{
+                break;
+            }
+        }
+        return result;
+    }
 }
