@@ -26,7 +26,9 @@ package com.zxd.test.leetcode;
 public class BuildTree_105 {
 
 	public static void main(String[] args) {
-
+		BuildTree_105 buildTree_105 = new BuildTree_105();
+		TreeNode root = buildTree_105.buildTree(new int[]{3,9,20,15,7},new int[]{9,3,15,20,7});
+		System.out.println(root);
 	}
 
 	public TreeNode buildTree(int[] preorder, int[] inorder) {
