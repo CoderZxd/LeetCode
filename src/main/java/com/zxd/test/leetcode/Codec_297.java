@@ -54,7 +54,8 @@ public class Codec_297 {
 //		codec_297.inOrder(treeNode_1,inOrderList);
 		String serialize = codec_297.serialize(treeNode_1);
 		System.out.println(serialize);
-		codec_297.deserialize(serialize);
+		TreeNode root = codec_297.deserialize(serialize);
+		System.out.println(root);
 	}
 
 	//通过树的先序+中序或者中序+后序可以实现树的反序化(如果没有重复元素)
