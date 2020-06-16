@@ -63,6 +63,13 @@ public class Codec_297 {
 	public String serialize(TreeNode root) {
 		return rserialize(root, "");
 	}
+
+	/**
+	 * 前序遍历
+	 * @param root
+	 * @param str
+	 * @return
+	 */
 	public String rserialize(TreeNode root, String str) {
 		if (root == null) {
 			str += "None,";
