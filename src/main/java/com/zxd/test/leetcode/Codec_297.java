@@ -1,6 +1,8 @@
 package com.zxd.test.leetcode;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -55,17 +57,20 @@ public class Codec_297 {
 		codec_297.deserialize(serialize);
 	}
 
-	//通过树的先序+中序或者中序+后序可以实现树的反序化
+	//通过树的先序+中序或者中序+后序可以实现树的反序化(如果没有重复元素)
 	// Encodes a tree to a single string.
 	public String serialize(TreeNode root) {
-		if(root == null){
-			return null;
+		return rserialize(root, "");
+	}
+	public String rserialize(TreeNode root, String str) {
+		if (root == null) {
+			str += "None,";
+		} else {
+			str += root.val + ",";
+			str = rserialize(root.left, str);
+			str = rserialize(root.right, str);
 		}
-		StringBuffer preOrderSb = new StringBuffer();
-		preOrder(root,preOrderSb);
-		StringBuffer inOrderSb = new StringBuffer();
-		inOrder(root,inOrderSb);
-		return preOrderSb.deleteCharAt(preOrderSb.lastIndexOf(",")).toString()+"|"+inOrderSb.deleteCharAt(inOrderSb.lastIndexOf(",")).toString();
+		return str;
 	}
 
 	/**
@@ -117,18 +122,27 @@ public class Codec_297 {
 
 	// Decodes your encoded data to tree.
 	public TreeNode deserialize(String data) {
-		if(null == data){
+		String[] data_array = data.split(",");
+		List<String> data_list = new LinkedList<String>(Arrays.asList(data_array));
+		return rdeserialize(data_list);
+	}
+
+	public TreeNode rdeserialize(List<String> l) {
+		if (l.get(0).equals("None")) {
+			l.remove(0);
 			return null;
 		}
-		String[] arrays = data.split("\\|");
-		String[] preOrderArray = arrays[0].split(",");
-		String[] inOrderArray = arrays[1].split(",");
-		TreeNode root =  buildTree(preOrderArray,inOrderArray);
+
+		TreeNode root = new TreeNode(Integer.valueOf(l.get(0)));
+		l.remove(0);
+		root.left = rdeserialize(l);
+		root.right = rdeserialize(l);
+
 		return root;
 	}
 
 	public TreeNode buildTree(String[] preorder, String[] inorder) {
-		//不管什么遍历方式，结果长度肯定是一样的，都是总结点数
+		//不管什么遍历方式，结果长度肯定是一样的，都是总节点数
 		if(preorder.length!= inorder.length || preorder.length<1){
 			return null;
 		}
