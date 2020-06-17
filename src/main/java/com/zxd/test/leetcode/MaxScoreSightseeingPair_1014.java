@@ -62,7 +62,7 @@ public class MaxScoreSightseeingPair_1014 {
 	 * @return
 	 */
 	public int maxScoreSightseeingPair_1(int[] A) {
-		int left = A[0], result = Integer.MIN_VALUE,len=A.length;
+		int left = A[0]+0, result = Integer.MIN_VALUE,len=A.length;
 		for (int j = 1; j < len; j++) {
 			result = Math.max(result, left + A[j]-j);
 			left = Math.max(left, A[j] + j);
