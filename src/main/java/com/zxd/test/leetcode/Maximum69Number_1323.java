@@ -45,12 +45,21 @@ public class Maximum69Number_1323 {
 
 	public static void main(String[] args) {
 		Maximum69Number_1323 maximum69Number_1323 = new Maximum69Number_1323();
-		System.out.println(maximum69Number_1323.maximum69Number(9669));
-		System.out.println(maximum69Number_1323.maximum69Number(9996));
-		System.out.println(maximum69Number_1323.maximum69Number(9999));
-		System.out.println(maximum69Number_1323.maximum69Number(6));
-		System.out.println(maximum69Number_1323.maximum69Number(69));
-		System.out.println(maximum69Number_1323.maximum69Number(669));
+		System.out.println(maximum69Number_1323.maximum69Number_1(9669));
+		System.out.println(maximum69Number_1323.maximum69Number_1(9996));
+		System.out.println(maximum69Number_1323.maximum69Number_1(9999));
+		System.out.println(maximum69Number_1323.maximum69Number_1(6));
+		System.out.println(maximum69Number_1323.maximum69Number_1(69));
+		System.out.println(maximum69Number_1323.maximum69Number_1(669));
+	}
+
+	/**
+	 * 方法二
+	 * @param num
+	 * @return
+	 */
+	public int maximum69Number_1(int num) {
+		return Integer.parseInt(Integer.toString(num).replaceFirst("6","9"));
 	}
 
 	/**
