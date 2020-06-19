@@ -33,17 +33,23 @@ public class IsPalindrome_125 {
 		int len = s.length();
 		if(len>1){
 			for(int l=0,r=len-1;l<=r;){
-				if(!((s.charAt(l)>='a' && s.charAt(l)<='z') || (s.charAt(l)>='0' && s.charAt(l)<='9') || (s.charAt(l)>='A' && s.charAt(l)<='Z'))){
+//				if(!((s.charAt(l)>='a' && s.charAt(l)<='z') || (s.charAt(l)>='0' && s.charAt(l)<='9') || (s.charAt(l)>='A' && s.charAt(l)<='Z'))){
+//					l++;
+//					continue;
+//				}
+				if(!Character.isLetterOrDigit(s.charAt(l))){
 					l++;
 					continue;
 				}
-				if(!((s.charAt(r)>='a' && s.charAt(r)<='z') || (s.charAt(r)>='0' && s.charAt(r)<='9') || (s.charAt(r)>='A' && s.charAt(r)<='Z'))){
+//				if(!((s.charAt(r)>='a' && s.charAt(r)<='z') || (s.charAt(r)>='0' && s.charAt(r)<='9') || (s.charAt(r)>='A' && s.charAt(r)<='Z'))){
+//					r--;
+//					continue;
+//				}
+				if(!Character.isLetterOrDigit(s.charAt(r))){
 					r--;
 					continue;
 				}
-				String left = s.charAt(l)+"";
-				String right = s.charAt(r)+"";
-				if(!left.equalsIgnoreCase(right)){
+				if(Character.toLowerCase(s.charAt(l)) != Character.toLowerCase(s.charAt(r))){
 					return false;
 				}
 				l++;
