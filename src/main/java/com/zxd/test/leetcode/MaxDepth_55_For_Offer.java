@@ -42,11 +42,21 @@ public class MaxDepth_55_For_Offer {
 		node_2.left = node_4;
 		node_2.right = node_5;
 		System.out.println("max depth:"+maxDepth55ForOffer.maxDepth(root));
+		System.out.println("max depth:"+maxDepth55ForOffer.maxDepth_1(root));
 	}
 
 	public int maxDepth(TreeNode root) {
 		dfs(root,0);
 		return maxDepth;
+	}
+
+	/**
+	 * 递归解决
+	 * @param root
+	 * @return
+	 */
+	public int maxDepth_1(TreeNode root) {
+		return root == null?0:Math.max(maxDepth_1(root.left),maxDepth_1(root.right))+1;
 	}
 
 	/**
