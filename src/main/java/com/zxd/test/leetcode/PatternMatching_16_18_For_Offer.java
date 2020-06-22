@@ -49,9 +49,11 @@ public class PatternMatching_16_18_For_Offer {
 	public boolean patternMatching(String pattern, String value) {
 		int lenPattern = pattern.length();
 		int lenValue = value.length();
+		//如果pattern与value都为空,返回true
 		if(lenPattern == 0 && lenValue == 0){
 			return true;
 		}
+		//如果pattern为空,value不为空,返回false
 		if(lenPattern == 0 && lenValue != 0){
 			return false;
 		}
@@ -63,17 +65,18 @@ public class PatternMatching_16_18_For_Offer {
 			}
 			return patternMatchingForReplaceChar("",pattern,value);
 		}
+		//如果pattern不为空,value却为空,返回false
 		if(lenValue == 0){
 			return false;
 		}
-		//pattern包括a和b
-		//2.如果a和b有一个为空串，判断是否满足
+		//2.pattern包括a和b
+		//如果a和b有一个为空串，判断是否满足
 		//全部替换a为""或者b为""
 		if(patternMatchingForReplaceChar("a",pattern,value) || patternMatchingForReplaceChar("b",pattern,value)){
 			return true;
 		}
 		//3.a和b都不为""
-		//统计a与b的个数(二元一次方程求解)
+		//统计a与b的个数(二元一次方程求解,countA*a+countB*b=lenValue)
 		String[] patternArray = pattern.split("");
 		int length = patternArray.length;
 		int count_a = 0;
@@ -126,6 +129,13 @@ public class PatternMatching_16_18_For_Offer {
 		return false;
 	}
 
+	/**
+	 * 将pattern中的c替换成"",然后判断pattern是否与value匹配
+	 * @param c
+	 * @param pattern
+	 * @param value
+	 * @return
+	 */
 	private boolean patternMatchingForReplaceChar(String c,String pattern,String value){
 		String newPattern = pattern.replaceAll(c,"");
 		int newLenPattern = newPattern.length();
