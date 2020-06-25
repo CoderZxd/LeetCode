@@ -1,5 +1,6 @@
 package com.zxd.test.leetcode;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -36,10 +37,35 @@ public class WordBreak_139 {
 
     public static void main(String[] args) {
 
+        WordBreak_139 wordBreak = new WordBreak_139();
+//        System.out.println(wordBreak.wordBreak("leetcode", Arrays.asList(new String[]{"leet", "code"})));
+//        System.out.println(wordBreak.wordBreak("applepenapple", Arrays.asList(new String[]{"apple", "pen"})));
+        System.out.println(wordBreak.wordBreak("catsandog", Arrays.asList(new String[]{"cats", "dog", "sand", "and", "cat"})));
+
     }
 
+    /**
+     * 递归
+     *29 / 36 个通过测试用例
+     * @param s
+     * @param wordDict
+     * @return
+     */
     public boolean wordBreak(String s, List<String> wordDict) {
-
+        if("".equals(s)){
+            return true;
+        }
+        int len = s.length();
+        for(int i=1;i<=len;i++){
+            String subStr = s.substring(0,i);
+            if(wordDict.contains(subStr)){
+                String newS = s.substring(i);
+                boolean subResult = wordBreak(newS,wordDict);
+                if(subResult){
+                    return true;
+                }
+            }
+        }
         return false;
     }
 }
