@@ -38,28 +38,40 @@ public class WordBreak_139 {
     public static void main(String[] args) {
 
         WordBreak_139 wordBreak = new WordBreak_139();
-//        System.out.println(wordBreak.wordBreak("leetcode", Arrays.asList(new String[]{"leet", "code"})));
-//        System.out.println(wordBreak.wordBreak("applepenapple", Arrays.asList(new String[]{"apple", "pen"})));
+        System.out.println(wordBreak.wordBreak("leetcode", Arrays.asList(new String[]{"leet", "code"})));
+        System.out.println(wordBreak.wordBreak("applepenapple", Arrays.asList(new String[]{"apple", "pen"})));
         System.out.println(wordBreak.wordBreak("catsandog", Arrays.asList(new String[]{"cats", "dog", "sand", "and", "cat"})));
+        System.out.println(wordBreak.wordBreak("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab", Arrays.asList(new String[]{"a","aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"})));
+        System.out.println(wordBreak.wordBreak("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Arrays.asList(new String[]{"a","aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"})));
 
     }
 
     /**
      * 递归
-     *29 / 36 个通过测试用例
+     * 执行用时： 3 ms , 在所有 Java 提交中击败了 95.01% 的用户
+     * 内存消耗： 39.3 MB , 在所有 Java 提交中击败了 8.00% 的用户
      * @param s
      * @param wordDict
      * @return
      */
     public boolean wordBreak(String s, List<String> wordDict) {
+        //如果字符串s为空，说明可以完全匹配，返回true
         if("".equals(s)){
             return true;
         }
         int len = s.length();
-        for(int i=1;i<=len;i++){
-            String subStr = s.substring(0,i);
+        //从未部开始匹配(从头部开始匹配也一样),找到第一个字符串在wordDict中，然后递归判断剩余字符串时候符合要求
+        for(int i=len-1;i>=0;i--){
+            String subStr = s.substring(i);
+            //如果当前字符串在wordDict中,递归求解剩余字符串时候满足要求
             if(wordDict.contains(subStr)){
-                String newS = s.substring(i);
+                //剩余字符串
+                String newS = s.substring(0,i);
+                //如果剩余字符串依然是subStr结尾，则需要求新的需要递归的字符串，直到不是以subStr结尾的字符串
+                while (newS.endsWith(subStr)){
+                    newS = newS.substring(0,newS.length()-subStr.length());
+                }
+                //如果有结果为true,则说明该字符串满足条件，可以直接返回true
                 boolean subResult = wordBreak(newS,wordDict);
                 if(subResult){
                     return true;
