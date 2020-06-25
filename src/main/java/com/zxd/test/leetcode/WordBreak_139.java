@@ -1,7 +1,9 @@
 package com.zxd.test.leetcode;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * @ClassName WordBreak_139
@@ -39,6 +41,7 @@ public class WordBreak_139 {
 
         WordBreak_139 wordBreak = new WordBreak_139();
         System.out.println(wordBreak.wordBreak("leetcode", Arrays.asList(new String[]{"leet", "code"})));
+        System.out.println(wordBreak.wordBreak_offical("leetcode", Arrays.asList(new String[]{"leet", "code"})));
         System.out.println(wordBreak.wordBreak("applepenapple", Arrays.asList(new String[]{"apple", "pen"})));
         System.out.println(wordBreak.wordBreak("catsandog", Arrays.asList(new String[]{"cats", "dog", "sand", "and", "cat"})));
         System.out.println(wordBreak.wordBreak("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab", Arrays.asList(new String[]{"a","aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"})));
@@ -60,7 +63,7 @@ public class WordBreak_139 {
             return true;
         }
         int len = s.length();
-        //从未部开始匹配(从头部开始匹配也一样),找到第一个字符串在wordDict中，然后递归判断剩余字符串时候符合要求
+        //从未部开始匹配(从头部开始匹配也一样),找到第一个字符串在wordDict中，然后递归判断剩余字符串是否符合要求
         for(int i=len-1;i>=0;i--){
             String subStr = s.substring(i);
             //如果当前字符串在wordDict中,递归求解剩余字符串时候满足要求
@@ -78,6 +81,28 @@ public class WordBreak_139 {
                 }
             }
         }
+        //遍历到最后没有符合要求的，返回false
         return false;
+    }
+
+    /**
+     * 官方题解：动态规划
+     * @param s
+     * @param wordDict
+     * @return
+     */
+    public boolean wordBreak_offical(String s, List<String> wordDict) {
+        Set<String> wordDictSet = new HashSet(wordDict);
+        boolean[] dp = new boolean[s.length() + 1];
+        dp[0] = true;
+        for (int i = 1; i <= s.length(); i++) {
+            for (int j = 0; j < i; j++) {
+                if (dp[j] && wordDictSet.contains(s.substring(j, i))) {
+                    dp[i] = true;
+                    break;
+                }
+            }
+        }
+        return dp[s.length()];
     }
 }
