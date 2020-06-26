@@ -83,6 +83,27 @@ public class RemoveDuplicateNodes_02_01_For_Offer {
         }
         return head;
     }
+
+    /**
+     * 双层循环,O(1)空间复杂度,O(n^2)时间复杂度
+     * @param head
+     * @return
+     */
+    public ListNode removeDuplicateNodes_2(ListNode head) {
+        ListNode ob = head;
+        while (ob != null) {
+            ListNode oc = ob;
+            while (oc.next != null) {
+                if (oc.next.val == ob.val) {
+                    oc.next = oc.next.next;
+                } else {
+                    oc = oc.next;
+                }
+            }
+            ob = ob.next;
+        }
+        return head;
+    }
 }
 /**
  * Definition for singly-linked list.
