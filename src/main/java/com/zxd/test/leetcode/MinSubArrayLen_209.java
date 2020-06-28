@@ -67,10 +67,6 @@ public class MinSubArrayLen_209 {
                 }
             }
         }
-        //最好result结果未变，则表明没有符合要求的值，返回0
-        if(result == len+1){
-            return 0;
-        }
-        return result;
+        return result == len+1? 0:result;
     }
 }
