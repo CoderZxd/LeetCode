@@ -40,6 +40,10 @@ class CQueue {
 		this.head = new Stack<>();
 	}
 
+	/**
+	 * 保持了tail与head元素一致
+	 * @param value
+	 */
 	public void appendTail(int value) {
 		this.tail.push(value);
 		Stack<Integer> tempHead = new Stack<>();
@@ -66,6 +70,25 @@ class CQueue {
 			return value;
 		}
 		return -1;
+	}
+
+	/**
+	 * 官方方法一：双栈
+	 * @param value
+	 */
+	public void appendTail_1(int value) {
+		tail.push(value);
+	}
+
+	public int deleteHead_1() {
+		if(!head.isEmpty()){
+			return head.pop();
+		}else{
+			while(!tail.isEmpty()){
+				head.push(tail.pop());
+			}
+			return head.isEmpty() ? -1 : head.pop();
+		}
 	}
 
 	public static void main(String[] args) {
