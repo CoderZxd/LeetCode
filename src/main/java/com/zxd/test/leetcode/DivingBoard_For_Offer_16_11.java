@@ -1,5 +1,9 @@
 package com.zxd.test.leetcode;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * @ClassName DivingBoard_For_Offer_16_11
  * @Description https://leetcode-cn.com/problems/diving-board-lcci/
@@ -26,11 +30,22 @@ package com.zxd.test.leetcode;
 public class DivingBoard_For_Offer_16_11 {
 
     public static void main(String[] args) {
-
+        DivingBoard_For_Offer_16_11 divingBoardForOffer = new DivingBoard_For_Offer_16_11();
+        int[] result = divingBoardForOffer.divingBoard(1,2,3);
+        System.out.println(result);
     }
 
     public int[] divingBoard(int shorter, int longer, int k) {
-
-        return null;
+        if (k == 0) {
+            return new int[0];
+        }
+        if(shorter == longer){
+            return new int[]{shorter*k};
+        }
+        int[] result = new int[k+1];
+        for(int i=0;i<=k;i++){
+            result[i] = (k-i)*shorter+i*longer;
+        }
+        return result;
     }
 }
