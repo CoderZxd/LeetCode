@@ -29,3 +29,5 @@ hs_err_pid*
 .gitignore
 target/generated-sources/
 target/generated-test-sources/
+/.idea/
+/target/
