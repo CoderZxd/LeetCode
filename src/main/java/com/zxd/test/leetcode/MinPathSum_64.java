@@ -30,9 +30,9 @@ public class MinPathSum_64 {
     /**
      * @Author zouxiaodong
      * @Description 动态规划
-     * 当 i>0i>0 且 j=0j=0 时，dp[i][0]=dp[i−1][0]+grid[i][0]。
-     * 当 i=0i=0 且 j>0j>0 时，dp[0][j]=dp[0][j−1]+grid[0][j]。
-     * 当 i>0i>0 且 j>0j>0 时，dp[i][j]=min(dp[i−1][j],dp[i][j−1])+grid[i][j]。
+     * 当 i>0,i>0 且 j=0j=0 时，dp[i][0]=dp[i−1][0]+grid[i][0]。
+     * 当 i=0,i=0 且 j>0j>0 时，dp[0][j]=dp[0][j−1]+grid[0][j]。
+     * 当 i>0,i>0 且 j>0,j>0 时，dp[i][j]=min(dp[i−1][j],dp[i][j−1])+grid[i][j]。
      * @Date 2020/07/23 8:17
      * @Param [grid]
      * @return int
