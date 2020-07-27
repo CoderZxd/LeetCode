@@ -64,4 +64,23 @@ public class IsSubsequence_392 {
         }
         return true;
     }
+
+    /**
+     * @Author zouxiaodong
+     * @Description 官方题解：双指针
+     * @Date 2020/07/27 9:18
+     * @Param [s, t]
+     * @return boolean
+     **/
+    public boolean isSubsequence_offical(String s, String t) {
+        int n = s.length(), m = t.length();
+        int i = 0, j = 0;
+        while (i < n && j < m) {
+            if (s.charAt(i) == t.charAt(j)) {
+                i++;
+            }
+            j++;
+        }
+        return i == n;
+    }
 }
