@@ -17,11 +17,29 @@ package com.zxd.test.leetcode;
 public class AddStrings_415 {
 
     public static void main(String[] args) {
-
+        AddStrings_415 addStrings = new AddStrings_415();
+        System.out.println(addStrings.addStrings("99999","1"));
     }
 
     public String addStrings(String num1, String num2) {
-
-        return null;
+        if (num1 == null || num1.length() == 0){
+            return num2;
+        }
+        if(num2 == null || num2.length() == 0){
+            return num1;
+        }
+        int len1 = num1.length();
+        int len2 = num2.length();
+        int carry = 0;
+        StringBuffer sb = new StringBuffer();
+        for(int i= len1-1,j=len2-1;i>=0 || j>= 0;i--,j--){
+           int sum = (i>=0?Integer.parseInt(String.valueOf(num1.charAt(i))):0) + (j>=0?Integer.parseInt(String.valueOf(num2.charAt(j))):0) + carry;
+           carry = sum/10;
+           sb.append(sum%10);
+        }
+        if(carry > 0){
+            sb.append(carry);
+        }
+        return sb.reverse().toString();
     }
 }
