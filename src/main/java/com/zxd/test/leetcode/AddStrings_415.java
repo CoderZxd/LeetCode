@@ -33,7 +33,7 @@ public class AddStrings_415 {
         int carry = 0;
         StringBuffer sb = new StringBuffer();
         for(int i= len1-1,j=len2-1;i>=0 || j>= 0;i--,j--){
-           int sum = (i>=0?Integer.parseInt(String.valueOf(num1.charAt(i))):0) + (j>=0?Integer.parseInt(String.valueOf(num2.charAt(j))):0) + carry;
+           int sum = (i>=0?num1.charAt(i)-'0':0) + (j>=0?num2.charAt(j)-'0':0) + carry;
            carry = sum/10;
            sb.append(sum%10);
         }
