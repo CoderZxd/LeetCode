@@ -37,7 +37,7 @@ public class Rob_198 {
 	}
 
 	/**
-	 * 动态规划 dp[i] = max(dp[i-2]+nums[2],dp[i-1])
+	 * 动态规划 dp[i] = max(dp[i-2]+nums[i],dp[i-1])
 	 * @param nums
 	 * @return
 	 */
