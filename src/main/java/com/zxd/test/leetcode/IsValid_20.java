@@ -74,9 +74,6 @@ public class IsValid_20 {
                 }
             }
         }
-        if(!stack.empty()){
-            return false;
-        }
-        return true;
+        return stack.empty()
     }
 }
