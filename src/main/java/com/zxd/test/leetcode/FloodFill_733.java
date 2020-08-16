@@ -37,7 +37,7 @@ import java.util.Set;
 //        image[i][j] 和 newColor 表示的颜色值在范围 [0, 65535]内。
 public class FloodFill_733 {
 
-    private Set<String> set = new HashSet<>(16);
+    private Set<String> computedEleSet = new HashSet<>(16);
 
     public static void main(String[] args) {
         int[] a1 = new int[]{1,1,1};
@@ -49,10 +49,10 @@ public class FloodFill_733 {
     }
 
     public int[][] floodFill(int[][] image, int sr, int sc, int newColor) {
-        Set<String> resultSet = new HashSet<>(16);
-        dfs(image,sr,sc,image[sr][sc],resultSet);
-        if(!resultSet.isEmpty()){
-            for(String ele:resultSet){
+        Set<String> colorEleSet = new HashSet<>(16);
+        dfs(image,sr,sc,image[sr][sc],colorEleSet);
+        if(!colorEleSet.isEmpty()){
+            for(String ele:colorEleSet){
                 String[] rc = ele.split("_");
                 image[Integer.parseInt(rc[0])][Integer.parseInt(rc[1])] = newColor;
             }
@@ -60,27 +60,27 @@ public class FloodFill_733 {
         return image;
     }
 
-    private void dfs(int[][] image,int r,int c,int val,Set<String> resultSet){
+    private void dfs(int[][] image,int r,int c,int val,Set<String> colorEleSet){
         String ele = r+"_"+c;
-        if(set.contains(ele)){
+        if(computedEleSet.contains(ele)){
             return;
         }
-        set.add(ele);
+        computedEleSet.add(ele);
         if(image[r][c] == val){
-            resultSet.add(ele);
+            colorEleSet.add(ele);
             int row = image.length;
             int col = image[0].length;
             if(r-1>=0 && image[r-1][c] == val){
-                dfs(image,r-1,c,val,resultSet);
+                dfs(image,r-1,c,val,colorEleSet);
             }
             if (c -1 >=0 && image[r][c-1] == val){
-                dfs(image,r,c-1,val,resultSet);
+                dfs(image,r,c-1,val,colorEleSet);
             }
             if (c+1<col && image[r][c+1] == val){
-                dfs(image,r,c+1,val,resultSet);
+                dfs(image,r,c+1,val,colorEleSet);
             }
             if(r+1<row && image[r+1][c] == val){
-                dfs(image,r+1,c,val,resultSet);
+                dfs(image,r+1,c,val,colorEleSet);
             }
         }
     }
