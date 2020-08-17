@@ -80,18 +80,27 @@ public class IsBalanced_110 {
     }
 
     public boolean isBalanced(TreeNode root) {
+        //如果树为空，返回true
         if(root == null){
             return true;
         }
+        //树的左右节点高度差是否>1,如果>1则返回false
         if(Math.abs(dfs(root.left) - dfs(root.right)) > 1){
             return false;
         }
+        //如果树的左右节点有一个节点不满足高度要求，则返回false
         if(!isBalanced(root.left) || !isBalanced(root.right)){
             return false;
         }
+        //否则返回true
         return true;
     }
 
+    /**
+     * @Description 返回树的高度
+     * @Param [node]
+     * @return int
+     **/
     private int dfs(TreeNode node){
         if(node == null){
             return 0;
