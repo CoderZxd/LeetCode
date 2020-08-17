@@ -63,16 +63,33 @@ public class IsBalanced_110 {
         root2.left = root2_l;
         root2.right = root2_r;
         System.out.println(isBalanced.isBalanced(root2));
+        TreeNode root3 = new TreeNode(1);
+        TreeNode root3_l = new TreeNode(2);
+        TreeNode root3_l_l = new TreeNode(3);
+        TreeNode root3_l_l_l = new TreeNode(4);
+        TreeNode root3_r = new TreeNode(2);
+        TreeNode root3_r_r = new TreeNode(3);
+        TreeNode root3_r_r_r = new TreeNode(4);
+        root3.left = root3_l;
+        root3.right = root3_r;
+        root3_l.left = root3_l_l;
+        root3_l_l.left = root3_l_l_l;
+        root3_r.right = root3_r_r;
+        root3_r_r.right = root3_r_r_r;
+        System.out.println(isBalanced.isBalanced(root3));
     }
 
     public boolean isBalanced(TreeNode root) {
         if(root == null){
             return true;
         }
-        if(Math.abs(dfs(root.left) - dfs(root.right)) <= 1){
-            return true;
+        if(Math.abs(dfs(root.left) - dfs(root.right)) > 1){
+            return false;
         }
-        return false;
+        if(!isBalanced(root.left) || !isBalanced(root.right)){
+            return false;
+        }
+        return true;
     }
 
     private int dfs(TreeNode node){
