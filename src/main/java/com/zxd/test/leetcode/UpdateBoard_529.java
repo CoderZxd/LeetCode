@@ -8,7 +8,8 @@ package com.zxd.test.leetcode;
 //529. 扫雷游戏
 //        让我们一起来玩扫雷游戏！
 //
-//        给定一个代表游戏板的二维字符矩阵。 'M' 代表一个未挖出的地雷，'E' 代表一个未挖出的空方块，'B' 代表没有相邻（上，下，左，右，和所有4个对角线）地雷的已挖出的空白方块，数字（'1' 到 '8'）表示有多少地雷与这块已挖出的方块相邻，'X' 则表示一个已挖出的地雷。
+//        给定一个代表游戏板的二维字符矩阵。 'M' 代表一个未挖出的地雷，'E' 代表一个未挖出的空方块，'B' 代表没有相邻（上，下，左，右，和所有4个对角线）地雷的已挖出的空白方块，
+//        数字（'1' 到 '8'）表示有多少地雷与这块已挖出的方块相邻，'X' 则表示一个已挖出的地雷。
 //
 //        现在给出在所有未挖出的方块中（'M'或者'E'）的下一个点击位置（行和列索引），根据以下规则，返回相应位置被点击后对应的面板：
 //
@@ -66,7 +67,55 @@ public class UpdateBoard_529 {
     }
 
     public char[][] updateBoard(char[][] board, int[] click) {
+        int x = click[0], y = click[1];
+        if (board[x][y] == 'M') {
+            // 规则 1
+            board[x][y] = 'X';
+        } else{
+            dfs(board, x, y);
+        }
+        return board;
+    }
 
-        return null;
+
+    int[] dirX = {0, 1, 0, -1, 1, 1, -1, -1};
+    int[] dirY = {1, 0, -1, 0, 1, -1, 1, -1};
+
+    /**
+     * @Author zouxiaodong
+     * @Description 方法一：深度优先搜索 + 模拟
+     * @Date 2020/08/20 8:51
+     * @Param [board, x, y]
+     * @return void
+     **/
+    public void dfs(char[][] board, int x, int y) {
+        int cnt = 0;
+        for (int i = 0; i < 8; ++i) {
+            int tx = x + dirX[i];
+            int ty = y + dirY[i];
+            if (tx < 0 || tx >= board.length || ty < 0 || ty >= board[0].length) {
+                continue;
+            }
+            // 不用判断 M，因为如果有 M 的话游戏已经结束了
+            if (board[tx][ty] == 'M') {
+                ++cnt;
+            }
+        }
+        if (cnt > 0) {
+            // 规则 3
+            board[x][y] = (char) (cnt + '0');
+        } else {
+            // 规则 2
+            board[x][y] = 'B';
+            for (int i = 0; i < 8; ++i) {
+                int tx = x + dirX[i];
+                int ty = y + dirY[i];
+                // 这里不需要在存在 B 的时候继续扩展，因为 B 之前被点击的时候已经被扩展过了
+                if (tx < 0 || tx >= board.length || ty < 0 || ty >= board[0].length || board[tx][ty] != 'E') {
+                    continue;
+                }
+                dfs(board, tx, ty);
+            }
+        }
     }
 }
