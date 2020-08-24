@@ -50,12 +50,10 @@ public class RepeatedSubstringPattern_459 {
         if(preSubStr.equals(sufSubStr)){
             return true;
         }else{
-            for(int i=0,j=1;i<j && j<=len/2;){
-                String substr = s.substring(i,j);
+            for(int i=1;i<=len/2;i++){
+                String substr = s.substring(0,i);
                 if(isStartWithStr(substr,s)){
                     return true;
-                }else{
-                    j++;
                 }
             }
             return false;
