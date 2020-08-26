@@ -22,7 +22,7 @@ public class LetterCombinations_17 {
 
     public static void main(String[] args) {
         LetterCombinations_17 letterCombinations = new LetterCombinations_17();
-        List<String> ss = letterCombinations.letterCombinations("2");
+        List<String> ss = letterCombinations.letterCombinations("27");
         System.out.println(ss);
     }
 
@@ -47,11 +47,11 @@ public class LetterCombinations_17 {
             resultList.addAll(mapping.get(s));
             return resultList;
         }
-        String endChar = s.substring(s.length()-1);
         String subStr = s.substring(0,s.length()-1);
+        List<String> subNUmList = recursive(subStr);
+        String endChar = s.substring(s.length()-1);
         List<String> nums = mapping.get(endChar);
         for(String num:nums){
-            List<String> subNUmList = recursive(subStr);
             for (String subNum:subNUmList){
                 resultList.add(subNum+num);
             }
