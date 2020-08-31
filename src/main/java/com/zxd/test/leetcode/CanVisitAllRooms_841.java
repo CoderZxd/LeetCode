@@ -37,17 +37,29 @@ import java.util.Set;
 //        所有房间中的钥匙数量总计不超过 3000。
 public class CanVisitAllRooms_841 {
 
-    private Set<Integer> visitedRoomsSet = new HashSet<>();
+    private boolean[] visited;
+
+    private int num;
 
     public static void main(String[] args) {
 
     }
 
     public boolean canVisitAllRooms(List<List<Integer>> rooms) {
-        if(rooms.size() == 0){
-            return true;
-        }
+        int size = rooms.size();
+        visited=new boolean[size];
+        num=0;
+        dfs(rooms,0);
+        return num==size;
+    }
 
-        return false;
+    public void dfs(List<List<Integer>> rooms, int x) {
+        visited[x] = true;
+        num++;
+        for (int it : rooms.get(x)) {
+            if (!visited[it]) {
+                dfs(rooms, it);
+            }
+        }
     }
 }
