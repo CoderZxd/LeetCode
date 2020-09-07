@@ -31,15 +31,17 @@ public class TopKFrequent_347 {
         topKFrequent.topKFrequent(new int[]{1},1);
     }
 
+    /**
+     * @Author zouxiaodong
+     * @Description O(nlogn)时间复杂度
+     * @Date 2020/09/07 8:54
+     * @Param [nums, k]
+     * @return int[]
+     **/
     public int[] topKFrequent(int[] nums, int k) {
         Map<Integer,Integer> numsMap = new HashMap<>(nums.length*2);
         for(Integer num:nums){
-            Integer value = numsMap.get(num);
-            if (value == null) {
-                numsMap.put(num, 1);
-            } else {
-                numsMap.put(num, value + 1);
-            }
+            numsMap.put(num, numsMap.getOrDefault(num,0) + 1);
         }
         List<KeyToNums> keyToNumsList = new ArrayList<>(numsMap.size());
         for(Map.Entry<Integer,Integer> entry:numsMap.entrySet()){
@@ -83,5 +85,43 @@ public class TopKFrequent_347 {
         public int compareTo(KeyToNums o) {
             return o.nums - this.nums;
         }
+    }
+
+
+    /**
+     * @Author zouxiaodong
+     * @Description 最大堆最小堆
+     * @Date 2020/09/07 8:54
+     * @Param [nums, k]
+     * @return int[]
+     **/
+    public int[] topKFrequent_1(int[] nums, int k) {
+        Map<Integer,Integer> numsMap = new HashMap<>(nums.length*2);
+        for(Integer num:nums){
+            numsMap.put(num, numsMap.getOrDefault(num,0) + 1);
+        }
+        PriorityQueue<int[]> queue = new PriorityQueue<int[]>(new Comparator<int[]>() {
+            @Override
+            public int compare(int[] o1, int[] o2) {
+                return o1[1]-o2[1];
+            }
+        });
+        for(Map.Entry<Integer,Integer> entry:numsMap.entrySet()){
+            int num = entry.getKey();
+            int count = entry.getValue();
+            if(queue.size() == k){
+                if (queue.peek()[1]<count){
+                    queue.poll();
+                    queue.offer(new int[]{num,count});
+                }
+            }else{
+                queue.offer(new int[]{num,count});
+            }
+        }
+        int[] result = new int[k];
+        for(int i=0;i<k;i++){
+            result[i] = queue.poll()[0];
+        }
+        return result;
     }
 }
