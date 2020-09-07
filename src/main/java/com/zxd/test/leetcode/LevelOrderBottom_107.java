@@ -45,13 +45,13 @@ public class LevelOrderBottom_107 {
     }
 
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
+        List<List<Integer>> resultList = new ArrayList<>();
         if(root == null){
-            return new ArrayList<>();
+            return resultList;
         }
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
         queue.offer(null);
-        List<List<Integer>> resultList = new ArrayList<>();
         List<Integer> tempList = new ArrayList<>();
         while (!queue.isEmpty()){
             TreeNode node = queue.poll();
