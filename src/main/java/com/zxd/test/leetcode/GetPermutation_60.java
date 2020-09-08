@@ -31,10 +31,10 @@ public class GetPermutation_60 {
 
     public static void main(String[] args) {
         GetPermutation_60 getPermutation = new GetPermutation_60();
+        System.out.println(getPermutation.getPermutation(3,5));
         System.out.println(getPermutation.getPermutation(3,2));
-//        System.out.println(getPermutation.getPermutation(3,3));
-//        System.out.println(getPermutation.getPermutation(4,9));
-//        System.out.println(getPermutation.getPermutation(1,1));
+        System.out.println(getPermutation.getPermutation(4,9));
+        System.out.println(getPermutation.getPermutation(1,1));
     }
 
     public String getPermutation(int n, int k) {
@@ -80,7 +80,10 @@ public class GetPermutation_60 {
         for(int i=1;i<n;i++){
             nums *= i;
         }
+        if(nums == k){
+            return 1+recursive(n-1,k);
+        }
         int num = new Double(Math.ceil((double)k/nums)).intValue();
-        return num+recursive(n-1,k-nums);
+        return num+recursive(n-1,k-nums*(num-1)<0?0:(k-nums*(num-1)));
     }
 }
