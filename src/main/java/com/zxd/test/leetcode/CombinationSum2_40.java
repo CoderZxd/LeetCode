@@ -1,6 +1,7 @@
 package com.zxd.test.leetcode;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -41,8 +42,8 @@ public class CombinationSum2_40 {
 
     public static void main(String[] args) {
         CombinationSum2_40 combinationSum2_40 = new CombinationSum2_40();
-//        List<List<Integer>> resutlList = combinationSum2_40.combinationSum2(new int[]{10,1,2,7,6,1,5},8);
-        List<List<Integer>> resutlList = combinationSum2_40.combinationSum2(new int[]{2,5,2,1,2},5);
+        List<List<Integer>> resutlList = combinationSum2_40.combinationSum2(new int[]{10,1,2,7,6,1,5},8);
+//        List<List<Integer>> resutlList = combinationSum2_40.combinationSum2(new int[]{2,5,2,1,2},5);
         System.out.println(resutlList);
     }
 
@@ -50,7 +51,14 @@ public class CombinationSum2_40 {
 
     List<Integer> tempList = new ArrayList<>();
 
+    /**
+     * 回溯
+     * @param candidates
+     * @param target
+     * @return
+     */
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
+        Arrays.sort(candidates);
         dfs(candidates,target,0);
         return resultList;
     }
@@ -64,6 +72,10 @@ public class CombinationSum2_40 {
             return;
         }
         for(int i=index;i<candidates.length;i++){
+            //去重
+            if(i>index&&candidates[i]==candidates[i-1]){
+                continue;
+            }
             tempList.add(candidates[i]);
             dfs(candidates,val-candidates[i],i+1);
             tempList.remove(tempList.size()-1);
