@@ -37,6 +37,13 @@ public class CombinationSum3_216 {
         System.out.println(result);
     }
 
+    /**
+     * @Author zouxiaodong
+     * @Description 回溯，注意 “组合中只允许含有 1 - 9 的正整数” 的条件
+     * @Date 2020/09/11 8:30
+     * @Param [k, n]
+     * @return java.util.List<java.util.List<java.lang.Integer>>
+     **/
     public List<List<Integer>> combinationSum3(int k, int n) {
         dfs(n,1,k);
         return resultList;
