@@ -35,6 +35,7 @@ public class SumOfLeftLeaves_404 {
         root_r.right = root_r_r;
         SumOfLeftLeaves_404 sumOfLeftLeaves_404 = new SumOfLeftLeaves_404();
         System.out.println(sumOfLeftLeaves_404.sumOfLeftLeaves(root));
+        System.out.println(sumOfLeftLeaves_404.sumOfLeftLeaves_recursive(root));
     }
 
     public int sumOfLeftLeaves(TreeNode root) {
@@ -54,6 +55,19 @@ public class SumOfLeftLeaves_404 {
         }
         dfs(node.left,true);
         dfs(node.right,false);
+    }
+
+
+    /**
+     * 解法二：递归
+     * @param root
+     * @return
+     */
+    public int sumOfLeftLeaves_recursive(TreeNode root) {
+        if(root == null){
+            return 0;
+        }
+        return sumOfLeftLeaves_recursive(root.left) + sumOfLeftLeaves_recursive(root.right) + (root.left != null && root.left.left == null && root.left.right == null ? root.left.val:0);
     }
 }
 /**
