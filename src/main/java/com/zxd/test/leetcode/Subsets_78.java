@@ -46,9 +46,7 @@ public class Subsets_78 {
     }
 
     private void dfs(int[] nums,int index,List<Integer> tempList){
-        if(tempList.size()<= nums.length){
-            result.add(new ArrayList<>(tempList));
-        }
+        result.add(new ArrayList<>(tempList));
         for(int i=index;i<nums.length;i++){
             tempList.add(nums[i]);
             dfs(nums,i+1,tempList);
