@@ -20,9 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7af4176-39b1-4cb2-a536-6327e4f0e7a8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/Multiply_43.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/FindMode_501.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/LeetCode.kotlin_module" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,56 +78,56 @@
       <recent name="D:\Projects\LeetCode\src\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.IsSameTree_100">
-    <configuration name="AddStrings_415" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.AddStrings_415" />
+  <component name="RunManager" selected="Application.FindMode_501">
+    <configuration name="ConvertBST_538" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.ConvertBST_538" />
       <module name="LeetCode" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FindMagicIndex_For_Offer_08_03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.FindMagicIndex_For_Offer_08_03" />
+    <configuration name="FindMode_501" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.FindMode_501" />
       <module name="LeetCode" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IsSameTree_100" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.IsSameTree_100" />
+    <configuration name="InorderTraversal_94" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.InorderTraversal_94" />
       <module name="LeetCode" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IsSubsequence_392" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.IsSubsequence_392" />
+    <configuration name="MergeTrees_617" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.MergeTrees_617" />
       <module name="LeetCode" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PalindromePairs_336" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.PalindromePairs_336" />
+    <configuration name="PermuteUnique_47" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.PermuteUnique_47" />
       <module name="LeetCode" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.IsSubsequence_392" />
-      <item itemvalue="Application.FindMagicIndex_For_Offer_08_03" />
-      <item itemvalue="Application.AddStrings_415" />
-      <item itemvalue="Application.PalindromePairs_336" />
-      <item itemvalue="Application.IsSameTree_100" />
+      <item itemvalue="Application.InorderTraversal_94" />
+      <item itemvalue="Application.PermuteUnique_47" />
+      <item itemvalue="Application.ConvertBST_538" />
+      <item itemvalue="Application.MergeTrees_617" />
+      <item itemvalue="Application.FindMode_501" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.IsSameTree_100" />
-        <item itemvalue="Application.PalindromePairs_336" />
-        <item itemvalue="Application.AddStrings_415" />
-        <item itemvalue="Application.FindMagicIndex_For_Offer_08_03" />
-        <item itemvalue="Application.IsSubsequence_392" />
+        <item itemvalue="Application.FindMode_501" />
+        <item itemvalue="Application.MergeTrees_617" />
+        <item itemvalue="Application.ConvertBST_538" />
+        <item itemvalue="Application.PermuteUnique_47" />
+        <item itemvalue="Application.InorderTraversal_94" />
       </list>
     </recent_temporary>
   </component>
@@ -215,7 +214,40 @@
       <workItem from="1596758474670" duration="3216000" />
       <workItem from="1597018180220" duration="2928000" />
       <workItem from="1597215851292" duration="27000" />
-      <workItem from="1597277871086" duration="86000" />
+      <workItem from="1597277871086" duration="1185000" />
+      <workItem from="1597285349463" duration="3412000" />
+      <workItem from="1597623432265" duration="2703000" />
+      <workItem from="1597709742339" duration="2685000" />
+      <workItem from="1597732001711" duration="1929000" />
+      <workItem from="1597741122555" duration="322000" />
+      <workItem from="1597796340706" duration="2051000" />
+      <workItem from="1597883455667" duration="1316000" />
+      <workItem from="1597969312208" duration="2428000" />
+      <workItem from="1598229367766" duration="181000" />
+      <workItem from="1598229574022" duration="169000" />
+      <workItem from="1598229756496" duration="21000" />
+      <workItem from="1598229786776" duration="3989000" />
+      <workItem from="1598315098808" duration="4768000" />
+      <workItem from="1598325314764" duration="1962000" />
+      <workItem from="1598402340738" duration="6135000" />
+      <workItem from="1598487256293" duration="2890000" />
+      <workItem from="1598492174544" duration="667000" />
+      <workItem from="1598574411230" duration="1888000" />
+      <workItem from="1598834557612" duration="105000" />
+      <workItem from="1598860559366" duration="2118000" />
+      <workItem from="1598920272204" duration="1321000" />
+      <workItem from="1599180414054" duration="2798000" />
+      <workItem from="1599437133542" duration="392000" />
+      <workItem from="1599437543005" duration="3234000" />
+      <workItem from="1599460010198" duration="12414000" />
+      <workItem from="1599610224730" duration="1017000" />
+      <workItem from="1599782623240" duration="1696000" />
+      <workItem from="1600042229609" duration="1700000" />
+      <workItem from="1600131700418" duration="766000" />
+      <workItem from="1600388018397" duration="1019000" />
+      <workItem from="1600647919340" duration="2969000" />
+      <workItem from="1600819922660" duration="4829000" />
+      <workItem from="1600906049930" duration="3851000" />
     </task>
     <servers />
   </component>
@@ -249,58 +281,70 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="471" height="466" key="DebuggerActiveHint" timestamp="1596760672636">
+    <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser" timestamp="1599439164522">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="471" height="466" key="DebuggerActiveHint/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1596760672636" />
+    <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1599439164522" />
+    <state width="471" height="466" key="DebuggerActiveHint" timestamp="1600824987915">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="471" height="466" key="DebuggerActiveHint/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1600824987915" />
     <state x="740" y="265" key="FileChooserDialogImpl" timestamp="1596416855269">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="740" y="265" key="FileChooserDialogImpl/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1596416855269" />
-    <state width="1877" height="249" key="GridCell.Tab.0.bottom" timestamp="1596761692663">
+    <state width="1877" height="136" key="GridCell.Tab.0.bottom" timestamp="1600910381332">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="249" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1596761692663" />
-    <state width="1877" height="249" key="GridCell.Tab.0.center" timestamp="1596761692663">
+    <state width="1877" height="136" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1600910381332" />
+    <state width="1877" height="136" key="GridCell.Tab.0.center" timestamp="1600910381332">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="249" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1596761692663" />
-    <state width="1877" height="249" key="GridCell.Tab.0.left" timestamp="1596761692663">
+    <state width="1877" height="136" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1600910381332" />
+    <state width="1877" height="136" key="GridCell.Tab.0.left" timestamp="1600910381332">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="249" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1596761692663" />
-    <state width="1877" height="249" key="GridCell.Tab.0.right" timestamp="1596761692663">
+    <state width="1877" height="136" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1600910381332" />
+    <state width="1877" height="136" key="GridCell.Tab.0.right" timestamp="1600910381332">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="249" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1596761692663" />
-    <state width="1877" height="249" key="GridCell.Tab.1.bottom" timestamp="1596761692664">
+    <state width="1877" height="136" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1600910381332" />
+    <state width="1877" height="136" key="GridCell.Tab.1.bottom" timestamp="1600910381394">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="249" key="GridCell.Tab.1.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1596761692664" />
-    <state width="1877" height="249" key="GridCell.Tab.1.center" timestamp="1596761692664">
+    <state width="1877" height="136" key="GridCell.Tab.1.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1600910381394" />
+    <state width="1877" height="136" key="GridCell.Tab.1.center" timestamp="1600910381394">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="249" key="GridCell.Tab.1.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1596761692664" />
-    <state width="1877" height="249" key="GridCell.Tab.1.left" timestamp="1596761692663">
+    <state width="1877" height="136" key="GridCell.Tab.1.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1600910381394" />
+    <state width="1877" height="136" key="GridCell.Tab.1.left" timestamp="1600910381394">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="249" key="GridCell.Tab.1.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1596761692663" />
-    <state width="1877" height="249" key="GridCell.Tab.1.right" timestamp="1596761692664">
+    <state width="1877" height="136" key="GridCell.Tab.1.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1600910381394" />
+    <state width="1877" height="136" key="GridCell.Tab.1.right" timestamp="1600910381394">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="249" key="GridCell.Tab.1.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1596761692664" />
+    <state width="1877" height="136" key="GridCell.Tab.1.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1600910381394" />
     <state x="531" y="339" width="858" height="586" key="Registry" timestamp="1595811310212">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="531" y="339" width="858" height="586" key="Registry/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1595811310212" />
+    <state x="759" y="226" key="RollbackChangesDialog" timestamp="1599469316164">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="759" y="226" key="RollbackChangesDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1599469316164" />
     <state x="461" y="169" key="SettingsEditor" timestamp="1596416857300">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="169" key="SettingsEditor/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1596416857300" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1595811269089">
+    <state x="681" y="266" width="540" height="524" key="StructurePopup" timestamp="1600909488793">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1595811269089" />
+    <state x="681" y="266" width="540" height="524" key="StructurePopup/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1600909488793" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1599610300897">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1599610300897" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -349,16 +393,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/NextPermutation_31.java</url>
           <line>89</line>
           <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/CombinationSum_39.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/CombinationSum_39.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/SubarraySum_560.java</url>
@@ -414,6 +448,36 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/PalindromePairs_336.java</url>
           <line>30</line>
           <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/LevelOrderBottom_107.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/GetPermutation_60.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/GetPermutation_60.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/PermuteUnique_47.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/ConvertBST_538.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/FindMode_501.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="77" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
