@@ -1,6 +1,8 @@
 package com.zxd.test.leetcode;
 
 import java.util.ArrayList;
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -31,7 +33,8 @@ public class PostorderTraversal_145 {
         root.right = root_r;
         root_r.left = root_r_l;
         PostorderTraversal_145 postorderTraversal145 = new PostorderTraversal_145();
-        List<Integer> result = postorderTraversal145.postorderTraversal(root);
+//        List<Integer> result = postorderTraversal145.postorderTraversal(root);
+        List<Integer> result = postorderTraversal145.postorderTraversal_1(root);
         System.out.println(result);
     }
 
@@ -55,6 +58,39 @@ public class PostorderTraversal_145 {
         postOrder(node.left,result);
         postOrder(node.right,result);
         result.add(node.val);
+    }
+
+    /**
+     * @Author zouxiaodong
+     * @Description 解法二：迭代
+     * @Date 2020/09/29 8:20
+     * @Param [root]
+     * @return java.util.List<java.lang.Integer>
+     **/
+    public List<Integer> postorderTraversal_1(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        if (root == null) {
+            return res;
+        }
+
+        Deque<TreeNode> stack = new LinkedList<>();
+        TreeNode prev = null;
+        while (root != null || !stack.isEmpty()) {
+            while (root != null) {
+                stack.push(root);
+                root = root.left;
+            }
+            root = stack.pop();
+            if (root.right == null || root.right == prev) {
+                res.add(root.val);
+                prev = root;
+                root = null;
+            } else {
+                stack.push(root);
+                root = root.right;
+            }
+        }
+        return res;
     }
 }
 /**
