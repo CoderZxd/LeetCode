@@ -49,7 +49,7 @@ public class DetectCycle_142 {
         n3.next=n4;
         n4.next=n2;
         DetectCycle_142 detectCycle142 = new DetectCycle_142();
-        ListNode cycleNode = detectCycle142.detectCycle(head);
+        ListNode cycleNode = detectCycle142.detectCycle_2(head);
         System.out.println(cycleNode);
     }
 
@@ -63,6 +63,72 @@ public class DetectCycle_142 {
                 return head;
             }
             head = head.next;
+        }
+        return null;
+    }
+
+    /**
+     * @Author zouxiaodong
+     * @Description 不适用额外空间，使用快慢指针先判断是否有环，再找到入环的第一个节点
+     * @Date 2020/10/10 8:53
+     * @Param [head]
+     * @return com.zxd.test.leetcode.ListNode
+     **/
+    public ListNode detectCycle_1(ListNode head) {
+        //第一步：使用快慢指针判断是否有环
+        if(head == null || head.next == null){
+            return null;
+        }
+        ListNode slow = head;
+        ListNode fast = head.next;
+        while (slow != fast){
+            if(fast == null || fast.next == null){
+                return null;
+            }
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        //第二步:如果有环，找到入环的第一个节点
+        ListNode startNode = head;
+        ListNode nextNode = slow.next;
+        while (startNode != nextNode){
+            if(nextNode != slow){
+                nextNode = nextNode.next;
+            }else{
+                startNode = startNode.next;
+                nextNode = slow.next;
+            }
+        }
+        return startNode;
+    }
+
+    /**
+     * @Author zouxiaodong
+     * @Description 快慢指针二
+     * @Date 2020/10/10 9:37
+     * @Param [head]
+     * @return com.zxd.test.leetcode.ListNode
+     **/
+    public ListNode detectCycle_2(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+        ListNode slow = head, fast = head;
+        while (fast != null) {
+            slow = slow.next;
+            if (fast.next != null) {
+                fast = fast.next.next;
+            } else {
+                return null;
+            }
+            if (fast == slow) {
+                ListNode ptr = head;
+                while (ptr != slow) {
+                    ptr = ptr.next;
+                    slow = slow.next;
+                }
+                return ptr;
+            }
         }
         return null;
     }
