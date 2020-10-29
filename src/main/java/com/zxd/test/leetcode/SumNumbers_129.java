@@ -1,5 +1,7 @@
 package com.zxd.test.leetcode;
 
+import com.sun.org.glassfish.gmbal.Description;
+
 /**
  * @Description https://leetcode-cn.com/problems/sum-root-to-leaf-numbers/
  * @Author zouxiaodong
@@ -56,9 +58,17 @@ public class SumNumbers_129 {
     }
 
     public int sumNumbers(TreeNode root) {
-        return dfs(root,0);
+//        return dfs(root,0);
+        return dfs_official(root,0);
     }
 
+    /**
+     * @Author zouxiaodong
+     * @Description 我的题解
+     * @Date 2020/10/29 9:14
+     * @Param
+     * @return
+     **/
     private int dfs(TreeNode node,int val){
         if(node == null){
             return val;
@@ -71,5 +81,23 @@ public class SumNumbers_129 {
         }else {
             return dfs(node.right,sumVal);
         }
+    }
+
+    /**
+     * @Author zouxiaodong
+     * @Description 官方题解
+     * @Date 2020/10/29 9:14
+     * @Param [node, val]
+     * @return int
+     **/
+    private int dfs_official(TreeNode node,int val){
+        if(node == null){
+            return 0;
+        }
+        int sumVal = val*10 + node.val;
+        if(node.left == null && node.right == null){
+            return sumVal;
+        }
+        return dfs_official(node.left,sumVal)+dfs_official(node.right,sumVal);
     }
 }
