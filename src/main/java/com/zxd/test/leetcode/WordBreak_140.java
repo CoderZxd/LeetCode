@@ -55,10 +55,12 @@ public class WordBreak_140 {
         WordBreak_140 wordBreak_140 = new WordBreak_140();
 //        String[] dict = new String[]{"cat", "cats", "and", "sand", "dog"};
 //        wordBreak_140.wordBreak("catsanddog", Arrays.asList(dict));
-        String[] dict = new String[]{"apple", "pen", "applepen", "pine", "pineapple"};
-        wordBreak_140.wordBreak("pineapplepenapple", Arrays.asList(dict));
+//        String[] dict = new String[]{"apple", "pen", "applepen", "pine", "pineapple"};
+//        wordBreak_140.wordBreak("pineapplepenapple", Arrays.asList(dict));
 //        String[] dict = new String[]{"cats", "dog", "sand", "and", "cat"};
 //        wordBreak_140.wordBreak("catsandog", Arrays.asList(dict));
+        String[] dict = new String[]{"a","aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"};
+        wordBreak_140.wordBreak("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Arrays.asList(dict));
     }
 
     public List<String> wordBreak(String s, List<String> wordDict) {
@@ -66,12 +68,7 @@ public class WordBreak_140 {
         dfs(s,0,tempList,wordDict);
         if(!resultList.isEmpty()){
             for(List<String> eleList:resultList){
-                StringBuffer sb = new StringBuffer();
-                for(String ele:eleList){
-                    sb.append(ele).append(" ");
-                }
-                sb.deleteCharAt(sb.length()-1);
-                result.add(sb.toString());
+                result.add(String.join(" ",eleList));
             }
         }
         return result;
@@ -79,7 +76,10 @@ public class WordBreak_140 {
 
     /**
      * @Author zouxiaodong
-     * @Description 回溯，31/36执行超时
+     * @Description 回溯，32/36执行超时
+     * 假设字符串 s 的长度为 n，回溯的时间复杂度在最坏情况下高达 O(n^n)。时间复杂度高的原因是存在大量重复计算，可以通过记忆化的方式降低时间复杂度。
+     * 具体做法是，使用哈希表存储字符串 ss 的每个下标和从该下标开始的部分可以组成的句子列表，在回溯过程中如果遇到已经访问过的下标，则可以直接从哈希表得到结果，
+     * 而不需要重复计算。如果到某个下标发现无法匹配，则哈希表中该下标对应的是空列表，因此可以对不能拆分的情况进行剪枝优化。
      * @Date 2020/11/02 10:23
      * @Param [s, start, tempList, wordDict]
      * @return void
