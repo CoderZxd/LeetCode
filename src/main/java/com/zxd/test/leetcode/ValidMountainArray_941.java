@@ -72,4 +72,25 @@ public class ValidMountainArray_941 {
         }
         return true;
     }
+
+    public boolean validMountainArray_1(int[] A) {
+        int len = A.length;
+        int i = 0;
+        // 递增扫描
+        while (i + 1 < len && A[i] < A[i + 1]) {
+            i++;
+        }
+
+        // 最高点不能是数组的第一个位置或最后一个位置
+        if (i == 0 || i == len - 1) {
+            return false;
+        }
+
+        // 递减扫描
+        while (i + 1 < len && A[i] > A[i + 1]) {
+            i++;
+        }
+
+        return i == len - 1;
+    }
 }
