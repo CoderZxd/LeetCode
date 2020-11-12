@@ -53,4 +53,27 @@ public class SortArrayByParityII_922 {
         }
         return result;
     }
+
+    /**
+     * @Author zouxiaodong
+     * @Description 双指针
+     * @Date 2020/11/12 13:36
+     * @Param [A]
+     * @return int[]
+     **/
+    public int[] sortArrayByParityII_1(int[] A) {
+        int n = A.length;
+        int j = 1;
+        for (int i = 0; i < n; i += 2) {
+            if (A[i] % 2 == 1) {
+                while (A[j] % 2 == 1) {
+                    j += 2;
+                }
+                int temp = A[i];
+                A[i] = A[j];
+                A[j] = temp;
+            }
+        }
+        return A;
+    }
 }
