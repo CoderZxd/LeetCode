@@ -45,16 +45,16 @@ public class OddEvenList_328 {
 
     public ListNode oddEvenList(ListNode head) {
         if(head != null && head.next != null){
-            ListNode left = head;
-            ListNode right = head.next;
-            ListNode second = head.next;
-            while (right != null && right.next != null){
-                left.next = right.next;
-                right.next = right.next.next;
-                left = left.next;
-                right = right.next;
+            ListNode odd = head;
+            ListNode even = head.next;
+            ListNode evenHead = head.next;
+            while (even != null && even.next != null){
+                odd.next = even.next;
+                odd = odd.next;
+                even.next = odd.next;
+                even = even.next;
             }
-            left.next = second;
+            odd.next = evenHead;
         }
         return head;
     }
