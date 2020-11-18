@@ -61,6 +61,7 @@ public class CanCompleteCircuit_134 {
         int costLen = cost.length;
         label:
         for(int i=0,j=0;i<gasLen && j<costLen;i++,j++){
+            //找到第一个gas比cos大的起始点
             if(gas[i] < cost[j]){
                 continue;
             }
