@@ -51,11 +51,11 @@ public class SortString_1370 {
 
     public static void main(String[] args) {
         SortString_1370 sortString_1370 = new SortString_1370();
-//        System.out.println(sortString_1370.sortString("aaaabbbbcccc"));
-//        System.out.println(sortString_1370.sortString("rat"));
-//        System.out.println(sortString_1370.sortString("leetcode"));
-//        System.out.println(sortString_1370.sortString("ggggggg"));
-//        System.out.println(sortString_1370.sortString("spo"));
+        System.out.println(sortString_1370.sortString("aaaabbbbcccc"));
+        System.out.println(sortString_1370.sortString("rat"));
+        System.out.println(sortString_1370.sortString("leetcode"));
+        System.out.println(sortString_1370.sortString("ggggggg"));
+        System.out.println(sortString_1370.sortString("spo"));
         System.out.println(sortString_1370.sortString("ab"));
     }
 
@@ -69,25 +69,15 @@ public class SortString_1370 {
             nums[s.charAt(i)-'a']++;
         }
         StringBuffer sb = new StringBuffer();
-        boolean haveMore = true;
-        while (haveMore){
-            haveMore = false;
+        while (sb.length()<len){
             for(int i=0;i<26;i++){
-                if(nums[i] == 1){
-                    nums[i]--;
-                    sb.append((char) ('a'+i));
-                }else if(nums[i]>=1){
-                    haveMore = true;
+                if(nums[i]>0){
                     nums[i]--;
                     sb.append((char) ('a'+i));
                 }
             }
             for(int i=25;i>=0;i--){
-                if(nums[i] == 1){
-                    nums[i]--;
-                    sb.append((char) ('a'+i));
-                }else if(nums[i]>1){
-                    haveMore = true;
+               if(nums[i]>0){
                     nums[i]--;
                     sb.append((char) ('a'+i));
                 }
