@@ -1,5 +1,6 @@
 package com.zxd.test.leetcode;
 
+
 import java.util.*;
 
 /**
@@ -29,21 +30,15 @@ public class GroupAnagrams_49 {
     }
 
     public List<List<String>> groupAnagrams(String[] strs) {
-        List<List<String>> resultList = new ArrayList<>();
         Map<String,List<String>> map = new HashMap<>();
         for(String ele:strs){
             String[] eleArray = ele.split("");
             Arrays.sort(eleArray);
             String key = String.join("",eleArray);
-            if(map.containsKey(key)){
-                map.get(key).add(ele);
-            }else{
-                List<String> temp = new ArrayList<>();
-                temp.add(ele);
-                map.put(key,temp);
-                resultList.add(temp);
-            }
+            List<String> list = map.getOrDefault(key,new ArrayList<>());
+            list.add(ele);
+            map.put(key,list);
         }
-        return resultList;
+        return new ArrayList<>(map.values());
     }
 }
