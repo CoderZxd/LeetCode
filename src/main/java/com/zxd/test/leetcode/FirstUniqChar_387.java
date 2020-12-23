@@ -26,21 +26,16 @@ public class FirstUniqChar_387 {
     }
 
     public int firstUniqChar(String s) {
-        int len = s.length();
-        if(len <= 1){
-            return len-1;
+        int[] arr = new int[26];
+        int n = s.length();
+        for (int i = 0; i < n; i++) {
+            arr[s.charAt(i)-'a']++ ;
         }
-        int[][] charNums = new int[26][2];
-        Arrays.fill(charNums,new int[]{len,0});
-        for(int i=0;i<len;i++){
-            if(charNums[s.charAt(i)-'a'][0] == len){
-                charNums[s.charAt(i)-'a'] = new int[]{i,1};
-            }else{
-                //直接设置字符长度+1
-                charNums[s.charAt(i)-'a'] = new int[]{len+1,1};
+        for (int i = 0; i < n; i++) {
+            if (arr[s.charAt(i)-'a'] == 1) {
+                return i;
             }
         }
-        Arrays.sort(charNums, Comparator.comparingInt(o -> o[0]));
-        return (charNums[0][0] == len+1 || charNums[0][0] == len )?-1:charNums[0][0];
+        return -1;
     }
 }
