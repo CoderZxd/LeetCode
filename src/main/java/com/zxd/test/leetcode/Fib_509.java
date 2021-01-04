@@ -43,4 +43,24 @@ public class Fib_509 {
         }
         return fib(n-1)+fib(n-2);
     }
+
+    /**
+     * @Author zouxiaodong
+     * @Description 动态规划
+     * @Date 2021/01/04 9:20
+     * @Param [n]
+     * @return int
+     **/
+    public int fib_dp(int n) {
+        if (n < 2) {
+            return n;
+        }
+        int p = 0, q = 0, r = 1;
+        for (int i = 2; i <= n; ++i) {
+            p = q;
+            q = r;
+            r = p + q;
+        }
+        return r;
+    }
 }
