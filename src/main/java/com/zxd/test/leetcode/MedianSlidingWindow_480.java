@@ -48,6 +48,7 @@ public class MedianSlidingWindow_480 {
         int[] temp = new int[k];
         for(int i=0;i<length;i++){
             System.arraycopy(nums,i,temp,0,k);
+//            temp = Arrays.copyOfRange(nums,i,i+k);
             Arrays.sort(temp);
             if(k%2 == 0){
                 int right = k/2;
