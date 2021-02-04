@@ -26,18 +26,16 @@ public class FindMaxAverage_643 {
     }
 
     public double findMaxAverage(int[] nums, int k) {
-        double result = 0.0;
         double sum = 0.0;
         for(int i=0;i<k;i++){
             sum += nums[i];
         }
-        result = sum/k;
+        double maxSum = sum;
         int len = nums.length;
-        for(int i=0,j=i+k;j<len;i++,j++){
-            sum -= nums[i];
-            sum += nums[j];
-            result = Math.max(result,sum/k);
+        for(int i=k;i<len;i++){
+            sum = sum - nums[i-k] + nums[i];
+            maxSum = Math.max(sum,maxSum);
         }
-        return result;
+        return maxSum/k;
     }
 }
