@@ -1,5 +1,6 @@
 package com.zxd.test.leetcode;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,8 +29,8 @@ public class CheckInclusion_567 {
 
     public static void main(String[] args) {
         CheckInclusion_567 checkInclusion_567 = new CheckInclusion_567();
-        System.out.println(checkInclusion_567.checkInclusion("ab","eidoaoba"));
-        System.out.println(checkInclusion_567.checkInclusion("ab","eidboaoo"));
+        System.out.println(checkInclusion_567.checkInclusion_1("ab","eidoaoba"));
+        System.out.println(checkInclusion_567.checkInclusion_1("ab","eidboaoo"));
     }
 
     public boolean checkInclusion(String s1, String s2) {
@@ -54,6 +55,31 @@ public class CheckInclusion_567 {
             for(Character cr:tempMap.keySet()){
                 if(!tempMap.get(cr).equals(numbersMap.get(cr))){
                     tempMap.clear();
+                    continue label;
+                }
+            }
+            return true;
+        }
+        return false;
+    }
+
+
+    /**
+     * @Author zouxiaodong
+     * @Description 76 / 103 个通过测试用例，超出时间限制
+     * @Date 2021/02/10 11:05
+     * @Param [s1, s2]
+     * @return boolean
+     **/
+    public boolean checkInclusion_1(String s1, String s2) {
+        char[] array = s1.toCharArray();
+        Arrays.sort(array);
+        label:
+        for(int i=0;i<=s2.length()-array.length;i++){
+            char[] temp = s2.substring(i,i+array.length).toCharArray();
+            Arrays.sort(temp);
+            for(int j=0;j<array.length;j++){
+                if(array[j] != temp[j]){
                     continue label;
                 }
             }
