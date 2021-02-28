@@ -20,8 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7af4176-39b1-4cb2-a536-6327e4f0e7a8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/FindMode_501.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,20 +40,13 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>.</find>
-      <find>bfs(</find>
-      <find>Queue</find>
-      <find>回溯</find>
-      <find>回溯算法的框架</find>
-      <find>.toArray</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1TL5zYGLrA9cFXyJgIb8vFOMw4T" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -61,6 +55,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="ignore_missing_gitignore" value="true" />
@@ -78,56 +73,56 @@
       <recent name="D:\Projects\LeetCode\src\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FindMode_501">
-    <configuration name="ConvertBST_538" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.ConvertBST_538" />
+  <component name="RunManager" selected="Application.Transpose_867">
+    <configuration name="CheckInclusion_567" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.CheckInclusion_567" />
       <module name="LeetCode" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FindMode_501" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.FindMode_501" />
+    <configuration name="FlipAndInvertImage_832" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.FlipAndInvertImage_832" />
       <module name="LeetCode" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InorderTraversal_94" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.InorderTraversal_94" />
+    <configuration name="IsToeplitzMatrix_766" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.IsToeplitzMatrix_766" />
       <module name="LeetCode" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MergeTrees_617" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.MergeTrees_617" />
+    <configuration name="MaxSatisfied_1052" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.MaxSatisfied_1052" />
       <module name="LeetCode" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PermuteUnique_47" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.PermuteUnique_47" />
+    <configuration name="Transpose_867" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.Transpose_867" />
       <module name="LeetCode" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.InorderTraversal_94" />
-      <item itemvalue="Application.PermuteUnique_47" />
-      <item itemvalue="Application.ConvertBST_538" />
-      <item itemvalue="Application.MergeTrees_617" />
-      <item itemvalue="Application.FindMode_501" />
+      <item itemvalue="Application.CheckInclusion_567" />
+      <item itemvalue="Application.IsToeplitzMatrix_766" />
+      <item itemvalue="Application.MaxSatisfied_1052" />
+      <item itemvalue="Application.FlipAndInvertImage_832" />
+      <item itemvalue="Application.Transpose_867" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FindMode_501" />
-        <item itemvalue="Application.MergeTrees_617" />
-        <item itemvalue="Application.ConvertBST_538" />
-        <item itemvalue="Application.PermuteUnique_47" />
-        <item itemvalue="Application.InorderTraversal_94" />
+        <item itemvalue="Application.Transpose_867" />
+        <item itemvalue="Application.FlipAndInvertImage_832" />
+        <item itemvalue="Application.MaxSatisfied_1052" />
+        <item itemvalue="Application.IsToeplitzMatrix_766" />
+        <item itemvalue="Application.CheckInclusion_567" />
       </list>
     </recent_temporary>
   </component>
@@ -247,7 +242,96 @@
       <workItem from="1600388018397" duration="1019000" />
       <workItem from="1600647919340" duration="2969000" />
       <workItem from="1600819922660" duration="4829000" />
-      <workItem from="1600906049930" duration="3851000" />
+      <workItem from="1600906049930" duration="4388000" />
+      <workItem from="1600992498820" duration="2220000" />
+      <workItem from="1600996846316" duration="634000" />
+      <workItem from="1601168093253" duration="1865000" />
+      <workItem from="1601193400883" duration="345000" />
+      <workItem from="1601252069551" duration="11079000" />
+      <workItem from="1601337779712" duration="2225000" />
+      <workItem from="1601424299500" duration="2922000" />
+      <workItem from="1601432109341" duration="71000" />
+      <workItem from="1602203670336" duration="2766000" />
+      <workItem from="1602288353335" duration="5882000" />
+      <workItem from="1602462618299" duration="2721000" />
+      <workItem from="1602556997014" duration="371000" />
+      <workItem from="1602634623508" duration="5038000" />
+      <workItem from="1602721362412" duration="1137000" />
+      <workItem from="1602807018891" duration="1155000" />
+      <workItem from="1603066879825" duration="1981000" />
+      <workItem from="1603152801448" duration="2292000" />
+      <workItem from="1603239695654" duration="2333000" />
+      <workItem from="1603326299211" duration="3323000" />
+      <workItem from="1603422040310" duration="1969000" />
+      <workItem from="1603671975874" duration="1950000" />
+      <workItem from="1603758079067" duration="1765000" />
+      <workItem from="1603844599669" duration="1797000" />
+      <workItem from="1603930416362" duration="5465000" />
+      <workItem from="1604017365099" duration="2000000" />
+      <workItem from="1604277613423" duration="9576000" />
+      <workItem from="1604302510128" duration="108000" />
+      <workItem from="1604364357545" duration="2552000" />
+      <workItem from="1604449784939" duration="6678000" />
+      <workItem from="1604537031774" duration="983000" />
+      <workItem from="1604622252567" duration="1593000" />
+      <workItem from="1604625220550" duration="247000" />
+      <workItem from="1604883086770" duration="3063000" />
+      <workItem from="1604968924407" duration="237000" />
+      <workItem from="1605150311636" duration="3228000" />
+      <workItem from="1605229258437" duration="2518000" />
+      <workItem from="1605488044873" duration="374000" />
+      <workItem from="1605489123571" duration="1824000" />
+      <workItem from="1605574400185" duration="3841000" />
+      <workItem from="1605660304488" duration="4865000" />
+      <workItem from="1605744687811" duration="2347000" />
+      <workItem from="1605831790083" duration="3353000" />
+      <workItem from="1606090750315" duration="3050000" />
+      <workItem from="1606177082722" duration="1261000" />
+      <workItem from="1606264005486" duration="2339000" />
+      <workItem from="1606294324224" duration="602000" />
+      <workItem from="1606350269838" duration="2262000" />
+      <workItem from="1606439885691" duration="4262000" />
+      <workItem from="1606785744193" duration="3487000" />
+      <workItem from="1606871216447" duration="751000" />
+      <workItem from="1606961705549" duration="1959000" />
+      <workItem from="1607043370047" duration="4080000" />
+      <workItem from="1607304058969" duration="917000" />
+      <workItem from="1607388482223" duration="543000" />
+      <workItem from="1607474612101" duration="982000" />
+      <workItem from="1607560532838" duration="2086000" />
+      <workItem from="1607649525175" duration="700000" />
+      <workItem from="1607907316055" duration="1797000" />
+      <workItem from="1607993172530" duration="1153000" />
+      <workItem from="1608079944307" duration="2343000" />
+      <workItem from="1608514205407" duration="1108000" />
+      <workItem from="1608515731436" duration="156000" />
+      <workItem from="1608515898079" duration="15000" />
+      <workItem from="1608598656462" duration="4834000" />
+      <workItem from="1608685139040" duration="3634000" />
+      <workItem from="1608858955391" duration="1279000" />
+      <workItem from="1609290175188" duration="4112000" />
+      <workItem from="1609376486410" duration="3278000" />
+      <workItem from="1609722800971" duration="561000" />
+      <workItem from="1609808872929" duration="1081000" />
+      <workItem from="1609895862419" duration="1156000" />
+      <workItem from="1610068394187" duration="4239000" />
+      <workItem from="1610072648398" duration="35000" />
+      <workItem from="1610328661552" duration="240000" />
+      <workItem from="1610586874606" duration="950000" />
+      <workItem from="1611110957758" duration="1499000" />
+      <workItem from="1611278006113" duration="4742000" />
+      <workItem from="1611622398503" duration="2682000" />
+      <workItem from="1611799860022" duration="1949000" />
+      <workItem from="1612142481369" duration="2558000" />
+      <workItem from="1612313867784" duration="1730000" />
+      <workItem from="1612400817825" duration="1473000" />
+      <workItem from="1612488042622" duration="3548000" />
+      <workItem from="1612659974784" duration="3361000" />
+      <workItem from="1612919769511" duration="4810000" />
+      <workItem from="1613980403358" duration="3152000" />
+      <workItem from="1614043984128" duration="2883000" />
+      <workItem from="1614048538723" duration="615000" />
+      <workItem from="1614137264730" duration="5792000" />
     </task>
     <servers />
   </component>
@@ -281,70 +365,60 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser" timestamp="1599439164522">
+    <state x="715" y="226" key="#xdebugger.evaluate" timestamp="1612661997087">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1599439164522" />
-    <state width="471" height="466" key="DebuggerActiveHint" timestamp="1600824987915">
+    <state x="715" y="226" key="#xdebugger.evaluate/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1608687403349" />
+    <state x="715" y="226" key="#xdebugger.evaluate/0.0.1920.1050/-1920.-4.1920.1050@0.0.1920.1050" timestamp="1612661997087" />
+    <state width="478" height="466" key="DebuggerActiveHint" timestamp="1614159093374">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="471" height="466" key="DebuggerActiveHint/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1600824987915" />
-    <state x="740" y="265" key="FileChooserDialogImpl" timestamp="1596416855269">
+    <state width="478" height="466" key="DebuggerActiveHint/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1608688468826" />
+    <state width="478" height="466" key="DebuggerActiveHint/0.0.1920.1050/-1920.-4.1920.1050@0.0.1920.1050" timestamp="1614159093374" />
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1614159299791">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="740" y="265" key="FileChooserDialogImpl/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1596416855269" />
-    <state width="1877" height="136" key="GridCell.Tab.0.bottom" timestamp="1600910381332">
+    <state width="1877" height="270" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1609809953680" />
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.-4.1920.1050@0.0.1920.1050" timestamp="1614159299791" />
+    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1614159299791">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="136" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1600910381332" />
-    <state width="1877" height="136" key="GridCell.Tab.0.center" timestamp="1600910381332">
+    <state width="1877" height="270" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1609809953680" />
+    <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.-4.1920.1050@0.0.1920.1050" timestamp="1614159299791" />
+    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1614159299791">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="136" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1600910381332" />
-    <state width="1877" height="136" key="GridCell.Tab.0.left" timestamp="1600910381332">
+    <state width="1877" height="270" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1609809953680" />
+    <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.-4.1920.1050@0.0.1920.1050" timestamp="1614159299791" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1614159299791">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="136" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1600910381332" />
-    <state width="1877" height="136" key="GridCell.Tab.0.right" timestamp="1600910381332">
+    <state width="1877" height="270" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1609809953680" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.-4.1920.1050@0.0.1920.1050" timestamp="1614159299791" />
+    <state width="1877" height="275" key="GridCell.Tab.1.bottom" timestamp="1614159299792">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="136" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1600910381332" />
-    <state width="1877" height="136" key="GridCell.Tab.1.bottom" timestamp="1600910381394">
+    <state width="1877" height="275" key="GridCell.Tab.1.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1608688776146" />
+    <state width="1877" height="275" key="GridCell.Tab.1.bottom/0.0.1920.1050/-1920.-4.1920.1050@0.0.1920.1050" timestamp="1614159299792" />
+    <state width="1877" height="275" key="GridCell.Tab.1.center" timestamp="1614159299791">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="136" key="GridCell.Tab.1.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1600910381394" />
-    <state width="1877" height="136" key="GridCell.Tab.1.center" timestamp="1600910381394">
+    <state width="1877" height="275" key="GridCell.Tab.1.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1608688776146" />
+    <state width="1877" height="275" key="GridCell.Tab.1.center/0.0.1920.1050/-1920.-4.1920.1050@0.0.1920.1050" timestamp="1614159299791" />
+    <state width="1877" height="275" key="GridCell.Tab.1.left" timestamp="1614159299791">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="136" key="GridCell.Tab.1.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1600910381394" />
-    <state width="1877" height="136" key="GridCell.Tab.1.left" timestamp="1600910381394">
+    <state width="1877" height="275" key="GridCell.Tab.1.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1608688776146" />
+    <state width="1877" height="275" key="GridCell.Tab.1.left/0.0.1920.1050/-1920.-4.1920.1050@0.0.1920.1050" timestamp="1614159299791" />
+    <state width="1877" height="275" key="GridCell.Tab.1.right" timestamp="1614159299792">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="136" key="GridCell.Tab.1.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1600910381394" />
-    <state width="1877" height="136" key="GridCell.Tab.1.right" timestamp="1600910381394">
+    <state width="1877" height="275" key="GridCell.Tab.1.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1608688776146" />
+    <state width="1877" height="275" key="GridCell.Tab.1.right/0.0.1920.1050/-1920.-4.1920.1050@0.0.1920.1050" timestamp="1614159299792" />
+    <state x="451" y="253" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1605745007952">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="136" key="GridCell.Tab.1.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1600910381394" />
-    <state x="531" y="339" width="858" height="586" key="Registry" timestamp="1595811310212">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="531" y="339" width="858" height="586" key="Registry/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1595811310212" />
-    <state x="759" y="226" key="RollbackChangesDialog" timestamp="1599469316164">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="759" y="226" key="RollbackChangesDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1599469316164" />
-    <state x="461" y="169" key="SettingsEditor" timestamp="1596416857300">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="461" y="169" key="SettingsEditor/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1596416857300" />
-    <state x="681" y="266" width="540" height="524" key="StructurePopup" timestamp="1600909488793">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="681" y="266" width="540" height="524" key="StructurePopup/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1600909488793" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1599610300897">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1599610300897" />
+    <state x="451" y="253" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1605745007952" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -478,6 +552,201 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/FindMode_501.java</url>
           <line>43</line>
           <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/Connect_117.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/PostorderTraversal_145.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/InsertIntoBST_701.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/DetectCycle_142.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/DetectCycle_142.java</url>
+          <line>124</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/IsLongPressedName_925.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/PartitionLabels_763.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/SmallerNumbersThanCurrent_1365.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/UniqueOccurrences_1207.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/SumNumbers_129.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/IslandPerimeter_463.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/Intersection_349.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/WordBreak_140.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/WordBreak_140.java</url>
+          <line>87</line>
+          <option name="timeStamp" value="114" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/ValidMountainArray_941.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="115" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/Insert_57.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="121" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/SortByBits_1356.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="122" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/KClosest_973.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="123" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/SortArrayByParityII_922.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="124" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/OddEvenList_328.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="125" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/ReconstructQueue_406.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="127" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/AllCellsDistOrder_1030.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="128" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/CanCompleteCircuit_134.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="129" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/MoveZeroes_283.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="130" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/MaximumGap_164.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="131" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/FourSumCount_454.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="137" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/SearchRange_34.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="138" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/LemonadeChange_860.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="139" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/ZigzagLevelOrder_103.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="140" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/Rotate_189.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="141" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/AddToArrayForm_989.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="142" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/PivotIndex_724.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="143" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/FairCandySwap_888.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="144" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/FairCandySwap_888.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="147" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/MedianSlidingWindow_480.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="150" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/EqualSubstring_1208.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="151" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/CheckInclusion_567.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="152" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/CheckInclusion_567.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="153" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/Transpose_867.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="155" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
