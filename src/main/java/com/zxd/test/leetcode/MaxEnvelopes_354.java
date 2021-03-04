@@ -35,13 +35,13 @@ public class MaxEnvelopes_354 {
         if(row == 0){
             return row;
         }
-        Arrays.sort(envelopes,(o1,o2)-> o1[0]==o2[0]?o2[1]-o1[1]:o1[0]-o2[0]);
+        Arrays.sort(envelopes,(o1,o2)-> o1[0]==o2[0]?o1[1]-o2[1]:o1[0]-o2[0]);
         int[] f = new int[row];
         Arrays.fill(f, 1);
         int ans = 1;
         for (int i = 1; i < row; ++i) {
             for (int j = 0; j < i; ++j) {
-                if (envelopes[j][1] < envelopes[i][1]) {
+                if (envelopes[j][0] < envelopes[i][0] && envelopes[j][1] < envelopes[i][1]) {
                     f[i] = Math.max(f[i], f[j] + 1);
                 }
             }
