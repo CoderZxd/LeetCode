@@ -49,10 +49,10 @@ public class NumRabbits_781 {
         }
         for(int i=0;i<1000;i++){
             if(nums[i]>0){
-                int mulit = nums[i]/(i+1);
-                int mod = nums[i]%(i+1);
-                result+=(i+1)*mulit;
-                if(mod != 0){
+                int diff = nums[i]/(i+1);
+                int single = nums[i]%(i+1);
+                result+=(i+1)*diff;
+                if(single != 0){
                     result += i+1;
                 }
             }
