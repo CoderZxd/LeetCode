@@ -34,3 +34,4 @@ target/generated-test-sources/
 .idea\
 target\
 LeetCode.iml
+.idea\
