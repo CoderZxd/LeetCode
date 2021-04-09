@@ -78,4 +78,27 @@ public class FindMin_154 {
         }
         return 5001;
     }
+
+    /**
+     * @Author zouxiaodong
+     * @Description 官方题解
+     * @Date 2021/04/09 10:34
+     * @Param [nums]
+     * @return int
+     **/
+    public int findMin_offical(int[] nums) {
+        int l = 0;
+        int r = nums.length - 1;
+        while (l < r) {
+            int mid = l + (r - l) / 2;
+            if (nums[mid] < nums[r]) {
+                r = mid;
+            } else if (nums[mid] > nums[r]) {
+                l = mid + 1;
+            } else {
+                r -= 1;
+            }
+        }
+        return nums[l];
+    }
 }
