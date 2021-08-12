@@ -38,7 +38,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/RomanToInt_13.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
+            <state relative-caret-position="1422">
               <caret line="80" selection-start-line="80" selection-end-line="80" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -47,11 +47,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/IsCousins_993.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="82" selection-start-line="82" selection-end-line="86" selection-end-column="13" />
+            <state relative-caret-position="465">
+              <caret line="78" column="28" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/LongestPalindromeSubseq_516.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="48" column="28" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -59,7 +68,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/IsBalanced_110.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
+            <state relative-caret-position="324">
               <caret line="18" selection-start-line="18" selection-end-line="22" selection-end-column="16" />
             </state>
           </provider>
@@ -92,12 +101,13 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/RomanToInt_13.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/IsCousins_993.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/LongestPalindromeSubseq_516.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-2124" />
-    <option name="y" value="84" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1066" />
   </component>
@@ -242,7 +252,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.IsCousins_993">
+  <component name="RunManager" selected="Application.LongestPalindromeSubseq_516">
     <configuration name="IntToRoman_12" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.IntToRoman_12" />
       <module name="LeetCode" />
@@ -252,6 +262,19 @@
     </configuration>
     <configuration name="IsCousins_993" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.IsCousins_993" />
+      <module name="LeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zxd.test.leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LongestPalindromeSubseq_516" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.LongestPalindromeSubseq_516" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
@@ -283,27 +306,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Trie_208" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.Trie_208" />
-      <module name="LeetCode" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.Trie_208" />
       <item itemvalue="Application.Rob_213" />
       <item itemvalue="Application.IntToRoman_12" />
       <item itemvalue="Application.RomanToInt_13" />
       <item itemvalue="Application.IsCousins_993" />
+      <item itemvalue="Application.LongestPalindromeSubseq_516" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LongestPalindromeSubseq_516" />
         <item itemvalue="Application.IsCousins_993" />
         <item itemvalue="Application.RomanToInt_13" />
         <item itemvalue="Application.IntToRoman_12" />
         <item itemvalue="Application.Rob_213" />
-        <item itemvalue="Application.Trie_208" />
       </list>
     </recent_temporary>
   </component>
@@ -536,18 +552,20 @@
       <workItem from="1619762462598" duration="2023000" />
       <workItem from="1620093329964" duration="26000" />
       <workItem from="1620956843744" duration="2758000" />
-      <workItem from="1621256282255" duration="1814000" />
+      <workItem from="1621256282255" duration="2181000" />
+      <workItem from="1622883534922" duration="31000" />
+      <workItem from="1628770061864" duration="972000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2471000" />
+    <option name="totallyTimeSpent" value="3841000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20255864" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20682302" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -1191,11 +1209,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/RomanToInt_13.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
+        <state relative-caret-position="1422">
           <caret line="80" selection-start-line="80" selection-end-line="80" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/IsBalanced_110.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" selection-start-line="18" selection-end-line="22" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -1206,17 +1231,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/IsBalanced_110.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/IsCousins_993.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="18" selection-start-line="18" selection-end-line="22" selection-end-column="16" />
+        <state relative-caret-position="465">
+          <caret line="78" column="28" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/IsCousins_993.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/LongestPalindromeSubseq_516.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="82" selection-start-line="82" selection-end-line="86" selection-end-column="13" />
+        <state relative-caret-position="195">
+          <caret line="48" column="28" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
         </state>
       </provider>
     </entry>
