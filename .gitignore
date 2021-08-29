@@ -35,3 +35,4 @@ target/generated-test-sources/
 target\
 LeetCode.iml
 .idea\
+/.idea/workspace.xml

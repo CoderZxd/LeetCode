@@ -53,4 +53,12 @@ public class RunningSum_1480 {
 		}
 		return result;
 	}
+
+	public int[] runningSum_2(int[] nums) {
+		int len = nums.length;
+		for(int i=1;i<len;i++){
+			nums[i] = nums[i]+nums[i-1];
+		}
+		return nums;
+	}
 }
