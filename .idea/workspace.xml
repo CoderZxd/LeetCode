@@ -77,16 +77,9 @@
       <recent name="D:\Projects\LeetCode\src\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GetMaximumGenerated_1646">
+  <component name="RunManager" selected="Application.Solution_528">
     <configuration name="GetMaximumGenerated_1646" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.GetMaximumGenerated_1646" />
-      <module name="LeetCode" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IntToRoman_12" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.IntToRoman_12" />
       <module name="LeetCode" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -131,20 +124,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Solution_528" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zxd.test.leetcode.Solution_528" />
+      <module name="LeetCode" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.IntToRoman_12" />
       <item itemvalue="Application.RomanToInt_13" />
       <item itemvalue="Application.IsCousins_993" />
       <item itemvalue="Application.LongestPalindromeSubseq_516" />
       <item itemvalue="Application.GetMaximumGenerated_1646" />
+      <item itemvalue="Application.Solution_528" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Solution_528" />
         <item itemvalue="Application.GetMaximumGenerated_1646" />
         <item itemvalue="Application.LongestPalindromeSubseq_516" />
         <item itemvalue="Application.IsCousins_993" />
         <item itemvalue="Application.RomanToInt_13" />
-        <item itemvalue="Application.IntToRoman_12" />
       </list>
     </recent_temporary>
   </component>
@@ -415,22 +415,46 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="179" key="GridCell.Tab.0.bottom" timestamp="1629705491324">
+    <state x="715" y="226" key="#xdebugger.evaluate" timestamp="1630315394567">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="179" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1629705491324" />
-    <state width="1877" height="179" key="GridCell.Tab.0.center" timestamp="1629705491324">
+    <state x="715" y="226" key="#xdebugger.evaluate/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1630315394567" />
+    <state width="408" height="466" key="DebuggerActiveHint" timestamp="1630315146055">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="179" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1629705491324" />
-    <state width="1877" height="179" key="GridCell.Tab.0.left" timestamp="1629705491324">
+    <state width="408" height="466" key="DebuggerActiveHint/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1630315146055" />
+    <state width="1877" height="232" key="GridCell.Tab.0.bottom" timestamp="1630316375105">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="179" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1629705491324" />
-    <state width="1877" height="179" key="GridCell.Tab.0.right" timestamp="1629705491324">
+    <state width="1877" height="232" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1630316375105" />
+    <state width="1877" height="232" key="GridCell.Tab.0.center" timestamp="1630316375105">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="179" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1629705491324" />
+    <state width="1877" height="232" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1630316375105" />
+    <state width="1877" height="232" key="GridCell.Tab.0.left" timestamp="1630316375105">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="232" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1630316375105" />
+    <state width="1877" height="232" key="GridCell.Tab.0.right" timestamp="1630316375105">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="232" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1630316375105" />
+    <state width="1877" height="232" key="GridCell.Tab.1.bottom" timestamp="1630316375106">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="232" key="GridCell.Tab.1.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1630316375106" />
+    <state width="1877" height="232" key="GridCell.Tab.1.center" timestamp="1630316375105">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="232" key="GridCell.Tab.1.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1630316375105" />
+    <state width="1877" height="232" key="GridCell.Tab.1.left" timestamp="1630316375105">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="232" key="GridCell.Tab.1.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1630316375105" />
+    <state width="1877" height="232" key="GridCell.Tab.1.right" timestamp="1630316375105">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="232" key="GridCell.Tab.1.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1630316375105" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1628838420417">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -803,6 +827,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/Rob_213.java</url>
           <line>76</line>
           <option name="timeStamp" value="172" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zxd/test/leetcode/Solution_528.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="176" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
