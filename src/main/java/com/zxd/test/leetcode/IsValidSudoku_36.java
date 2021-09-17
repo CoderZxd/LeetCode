@@ -3,12 +3,10 @@ package com.zxd.test.leetcode;
 import java.util.*;
 
 /**
- * @Project war-fx-glt2stage-demo
- * @Package com.zxd.test.leetcode
- * @Author：zouxiaodong
- * @Description:
- * @Date:Created in 12:04 2018/8/31.
- */
+ * @Author zouxiaodong
+ * @Description https://leetcode-cn.com/problems/valid-sudoku/submissions/
+ * @Date 2021/09/17 11:23
+ **/
 //36. 有效的数独
 //        请你判断一个 9x9 的数独是否有效。只需要 根据以下规则 ，验证已经填入的数字是否有效即可。
 //
