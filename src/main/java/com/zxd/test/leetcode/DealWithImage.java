@@ -23,29 +23,21 @@ public class DealWithImage {
     }
 
     public static void main(String[] args) throws IOException {
-        pixelImage(1);
-        pixelImage(2);
-        pixelImage(4);
-        pixelImage(8);
-        pixelImage(12);
-        pixelImage(16);
-        pixelImage(20);
-        pixelImage(24);
-        pixelImage(28);
-        pixelImage(32);
+        pixelImage(32,64);
     }
 
     //像素画照片
-    public static void pixelImage(int x) throws IOException {
+    public static void pixelImage(int x,int y) throws IOException {
         BufferedImage bufferedImage = ImageIO.read(new File("D://IMG_4817.JPG"));
         int width = bufferedImage.getWidth();
         int height = bufferedImage.getHeight();
+        System.out.println("=======>像素为:"+width+"*"+height);
         start:
         for(int i=0;i<width;i=i+x){
-            for(int j=0;j<height;j=j+x){
-                Map<Integer,Integer> valueToNums = new HashMap<>(x*x*2);
+            for(int j=0;j<height;j=j+y){
+                Map<Integer,Integer> valueToNums = new HashMap<>(x*y*2);
                 for(int m=i;m<i+x;m++){
-                    for(int n=j;n<j+x;n++){
+                    for(int n=j;n<j+y;n++){
                         if(m<width && n<height){
                             valueToNums.put(bufferedImage.getRGB(m,n),valueToNums.getOrDefault(bufferedImage.getRGB(m,n),0)+1);
                         }
@@ -54,8 +46,14 @@ public class DealWithImage {
                 List<Map.Entry<Integer,Integer>> list = new ArrayList<>(valueToNums.entrySet());
                 Collections.sort(list, (o1, o2) -> o2.getValue().compareTo(o1.getValue()));
                 for(int m=i;m<i+x;m++){
-                    for(int n=j;n<j+x;n++){
+                    for(int n=j;n<j+y;n++){
                         if(m<width && n<height){
+//                            Integer rgb = list.get(0).getKey();
+//                            int value = (0xff000000 & rgb) >>> 24;
+//                            int red =  (0x00ff0000 & rgb) >> 16;
+//                            int green = (0x0000ff00 & rgb) >> 8;
+//                            int blue =  (0x000000ff & rgb);
+//                            System.out.println(String.format("value:%d,red:%d,green:%d,blue:%d",value,red,green,blue));
                             bufferedImage.setRGB(m,n,list.get(0).getKey());
                         }
                     }
@@ -64,7 +62,7 @@ public class DealWithImage {
         }
         Iterator<ImageWriter> it = ImageIO.getImageWritersByFormatName("jpg");
         ImageWriter writer = it.next();
-        File f = new File("D://test_"+x+".JPG");
+        File f = new File("D://test_"+x+"_"+y+".JPG");
         ImageOutputStream ios = ImageIO.createImageOutputStream(f);
         writer.setOutput(ios);
         writer.write(bufferedImage);
