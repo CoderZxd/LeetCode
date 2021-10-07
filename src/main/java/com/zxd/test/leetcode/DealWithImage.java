@@ -23,7 +23,9 @@ public class DealWithImage {
     }
 
     public static void main(String[] args) throws IOException {
-        pixelImage(32,64);
+        pixelImage(6,8);
+        pixelImage(12,16);
+        pixelImage(24,32);
     }
 
     //像素画照片
