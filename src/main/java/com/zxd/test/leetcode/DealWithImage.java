@@ -25,10 +25,11 @@ public class DealWithImage {
     }
 
     public static void main(String[] args) throws IOException {
-        addBoxImage("D://dog_box.jpg",new int[]{100,50},new int[]{500,300},40,new int[]{255,0,0});
+        addCircleImage("D://dog_box.jpg",new int[]{2037,986},100,50,new int[]{255,0,0});
+//        addBoxImage("D://dog_box.jpg",new int[]{100,50},new int[]{500,300},40,new int[]{255,0,0});
 //        boxImage("D://dog.jpg",10,new int[]{255,255,0});
-//        pixelImage("D://dog.jpg",40,32);
-//        grayImage("D://dog_40_32.jpg");
+//        pixelImage("D://dog_box_add_circle.jpg",40,32);
+//        grayImage("D://dog_box_add_circle.jpg");
 //        binaryImage("D://dog_40_32.jpg");
 //        reverseImage("D://dog_40_32_gray.jpg");
 //        reverseImage("D://wallpaper.jpg");
@@ -61,6 +62,32 @@ public class DealWithImage {
         ImageIO.write(bufferedImage, getFormatName(imagePath), new File(imagePathNew));
     }
 
+    /**
+     * @Author zouxiaodong
+     * @Description 指定像素作为中心点画圆
+     * @Date 2021/10/08 17:19
+     * @Param [imagePath, middlePoint, maxRadius,minRadius,colors]
+     * @return void
+     **/
+    public static void addCircleImage(String imagePath,int[] middlePoint,int maxRadius,int minRadius,int[] colors) throws IOException {
+        BufferedImage bufferedImage = ImageIO.read(new File(imagePath));
+        int width = bufferedImage.getWidth();
+        int height = bufferedImage.getHeight();
+        System.out.println("=======>像素为:"+width+"*"+height);
+        start:
+        for(int i=0;i<width;i++){
+            for(int j=0;j<height;j++){
+                if((middlePoint[0]-i)*(middlePoint[0]-i)+(middlePoint[1]-j)*(middlePoint[1]-j) <= maxRadius*maxRadius &&
+                        (middlePoint[0]-i)*(middlePoint[0]-i)+(middlePoint[1]-j)*(middlePoint[1]-j) >= minRadius*minRadius){
+                    bufferedImage.setRGB(i,j,colorToRGB(255,colors[0],colors[1],colors[2]));
+                }
+            }
+        }
+        String formatName = getFormatName(imagePath);
+        String path = imagePath.replaceAll("\\." + formatName, "");
+        String imagePathNew = path+"_add_circle."+formatName;
+        ImageIO.write(bufferedImage, getFormatName(imagePath), new File(imagePathNew));
+    }
 
     /**
      * @Author zouxiaodong
