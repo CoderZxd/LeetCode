@@ -26,12 +26,12 @@ public class DealWithImage {
 //        addBoxImage("D://dog_box.jpg",new int[]{100,50},new int[]{500,300},40,new int[]{255,0,0});
 //        boxImage("D://dog.jpg",10,new int[]{255,255,0});
 //        pixelImage("D://dog_box_add_circle.jpg",40,32);
-//        grayImage("D://dog_box_add_circle.jpg");
+        grayImage("D://dog.jpg");
 //        binaryImage("D://dog_40_32.jpg");
 //        reverseImage("D://dog_40_32_gray.jpg");
 //        reverseImage("D://wallpaper.jpg");
 //        grayImageUseAPI("D://dog_40_32.jpg");
-        graphics2D("D://dog.jpg");
+//        graphics2D("D://dog.jpg");
     }
 
     public static void graphics2D(String imagePath) throws IOException {
@@ -305,11 +305,12 @@ public class DealWithImage {
         BufferedImage grayImage = new BufferedImage(width,height,bufferedImage.getType());
         for(int i=0;i<width;i++){
             for(int j=0;j<height;j++){
-                int rgb = bufferedImage.getRGB(i,j);
-                int red = (rgb >> 16) & 0xff;
-                int green = (rgb >> 8) & 0xff;
-                int blue = rgb & 0xff;
-                int gray = (int)(0.3*red+0.59*green+0.11*blue);
+//                int rgb = bufferedImage.getRGB(i,j);
+//                int red = (rgb >> 16) & 0xff;
+//                int green = (rgb >> 8) & 0xff;
+//                int blue = rgb & 0xff;
+                Color color = new Color(bufferedImage.getRGB(i,j));
+                int gray = (int)(0.3*color.getRed()+0.59*color.getGreen()+0.11*color.getBlue());
                 int pixelRgb = colorToRGB(255,gray,gray,gray);
                 grayImage.setRGB(i,j,pixelRgb);
             }
