@@ -4,6 +4,7 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.color.ColorSpace;
 import java.awt.image.BufferedImage;
+import java.awt.image.BufferedImageOp;
 import java.awt.image.ColorConvertOp;
 import java.io.File;
 import java.io.IOException;
@@ -12,20 +13,16 @@ import java.util.List;
 
 /**
  * @ClassName DealWithImage
- * @Description TODO
+ * @Description https://www.cnblogs.com/dw3306/p/14527155.html
+ *              http://www.vue5.com/java_dip/java_buffered_image.html
  * @Author xiaodong.zou
  * @Date 2021/10/6 19:24
  * @Version 1.0
  */
 public class DealWithImage {
 
-    //翻转照片
-    public static void main_reverse(String[] args) throws IOException {
-
-    }
-
     public static void main(String[] args) throws IOException {
-        addCircleImage("D://dog_box.jpg",new int[]{2037,986},100,50,new int[]{255,0,0});
+//        addCircleImage("D://dog_box.jpg",new int[]{2037,986},100,50,new int[]{255,0,0});
 //        addBoxImage("D://dog_box.jpg",new int[]{100,50},new int[]{500,300},40,new int[]{255,0,0});
 //        boxImage("D://dog.jpg",10,new int[]{255,255,0});
 //        pixelImage("D://dog_box_add_circle.jpg",40,32);
@@ -34,6 +31,73 @@ public class DealWithImage {
 //        reverseImage("D://dog_40_32_gray.jpg");
 //        reverseImage("D://wallpaper.jpg");
 //        grayImageUseAPI("D://dog_40_32.jpg");
+        graphics2D("D://dog.jpg");
+    }
+
+    public static void graphics2D(String imagePath) throws IOException {
+        BufferedImage bufferedImage = ImageIO.read(new File(imagePath));
+        String formatName = getFormatName(imagePath);
+        String path = imagePath.replaceAll("\\." + formatName, "");
+        //图片裁剪
+        BufferedImage subimage = bufferedImage.getSubimage(500,500,1000,1000);
+        String imagePathNew = path+"_sub."+formatName;
+        ImageIO.write(subimage, getFormatName(imagePath), new File(imagePathNew));
+        Graphics2D graphics2D = bufferedImage.createGraphics();
+        graphics2D.setColor(Color.RED);
+        //画一条直线
+        graphics2D.drawLine(500,500,1500,1500);
+        //画折线
+        graphics2D.drawPolyline(new int[]{100,500,300},new int[]{100,600,200},3);
+        //写字符串
+        Font font = new Font("Arial",Font.BOLD,50);
+        graphics2D.setFont(font);
+        graphics2D.drawString("Hello world",2000,2000);
+        //精准定位
+        FontMetrics fontMetrics = graphics2D.getFontMetrics(font);
+        int height = fontMetrics.getHeight();
+        int width = fontMetrics.stringWidth("Hello world");
+        graphics2D.drawString("I am zouxiaodong",2000,2000+height);
+        //消除字体锯齿
+        //消除边缘抗锯齿
+        graphics2D.setRenderingHint(RenderingHints.KEY_ANTIALIASING,RenderingHints.VALUE_ANTIALIAS_ON);
+        //文本抗锯齿
+        graphics2D.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING,RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
+        //画矩形
+        graphics2D.drawRect(700,700,100,200);
+        graphics2D.setColor(Color.YELLOW);
+        graphics2D.fillRect(1000,500,100,200);
+        graphics2D.drawRoundRect(200,200,100,200,40,80);
+        //画三维矩形
+        graphics2D.draw3DRect(400,400,100,200,true);
+        graphics2D.setColor(Color.GREEN);
+        graphics2D.fill3DRect(2000,2000,100,200,true);
+        //画圆弧
+        graphics2D.drawArc(100,40,90,50,180,180);
+        graphics2D.setColor(Color.yellow);
+        //填充缺右上角的四分之三的椭圆
+        graphics2D.fillArc(10,100,40,40,0,-270);
+        graphics2D.setColor(Color.green);
+        //填充缺左下角的四分之三的椭圆
+        graphics2D.fillArc(60,110,110,60,-90,-270);
+        //画多边形
+        graphics2D.setColor(Color.BLUE);
+        int px1[]={50,90,10,50};//首末点相重,才能画多边形
+        int py1[]={10,50,50,10};
+        int px2[]={140,180,170,180,140,100,110,140};
+        int py2[]={5,25,35,45,65,35,25,5};
+        graphics2D.setColor(Color.blue);
+        graphics2D.fillPolygon(px1,py1,4);
+        graphics2D.setColor(Color.red);
+        graphics2D.drawPolygon(px2,py2,8);
+        //添加图片
+        ColorSpace cs = ColorSpace.getInstance(ColorSpace.CS_GRAY);
+        ColorConvertOp op = new ColorConvertOp(cs, null);
+        graphics2D.drawImage(ImageIO.read(new File("D://dog_sub.jpg")),op,500,500);
+        //限定作图显示区域
+        graphics2D.clipRect(0,0,100,50);
+        graphics2D.clipRect(50,25,100,50);
+        String imageP = path+"_draw."+formatName;
+        ImageIO.write(bufferedImage, getFormatName(imagePath), new File(imageP));
     }
 
     /**
