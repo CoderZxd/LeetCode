@@ -50,7 +50,7 @@ public class MajorityElement_229 {
     public List<Integer> majorityElement(int[] nums) {
         List<Integer> result = new ArrayList<>(10);
         int len = nums.length;
-        double times = Math.floor(len/3);
+        int times = len/3;
         Map<Integer,Integer> numToTimesMap = new HashMap<>(len);
         for(int num:nums){
             Integer time = numToTimesMap.getOrDefault(num, 0);
